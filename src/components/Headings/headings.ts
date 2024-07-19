@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import responsiveTypography from "../../utils/responsiveTypography";
 
 const H1 = styled.h1`
   font-size: ${(props) => props.theme.typography.h1.fontSize};
@@ -7,6 +8,7 @@ const H1 = styled.h1`
   margin: ${(props) => props.theme.typography.h1.margin};
   color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.typography.fontFamilyHeader};
+  ${responsiveTypography("lg", "h1")}
 `;
 
 const H2 = styled.h2`
@@ -16,6 +18,7 @@ const H2 = styled.h2`
   margin: ${(props) => props.theme.typography.h2.margin};
   color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.typography.fontFamily};
+  ${responsiveTypography("lg", "h2")}
 `;
 
 const H3 = styled.h3`

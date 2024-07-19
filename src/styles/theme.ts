@@ -48,18 +48,26 @@ export const theme = {
     fontFamilyHeader: "CustomFont_H1",
     fontFamily: "Inter, sans-serif",
     h1: {
-      fontSize: "48px",
-      // fontSize: "64px",
-
+      fontSize: "56px",
       fontWeight: 700,
       lineHeight: 1.2,
       margin: "0 0 1rem 0",
+      responsive: {
+        lg: {
+          fontSize: "96px",
+        },
+      },
     },
     h2: {
-      fontSize: "2rem",
+      fontSize: "48px",
       fontWeight: 700,
       lineHeight: 1.3,
       margin: "0 0 1rem 0",
+      responsive: {
+        lg: {
+          fontSize: "64px",
+        },
+      },
     },
     h3: {
       fontSize: "1.75rem",
