@@ -2,7 +2,7 @@ export const theme = {
   colors: {
     primary: "#667EFF",
     secondary: "#324EE7",
-    background: "#000F43",
+    background: "#000416",
     text: "#FFFFFF",
     border: "#FFFFFF",
     accent: "#3760EE", // used has a background orb on skills section
@@ -45,22 +45,53 @@ export const theme = {
     button_gradient: "linear-gradient(90deg, #324EE7 0%, #667EFF 100%)",
   },
   typography: {
-    fontFamily: "Roboto, sans-serif",
-    fontSize: {
-      small: "12px",
-      medium: "16px",
-      large: "24px",
-      xlarge: "32px",
+    fontFamilyHeader: "CustomFont_H1",
+    fontFamily: "Inter, sans-serif",
+    h1: {
+      fontSize: "56px",
+      fontWeight: 700,
+      lineHeight: 1.2,
+      margin: "0 0 1rem 0",
+      responsive: {
+        lg: {
+          fontSize: "96px",
+        },
+      },
     },
-    fontWeight: {
-      light: 300,
-      normal: 400,
-      bold: 700,
+    h2: {
+      fontSize: "48px",
+      fontWeight: 700,
+      lineHeight: 1.3,
+      margin: "0 0 1rem 0",
+      responsive: {
+        lg: {
+          fontSize: "64px",
+        },
+      },
     },
-    lineHeight: {
-      small: "1.2",
-      medium: "1.5",
-      large: "1.8",
+    h3: {
+      fontSize: "1.75rem",
+      fontWeight: 700,
+      lineHeight: 1.4,
+      margin: "0 0 1rem 0",
+    },
+    h4: {
+      fontSize: "1.5rem",
+      fontWeight: 700,
+      lineHeight: 1.5,
+      margin: "0 0 1rem 0",
+    },
+    h5: {
+      fontSize: "1.25rem",
+      fontWeight: 700,
+      lineHeight: 1.6,
+      margin: "0 0 1rem 0",
+    },
+    h6: {
+      fontSize: "1rem",
+      fontWeight: 700,
+      lineHeight: 1.7,
+      margin: "0 0 1rem 0",
     },
   },
   spacing: (factor: number) => `${factor * 8}px`,
