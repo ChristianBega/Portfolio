@@ -19,13 +19,15 @@ export const theme: DefaultTheme = {
     color_5: "#3941FF",
     color_6: "#0038FF",
     color_7: "#000F43",
+    transparent: "transparent",
   },
   gradients: {
     button_gradient: "linear-gradient(90deg, #324EE7 0%, #667EFF 100%)",
   },
   typography: {
+    fontFamilyButton: "CustomFont_Button",
     fontFamilyHeader: "CustomFont_H1",
-    fontFamily: "Inter, sans-serif",
+    fontFamily: "Poppins, sans-serif",
     h1: {
       fontSize: "56px",
       fontWeight: 700,
@@ -111,6 +113,17 @@ export const theme: DefaultTheme = {
           fontSize: "16px",
         },
       },
+    },
+  },
+  buttons: {
+    contained: {
+      backgroundColor: "primary",
+      color: "text",
+    },
+    outlined: {
+      backgroundColor: "transparent",
+      borderColor: "primary",
+      color: "primary",
     },
   },
   spacing: (factor: number) => `${factor * 8}px`,

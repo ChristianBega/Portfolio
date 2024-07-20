@@ -21,11 +21,13 @@ declare module "styled-components" {
       color_5: string;
       color_6: string;
       color_7: string;
+      transparent: string;
     };
     gradients: {
       button_gradient: string;
     };
     typography: {
+      fontFamilyButton: string;
       fontFamilyHeader: string;
       fontFamily: string;
       h1: TypographyStyle;
@@ -36,6 +38,10 @@ declare module "styled-components" {
       h6: TypographyStyle;
       p: TypographyStyle;
       span: TypographyStyle;
+    };
+    buttons: {
+      contained: ButtonStyles;
+      outlined: ButtonStyles;
     };
     spacing: (factor: number) => string;
     border: {};
@@ -60,5 +66,12 @@ declare module "styled-components" {
         fontSize: string;
       };
     };
+  }
+
+  //^ Defines the structure & types of the button styles
+  export interface ButtonStyles {
+    backgroundColor: keyof DefaultTheme["colors"];
+    color: keyof DefaultTheme["colors"];
+    borderColor?: keyof DefaultTheme["colors"];
   }
 }
