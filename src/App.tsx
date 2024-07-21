@@ -14,7 +14,10 @@ const App: React.FC = () => {
       <Typography as="p">This is a paragraph.</Typography>
       <Typography as="span">This is a span.</Typography>
       <div style={{ marginTop: "2rem" }}>
-        <Button variant="contained" size="lg">
+        <Button variant="contained" backgroundGradient="button_gradient" size="lg">
+          Contact Me
+        </Button>
+        <Button variant="outlined" backgroundGradient="button_gradient" size="lg">
           Contact Me
         </Button>
         <Button variant="outlined" size="sm">
@@ -23,11 +26,11 @@ const App: React.FC = () => {
         <Button variant="contained" size="md">
           View Project
         </Button>
-        <Button variant="outlined" size="lg" borderColor="error" textColor="error">
-          Delete
+        <Button variant="contained" backgroundColor="warning" borderColor="warning" size="md">
+          Test_1
         </Button>
-        <Button variant="contained" size="sm" backgroundColor="color_7" borderColor="color_7" textColor="error">
-          Warning
+        <Button variant="outlined" backgroundColor="warning" borderColor="warning" size="md">
+          Test_2
         </Button>
       </div>
     </>

@@ -22,7 +22,7 @@ export const theme: DefaultTheme = {
     transparent: "transparent",
   },
   gradients: {
-    button_gradient: "linear-gradient(90deg, #324EE7 0%, #667EFF 100%)",
+    button_gradient: "linear-gradient(0deg, #324EE7 0%, #667EFF 100%)",
   },
   typography: {
     fontFamilyButton: "CustomFont_Button",

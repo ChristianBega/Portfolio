@@ -3,18 +3,25 @@ import styled, { css, DefaultTheme } from "styled-components";
 interface ButtonProps {
   variant: "contained" | "outlined";
   backgroundColor?: keyof DefaultTheme["colors"];
+  backgroundGradient?: keyof DefaultTheme["gradients"];
   textColor?: keyof DefaultTheme["colors"];
   borderColor?: keyof DefaultTheme["colors"];
   size: "sm" | "md" | "lg";
 }
 
 const getButtonStyles = (props: ButtonProps & { theme: DefaultTheme }) => {
-  const { theme, variant, backgroundColor, textColor, borderColor } = props;
+  const { theme, variant, backgroundColor, textColor, borderColor, backgroundGradient } = props;
   const defaultStyles = theme.buttons[variant];
 
   return {
-    backgroundColor:
-      variant === "outlined" ? "transparent" : backgroundColor ? theme.colors[backgroundColor] : theme.colors[defaultStyles.backgroundColor],
+    background:
+      variant === "outlined"
+        ? "transparent"
+        : backgroundGradient
+        ? theme.gradients[backgroundGradient]
+        : backgroundColor
+        ? theme.colors[backgroundColor]
+        : theme.colors[defaultStyles.backgroundColor],
     color: textColor ? theme.colors[textColor] : theme.colors[defaultStyles.color],
     borderColor: borderColor
       ? theme.colors[borderColor]
@@ -25,7 +32,7 @@ const getButtonStyles = (props: ButtonProps & { theme: DefaultTheme }) => {
 };
 
 const buttonStyles = css<ButtonProps>`
-  background-color: ${(props) => getButtonStyles(props).backgroundColor};
+  background: ${(props) => getButtonStyles(props).background};
   color: ${(props) => getButtonStyles(props).color};
   border: ${(props) => (props.variant === "outlined" ? `1px solid ${getButtonStyles(props).borderColor}` : "none")};
   padding: ${(props) => (props.size === "sm" ? "10px 14px" : props.size === "md" ? "13px 16px" : "12px 24px")};
@@ -35,6 +42,21 @@ const buttonStyles = css<ButtonProps>`
   font-family: ${(props) => props.theme.typography.fontFamilyButton};
   text-transform: capitalize;
   line-height: 1;
+  transition: all 4s ease;
+
+  &:hover {
+    background: ${(props) =>
+      props.variant === "contained"
+        ? "transparent"
+        : props.backgroundGradient
+        ? props.theme.gradients[props.backgroundGradient]
+        : getButtonStyles({ ...props, variant: "contained" }).background};
+    color: ${(props) =>
+      props.variant === "contained"
+        ? getButtonStyles({ ...props, variant: "outlined" }).color
+        : getButtonStyles({ ...props, variant: "contained" }).color};
+    border: ${(props) => (props.variant === "contained" ? `1px solid ${getButtonStyles({ ...props, variant: "outlined" }).borderColor}` : "none")};
+  }
 `;
 
 const Button = styled.button<ButtonProps>`
