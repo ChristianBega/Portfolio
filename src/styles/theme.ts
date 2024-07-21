@@ -1,17 +1,17 @@
-export const theme = {
+import { DefaultTheme } from "styled-components";
+
+export const theme: DefaultTheme = {
   colors: {
     primary: "#667EFF",
     secondary: "#324EE7",
     background: "#000416",
     text: "#FFFFFF",
     border: "#FFFFFF",
-    accent: "#3760EE", // used has a background orb on skills section
-
+    accent: "#3760EE",
     success: "#39FF14",
     warning: "#FFD700",
     error: "#FF073A",
     info: "#0CF",
-
     color_1: "#667EFF",
     color_2: "#324EE7",
     color_3: "#415DEF",
@@ -19,39 +19,20 @@ export const theme = {
     color_5: "#3941FF",
     color_6: "#0038FF",
     color_7: "#000F43",
+    transparent: "transparent",
   },
   gradients: {
-    // ! Setup later when we start using gradients these are all the colors
-    // 1A and 1B
-    // 1A. #FF0808, #8125F5, #6D42FF
-    // 1B. #FCD650, #FF6F6F
-    // 2A and 2B
-    // 2A. #08E1FF, #8125F5, #6D42FF
-    // 2B. #5450FC, #FF6F6F
-    // 3A and 3B
-    // 3A. #54FC50, #6FA8FF
-    // 3B. #00FF29, #8125F5
-
-    // ! Setup later when we start using gradients these are all the colors
-    // footer gradient for "eclipse"
-    // 0038FF, 000F43, 070707
-
-    // neon_blob_gradient_1A: "linear-gradient(0deg, _ 0%, _ 100%)",
-    // neon_blob_gradient_1B: "linear-gradient(0deg, _ 0%, _ 100%)",
-    // neon_blob_gradient_2A: "linear-gradient(0deg, _ 0%, _ 100%)",
-    // neon_blob_gradient_2B: "linear-gradient(0deg, _ 0%, _ 100%)",
-    // neon_blob_gradient_2A: "linear-gradient(0deg, _ 0%, _ 100%)",
-    // neon_blob_gradient_2B: "linear-gradient(0deg, _ 0%, _ 100%)",
-    button_gradient: "linear-gradient(90deg, #324EE7 0%, #667EFF 100%)",
+    button_gradient: "linear-gradient(0deg, #324EE7 0%, #667EFF 100%)",
   },
   typography: {
+    fontFamilyButton: "CustomFont_Button",
     fontFamilyHeader: "CustomFont_H1",
-    fontFamily: "Inter, sans-serif",
+    fontFamily: "Poppins, sans-serif",
     h1: {
       fontSize: "56px",
       fontWeight: 700,
-      lineHeight: 1.2,
-      margin: "0 0 1rem 0",
+      lineHeight: 1.3,
+      margin: "0 0 .5rem 0",
       responsive: {
         lg: {
           fontSize: "96px",
@@ -62,7 +43,7 @@ export const theme = {
       fontSize: "48px",
       fontWeight: 700,
       lineHeight: 1.3,
-      margin: "0 0 1rem 0",
+      margin: "0 0 .5rem 0",
       responsive: {
         lg: {
           fontSize: "64px",
@@ -70,28 +51,79 @@ export const theme = {
       },
     },
     h3: {
-      fontSize: "1.75rem",
+      fontSize: "37.25px",
       fontWeight: 700,
-      lineHeight: 1.4,
-      margin: "0 0 1rem 0",
+      lineHeight: 1.3,
+      margin: "0 0 .5rem 0",
+      responsive: {
+        lg: {
+          fontSize: "52px",
+        },
+      },
     },
     h4: {
-      fontSize: "1.5rem",
+      fontSize: "29px",
       fontWeight: 700,
-      lineHeight: 1.5,
-      margin: "0 0 1rem 0",
+      lineHeight: 1.3,
+      margin: "0 0 .5rem 0",
+      responsive: {
+        lg: {
+          fontSize: "32px",
+        },
+      },
     },
     h5: {
-      fontSize: "1.25rem",
+      fontSize: "22.5px",
       fontWeight: 700,
-      lineHeight: 1.6,
-      margin: "0 0 1rem 0",
+      lineHeight: 1.3,
+      margin: "0 0 .5rem 0",
+      responsive: {
+        lg: {
+          fontSize: "20px",
+        },
+      },
     },
     h6: {
-      fontSize: "1rem",
+      fontSize: "17.5px",
       fontWeight: 700,
-      lineHeight: 1.7,
-      margin: "0 0 1rem 0",
+      lineHeight: 1.3,
+      margin: "0 0 .5rem 0",
+      responsive: {
+        lg: {
+          fontSize: "16px",
+        },
+      },
+    },
+    p: {
+      fontSize: "16px",
+      fontWeight: 500,
+      lineHeight: 1.3,
+      responsive: {
+        lg: {
+          fontSize: "18px",
+        },
+      },
+    },
+    span: {
+      fontSize: "14px",
+      fontWeight: 500,
+      lineHeight: 1.3,
+      responsive: {
+        lg: {
+          fontSize: "16px",
+        },
+      },
+    },
+  },
+  buttons: {
+    contained: {
+      backgroundColor: "primary",
+      color: "text",
+    },
+    outlined: {
+      backgroundColor: "transparent",
+      borderColor: "primary",
+      color: "primary",
     },
   },
   spacing: (factor: number) => `${factor * 8}px`,
