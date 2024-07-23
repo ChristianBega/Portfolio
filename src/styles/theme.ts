@@ -18,11 +18,14 @@ export const theme: DefaultTheme = {
     color_4: "#1A56F0",
     color_5: "#3941FF",
     color_6: "#0038FF",
-    color_7: "#000F43",
-    transparent: "transparent",
+    color_7: "#3D2DF7",
+    color_8: "#000F43",
+    color_9: "#070B1D",
+    transparent: "rgba(0,0,0,0)",
   },
   gradients: {
     button_gradient: "linear-gradient(0deg, #324EE7 0%, #667EFF 100%)",
+    button_gradient_2: "linear-gradient(0deg, #FF073A 0%, #39FF14 100%)",
   },
   typography: {
     fontFamilyButton: "CustomFont_Button",
@@ -117,18 +120,26 @@ export const theme: DefaultTheme = {
   },
   buttons: {
     contained: {
-      backgroundColor: "primary",
+      backgroundColor: "warning",
+      backgroundColorHover: "transparent",
+      borderColor: "transparent",
+      borderColorHover: "primary",
       color: "text",
     },
     outlined: {
-      backgroundColor: "transparent",
+      backgroundColor: "color_9",
+      backgroundColorHover: "primary",
       borderColor: "primary",
+      borderColorHover: "transparent",
       color: "primary",
     },
   },
   spacing: (factor: number) => `${factor * 8}px`,
   border: {},
-  shadows: {},
+  shadows: {
+    button_shadow:
+      "0 0 19px 9px rgba(61, 45, 247, 0.1), 0 0 46.85px 0 rgba(49, 45, 247, 0.1), 0 0 25.48px 0 rgba(49, 45, 247, 0.1), 0 0 13px 0 rgba(73, 45, 247, 0.1), 0 0 6.52px 0 rgba(45, 41, 247, 0.1), 0 0 3.15px 0 rgba(45, 41, 247, 0.1);",
+  },
   breakpoints: {
     xs: "480px",
     sm: "768px",

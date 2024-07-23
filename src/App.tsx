@@ -14,23 +14,12 @@ const App: React.FC = () => {
       <Typography as="p">This is a paragraph.</Typography>
       <Typography as="span">This is a span.</Typography>
       <div style={{ marginTop: "2rem" }}>
-        <Button variant="contained" backgroundGradient="button_gradient" size="lg">
-          Contact Me
-        </Button>
-        <Button variant="outlined" backgroundGradient="button_gradient" size="lg">
-          Contact Me
-        </Button>
         <Button variant="outlined" size="sm">
           Let's Talk
         </Button>
-        <Button variant="contained" size="md">
-          View Project
-        </Button>
-        <Button variant="contained" backgroundColor="warning" borderColor="warning" size="md">
-          Test_1
-        </Button>
-        <Button variant="outlined" backgroundColor="warning" borderColor="warning" size="md">
-          Test_2
+        <div style={{ marginTop: "2rem", display: "flex", gap: "2rem" }}></div>
+        <Button variant="contained" size="lg">
+          Contact Me
         </Button>
       </div>
     </>
