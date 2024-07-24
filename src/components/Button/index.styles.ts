@@ -3,6 +3,9 @@ import { getButtonStyles } from "./getButtonStyles";
 import { ButtonProps } from "./types";
 
 const buttonStyles = css<ButtonProps>`
+  display: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "flex" : "inline-block")};
+  align-items: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "center" : "initial")};
+  justify-content: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "center" : "initial")};
   border: none;
   background: none;
   position: relative;
@@ -39,7 +42,7 @@ const buttonStyles = css<ButtonProps>`
         : `linear-gradient(0deg, ${getButtonStyles(props).background} 0%, ${getButtonStyles(props).background} 100%)`};
     opacity: 1;
   }
-  
+
   &::after {
     border: ${(props) => (props.variant === "outlined" ? "none" : `1px solid ${getButtonStyles(props).borderHover}`)};
     background-image: ${(props) =>
