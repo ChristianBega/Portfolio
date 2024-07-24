@@ -1,36 +1,27 @@
 import React from "react";
 import Typography from "./components/Typography/typography";
 import Button from "./components/Button/button";
+import { FaLocationArrow } from "react-icons/fa6";
+import { FaCircleArrowRight } from "react-icons/fa6";
 
 const App: React.FC = () => {
   return (
     <>
-      <Typography as="h1">Heading 1</Typography>
-      <Typography as="h2">Heading 2</Typography>
-      <Typography as="h3">Heading 3</Typography>
-      <Typography as="h4">Heading 4</Typography>
-      <Typography as="h5">Heading 5</Typography>
-      <Typography as="h6">Heading 6</Typography>
-      <Typography as="p">This is a paragraph.</Typography>
-      <Typography as="span">This is a span.</Typography>
+      <Typography component="h1">Heading 1</Typography>
+      <Typography component="h2">Heading 2</Typography>
+      <Typography component="h3">Heading 3</Typography>
+      <Typography component="h4">Heading 4</Typography>
+      <Typography component="h5">Heading 5</Typography>
+      <Typography component="h6">Heading 6</Typography>
+      <Typography component="p">This is a paragraph.</Typography>
+      <Typography component="span">This is a span.</Typography>
       <div style={{ marginTop: "2rem" }}>
-        <Button variant="contained" backgroundGradient="button_gradient" size="lg">
-          Contact Me
-        </Button>
-        <Button variant="outlined" backgroundGradient="button_gradient" size="lg">
-          Contact Me
-        </Button>
-        <Button variant="outlined" size="sm">
+        <Button variant="outlined" size="sm" iconEnd={<FaCircleArrowRight />}>
           Let's Talk
         </Button>
-        <Button variant="contained" size="md">
-          View Project
-        </Button>
-        <Button variant="contained" backgroundColor="warning" borderColor="warning" size="md">
-          Test_1
-        </Button>
-        <Button variant="outlined" backgroundColor="warning" borderColor="warning" size="md">
-          Test_2
+        <div style={{ marginTop: "2rem", display: "flex", gap: "2rem" }}></div>
+        <Button variant="contained" size="lg" iconStart={<FaLocationArrow />} iconEnd={<FaLocationArrow />}>
+          Contact Me
         </Button>
       </div>
     </>

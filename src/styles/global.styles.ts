@@ -32,6 +32,10 @@ body {
   scrollbar-color: transparent transparent;
 }
 
+button {
+  background: none;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
