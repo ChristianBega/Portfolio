@@ -1,111 +1,6 @@
-import styled, { css, DefaultTheme } from "styled-components";
-
-interface ButtonProps {
-  variant: "contained" | "outlined";
-  backgroundColor?: keyof DefaultTheme["colors"];
-  backgroundColorHover?: keyof DefaultTheme["colors"];
-  backgroundGradient?: keyof DefaultTheme["gradients"];
-  backgroundGradientHover?: keyof DefaultTheme["gradients"];
-  textColor?: keyof DefaultTheme["colors"];
-  borderColor?: keyof DefaultTheme["colors"];
-  borderColorHover?: keyof DefaultTheme["colors"];
-  size: "sm" | "md" | "lg";
-}
-
-const getButtonStyles = (props: ButtonProps & { theme: DefaultTheme }) => {
-  const {
-    theme,
-    variant,
-    backgroundColor,
-    textColor,
-    borderColor,
-    backgroundGradient,
-    borderColorHover,
-    backgroundColorHover,
-    backgroundGradientHover,
-  } = props;
-  const defaultStyles = theme.buttons[variant];
-
-  const background = backgroundColor
-    ? theme.colors[backgroundColor]
-    : backgroundGradient
-    ? theme.gradients[backgroundGradient]
-    : theme.colors[defaultStyles.backgroundColor];
-
-  const backgroundHover = backgroundColorHover
-    ? backgroundColorHover
-    : backgroundGradientHover
-    ? theme.gradients[backgroundGradientHover]
-    : theme.colors[defaultStyles.backgroundColorHover];
-
-  const color = textColor ? theme.colors[textColor] : theme.colors[defaultStyles.color];
-
-  const border = borderColor ? theme.colors[borderColor] : theme.colors[defaultStyles.borderColor];
-
-  const borderHover = borderColorHover ? theme.colors[borderColorHover] : theme.colors[defaultStyles.borderColorHover];
-
-  return {
-    background,
-    backgroundHover,
-    color,
-    border,
-    borderHover,
-  };
-};
-
-const buttonStyles = css<ButtonProps>`
-  border: none;
-  background: none;
-  position: relative;
-  color: ${(props) => getButtonStyles(props).color};
-  padding: ${(props) => (props.size === "sm" ? "10px 14px" : props.size === "md" ? "13px 16px" : "12px 24px")};
-  border-radius: ${(props) => (props.size === "sm" ? "19px" : props.size === "md" ? "12px" : "100px")};
-  font-size: ${(props) => (props.size === "sm" ? "14px" : props.size === "md" ? "16px" : "24px")};
-  cursor: pointer;
-  font-family: ${(props) => props.theme.typography.fontFamilyButton};
-  box-shadow: ${(props) => props.theme.shadows.button_shadow};
-  text-transform: uppercase;
-  line-height: 1;
-  transition: all 1s ease;
-  z-index: 1;
-  
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    transition: opacity 0.5s linear;
-    border-radius: inherit;
-  }
-
-  &::before {
-    border: ${(props) => `1px solid ${getButtonStyles(props).border}`};
-    background-image: ${(props) =>
-      props.backgroundGradient
-        ? getButtonStyles(props).background
-        : `linear-gradient(0deg, ${getButtonStyles(props).background} 0%, ${getButtonStyles(props).background} 100%)`};
-    opacity: 1;
-  }
-  &::after {
-    border: ${(props) => (props.variant === "outlined" ? "none" : `1px solid ${getButtonStyles(props).borderHover}`)};
-    background-image: ${(props) =>
-      props.backgroundGradientHover
-        ? getButtonStyles(props).backgroundHover
-        : `linear-gradient(0deg, ${getButtonStyles(props).backgroundHover} 0%, ${getButtonStyles(props).backgroundHover} 100%)`};
-    opacity: 0;
-  }
-  &:hover::before {
-    opacity: 0;
-  }
-
-  &:hover::after {
-    opacity: 1;
-  }
-`;
+import styled from "styled-components";
+import { ButtonProps } from "./types";
+import buttonStyles from "./index.styles";
 
 const Button = styled.button<ButtonProps>`
   ${buttonStyles}
@@ -114,6 +9,12 @@ const Button = styled.button<ButtonProps>`
 Button.defaultProps = {
   variant: "contained",
   size: "md",
+  // backgroundColor: "",
+  // backgroundColorHover: "",
+  // backgroundGradient: "",
+  // textColor: "",
+  // borderColor: "",
+  // borderColorHover: ""
 };
 
 export default Button;
