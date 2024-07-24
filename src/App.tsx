@@ -5,14 +5,14 @@ import Button from "./components/Button/button";
 const App: React.FC = () => {
   return (
     <>
-      <Typography as="h1">Heading 1</Typography>
-      <Typography as="h2">Heading 2</Typography>
-      <Typography as="h3">Heading 3</Typography>
-      <Typography as="h4">Heading 4</Typography>
-      <Typography as="h5">Heading 5</Typography>
-      <Typography as="h6">Heading 6</Typography>
-      <Typography as="p">This is a paragraph.</Typography>
-      <Typography as="span">This is a span.</Typography>
+      <Typography component="h1">Heading 1</Typography>
+      <Typography component="h2">Heading 2</Typography>
+      <Typography component="h3">Heading 3</Typography>
+      <Typography component="h4">Heading 4</Typography>
+      <Typography component="h5">Heading 5</Typography>
+      <Typography component="h6">Heading 6</Typography>
+      <Typography component="p">This is a paragraph.</Typography>
+      <Typography component="span">This is a span.</Typography>
       <div style={{ marginTop: "2rem" }}>
         <Button variant="outlined" size="sm">
           Let's Talk
