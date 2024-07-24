@@ -22,6 +22,7 @@ export const theme: DefaultTheme = {
     color_8: "#000F43",
     color_9: "#070B1D",
     transparent: "rgba(0,0,0,0)",
+    none: "none",
   },
   gradients: {
     button_gradient: "linear-gradient(0deg, #324EE7 0%, #667EFF 100%)",
@@ -120,8 +121,8 @@ export const theme: DefaultTheme = {
   },
   buttons: {
     contained: {
-      backgroundColor: "warning",
-      backgroundColorHover: "transparent",
+      backgroundColor: "primary",
+      backgroundColorHover: "color_9",
       borderColor: "transparent",
       borderColorHover: "primary",
       color: "text",
@@ -131,7 +132,7 @@ export const theme: DefaultTheme = {
       backgroundColorHover: "primary",
       borderColor: "primary",
       borderColorHover: "transparent",
-      color: "primary",
+      color: "text",
     },
   },
   spacing: (factor: number) => `${factor * 8}px`,

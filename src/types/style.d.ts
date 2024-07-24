@@ -24,6 +24,7 @@ declare module "styled-components" {
       color_8: string;
       color_9: string;
       transparent: string;
+      none: string;
     };
     gradients: {
       button_gradient: string;
@@ -78,9 +79,8 @@ declare module "styled-components" {
   export interface ButtonStyles {
     backgroundColor: keyof DefaultTheme["colors"];
     backgroundColorHover: keyof DefaultTheme["colors"];
-
+    borderColor: keyof DefaultTheme["colors"];
+    borderColorHover: keyof DefaultTheme["colors"];
     color: keyof DefaultTheme["colors"];
-    borderColor?: keyof DefaultTheme["colors"];
-    borderColorHover?: keyof DefaultTheme["colors"];
   }
 }

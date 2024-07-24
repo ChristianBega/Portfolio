@@ -9,7 +9,6 @@ interface ButtonProps {
   textColor?: keyof DefaultTheme["colors"];
   borderColor?: keyof DefaultTheme["colors"];
   borderColorHover?: keyof DefaultTheme["colors"];
-
   size: "sm" | "md" | "lg";
 }
 
@@ -27,14 +26,11 @@ const getButtonStyles = (props: ButtonProps & { theme: DefaultTheme }) => {
   } = props;
   const defaultStyles = theme.buttons[variant];
 
-  const background =
-    variant === "outlined"
-      ? theme.colors["transparent"]
-      : backgroundGradient
-      ? theme.gradients[backgroundGradient]
-      : backgroundColor
-      ? theme.colors[backgroundColor]
-      : theme.colors[defaultStyles.backgroundColor];
+  const background = backgroundColor
+    ? theme.colors[backgroundColor]
+    : backgroundGradient
+    ? theme.gradients[backgroundGradient]
+    : theme.colors[defaultStyles.backgroundColor];
 
   const backgroundHover = backgroundColorHover
     ? backgroundColorHover
@@ -44,19 +40,9 @@ const getButtonStyles = (props: ButtonProps & { theme: DefaultTheme }) => {
 
   const color = textColor ? theme.colors[textColor] : theme.colors[defaultStyles.color];
 
-  const border =
-    variant === "contained"
-      ? theme.colors["transparent"]
-      : borderColor
-      ? theme.colors[borderColor]
-      : theme.colors[defaultStyles.borderColor || "transparent"];
+  const border = borderColor ? theme.colors[borderColor] : theme.colors[defaultStyles.borderColor];
 
-  const borderHover =
-    variant === "outlined"
-      ? theme.colors["transparent"]
-      : borderColorHover
-      ? theme.colors[borderColorHover]
-      : theme.colors[defaultStyles.borderColorHover || "transparent"];
+  const borderHover = borderColorHover ? theme.colors[borderColorHover] : theme.colors[defaultStyles.borderColorHover];
 
   return {
     background,
@@ -82,6 +68,7 @@ const buttonStyles = css<ButtonProps>`
   line-height: 1;
   transition: all 1s ease;
   z-index: 1;
+  
   &::before,
   &::after {
     content: "";
@@ -104,7 +91,7 @@ const buttonStyles = css<ButtonProps>`
     opacity: 1;
   }
   &::after {
-    border: ${(props) => `1px solid ${getButtonStyles(props).borderHover}`};
+    border: ${(props) => (props.variant === "outlined" ? "none" : `1px solid ${getButtonStyles(props).borderHover}`)};
     background-image: ${(props) =>
       props.backgroundGradientHover
         ? getButtonStyles(props).backgroundHover
@@ -126,8 +113,6 @@ const Button = styled.button<ButtonProps>`
 
 Button.defaultProps = {
   variant: "contained",
-  backgroundColor: "primary",
-  textColor: "text",
   size: "md",
 };
 
