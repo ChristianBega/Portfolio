@@ -1,10 +1,11 @@
-import { css } from "styled-components";
+import responsiveTypography from "../../utils/responsiveTypography";
 import { getTypographyStyle } from "./getTypographyStyle";
 import { TypographyProps } from "./types";
-import responsiveTypography from "../../utils/responsiveTypography";
+import { css } from "styled-components";
 
 const typographyStyles = css<TypographyProps>`
-  font-size: ${(props) => getTypographyStyle(props.theme, props.component)?.fontSize};
+  font-size: ${(props) =>
+    props.variant ? props.theme.typography[props.variant].fontSize : getTypographyStyle(props.theme, props.component)?.fontSize};
   font-weight: ${(props) => getTypographyStyle(props.theme, props.component)?.fontWeight};
   line-height: ${(props) => getTypographyStyle(props.theme, props.component)?.lineHeight};
   margin: ${(props) => getTypographyStyle(props.theme, props.component)?.margin};
@@ -13,7 +14,7 @@ const typographyStyles = css<TypographyProps>`
     ["h1", "h2", "h3", "h4", "h5", "h6"].includes(props.component as string)
       ? props.theme.typography.fontFamilyHeader
       : props.theme.typography.fontFamily};
-  ${(props) => responsiveTypography("lg", props.component as keyof JSX.IntrinsicElements)}
+  ${(props) => responsiveTypography("lg", props.component, props.variant)}
 `;
 
 export default typographyStyles;

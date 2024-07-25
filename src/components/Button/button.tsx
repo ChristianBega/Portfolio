@@ -13,7 +13,9 @@ const Button: React.FC<ButtonProps> = ({ iconStart, iconEnd, children, ...props 
     <StyledButton {...props}>
       <div style={{ display: "flex", alignItems: "center", gap: ".5rem" }}>
         {iconStart && <span>{iconStart}</span>}
-        <Typography component="p">{children}</Typography>
+        <Typography component="p" variant="button_text">
+          {children}
+        </Typography>
         {iconEnd && <span>{iconEnd}</span>}
       </div>
     </StyledButton>

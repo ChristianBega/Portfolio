@@ -118,6 +118,16 @@ export const theme: DefaultTheme = {
         },
       },
     },
+    button_text: {
+      fontSize: "14px",
+      fontWeight: 500,
+      lineHeight: 1.3,
+      responsive: {
+        lg: {
+          fontSize: "14px",
+        },
+      },
+    },
   },
   buttons: {
     contained: {

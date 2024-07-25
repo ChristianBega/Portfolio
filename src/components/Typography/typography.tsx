@@ -6,9 +6,9 @@ const StyledTypography = styled.div<TypographyProps>`
   ${typographyStyles}
 `;
 
-const Typography: React.FC<TypographyProps> = ({ component, children, ...props }) => {
+const Typography: React.FC<TypographyProps> = ({ component, variant, children, ...props }) => {
   return (
-    <StyledTypography component={component} {...props}>
+    <StyledTypography component={component} variant={variant} {...props}>
       {children}
     </StyledTypography>
   );
