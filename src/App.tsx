@@ -26,8 +26,8 @@ const App: React.FC = () => {
         <Button
           variant="contained"
           size="lg"
-          iconStart={<Icon src="arrow-icon.svg" alt="Example Icon" />}
-          iconEnd={<Icon src="arrow-icon.svg" alt="Example Icon" />}
+          // iconStart={<Icon src="arrow-icon.svg" alt="Example Icon" />}
+          // iconEnd={<Icon src="arrow-icon.svg" alt="Example Icon" />}
         >
           Contact Me
         </Button>

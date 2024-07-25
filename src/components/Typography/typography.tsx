@@ -6,16 +6,12 @@ const StyledTypography = styled.div<TypographyProps>`
   ${typographyStyles}
 `;
 
-const Typography: React.FC<TypographyProps> = ({ component, variant, children, ...props }) => {
+const Typography: React.FC<TypographyProps> = ({ component = "p", variant, children, ...props }) => {
   return (
     <StyledTypography component={component} variant={variant} {...props}>
       {children}
     </StyledTypography>
   );
-};
-
-Typography.defaultProps = {
-  component: "p",
 };
 
 export default Typography;

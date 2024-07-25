@@ -1,5 +1,5 @@
 import { css, DefaultTheme, TypographyStyle } from "styled-components";
-import { TypographyProps } from "../components/Typography/types"; // Adjust the import path based on your project structure
+import { TypographyProps } from "../components/Typography/types";
 
 const responsiveTypography = (
   breakpoint: keyof DefaultTheme["breakpoints"],
