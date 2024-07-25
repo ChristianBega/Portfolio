@@ -43,6 +43,7 @@ declare module "styled-components" {
       h6: TypographyStyle;
       p: TypographyStyle;
       span: TypographyStyle;
+      button_text: TypographyStyle;
     };
     buttons: {
       contained: ButtonStyles;

@@ -8,27 +8,33 @@ const StyledButton = styled.button<ButtonProps>`
   ${buttonStyles}
 `;
 
-const Button: React.FC<ButtonProps> = ({ iconStart, iconEnd, children, ...props }) => {
+const Button: React.FC<ButtonProps> = ({
+  variant = "contained",
+  size = "md",
+  // backgroundColor = "",
+  // backgroundColorHover = "",
+  // backgroundGradient = "",
+  // textColor = "",
+  // borderColor = "",
+  // borderColorHover = "",
+  iconStart,
+  iconEnd,
+  children,
+  ...props
+}) => {
   return (
-    <StyledButton {...props}>
+    <StyledButton variant={variant} size={size} {...props}>
       <div style={{ display: "flex", alignItems: "center", gap: ".5rem" }}>
         {iconStart && <span>{iconStart}</span>}
-        <Typography component="p">{children}</Typography>
+        <Typography component="p" variant="button_text">
+          {children}
+        </Typography>
         {iconEnd && <span>{iconEnd}</span>}
       </div>
     </StyledButton>
   );
 };
 
-Button.defaultProps = {
-  variant: "contained",
-  size: "md",
-  // backgroundColor: "",
-  // backgroundColorHover: "",
-  // backgroundGradient: "",
-  // textColor: "",
-  // borderColor: "",
-  // borderColorHover: ""
-};
+// Removed defaultProps
 
 export default Button;

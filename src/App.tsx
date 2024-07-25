@@ -1,8 +1,7 @@
 import React from "react";
 import Typography from "./components/Typography/typography";
 import Button from "./components/Button/button";
-import { FaLocationArrow } from "react-icons/fa6";
-import { FaCircleArrowRight } from "react-icons/fa6";
+import Icon from "./components/Icon/icon";
 
 const App: React.FC = () => {
   return (
@@ -15,12 +14,21 @@ const App: React.FC = () => {
       <Typography component="h6">Heading 6</Typography>
       <Typography component="p">This is a paragraph.</Typography>
       <Typography component="span">This is a span.</Typography>
+      <Typography component="p" variant="button_text">
+        button text
+      </Typography>
+
       <div style={{ marginTop: "2rem" }}>
-        <Button variant="outlined" size="sm" iconEnd={<FaCircleArrowRight />}>
+        <Button variant="outlined" size="sm" iconEnd={<Icon src="arrow-icon.svg" alt="Example Icon" />}>
           Let's Talk
         </Button>
         <div style={{ marginTop: "2rem", display: "flex", gap: "2rem" }}></div>
-        <Button variant="contained" size="lg" iconStart={<FaLocationArrow />} iconEnd={<FaLocationArrow />}>
+        <Button
+          variant="contained"
+          size="lg"
+          // iconStart={<Icon src="arrow-icon.svg" alt="Example Icon" />}
+          // iconEnd={<Icon src="arrow-icon.svg" alt="Example Icon" />}
+        >
           Contact Me
         </Button>
       </div>
