@@ -3,29 +3,10 @@ import Icon from "../../components/Icon/icon";
 import Typography from "../../components/Typography/typography.tsx";
 import { StyledNavigation, StyledNavigationBar, StyledNavigationContainer, StyledNavigationWrapper } from "./index.styles.tsx";
 import NavigationMenuList from "./components/navigationMenuList/navigationMenuList.tsx";
-
-const navigationVariants = {
-  closed: {
-    height: "60px",
-    borderRadius: "100px",
-    transition: {
-      ease: "easeInOut",
-      duration: 0.5,
-      delay: 0.5,
-    },
-  },
-  open: {
-    borderRadius: "24px",
-    height: "304px",
-    transition: {
-      ease: "easeInOut",
-      duration: 0.5,
-    },
-  },
-};
+import { navigationVariants } from "./animations/navigationAnimations.ts";
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
