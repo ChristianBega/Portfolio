@@ -8,7 +8,7 @@ const StyledTypography = styled.div<TypographyProps>`
 
 const Typography: React.FC<TypographyProps> = ({ component = "p", variant, children, ...props }) => {
   return (
-    <StyledTypography component={component} variant={variant} {...props}>
+    <StyledTypography as={component} component={component} variant={variant} {...props}>
       {children}
     </StyledTypography>
   );

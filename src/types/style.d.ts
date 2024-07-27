@@ -14,6 +14,7 @@ declare module "styled-components" {
       warning: string;
       error: string;
       info: string;
+      color_light: string;
       color_1: string;
       color_2: string;
       color_3: string;
@@ -44,6 +45,7 @@ declare module "styled-components" {
       p: TypographyStyle;
       span: TypographyStyle;
       button_text: TypographyStyle;
+      navigation_text: TypographyStyle;
     };
     buttons: {
       contained: ButtonStyles;
@@ -69,6 +71,9 @@ declare module "styled-components" {
     fontWeight: number;
     lineHeight: number;
     margin?: string;
+    textTransform?: string;
+    letterSpacing?: number;
+    fontFamily?: string;
     responsive?: {
       [key in keyof DefaultTheme["breakpoints"]]?: {
         fontSize: string;

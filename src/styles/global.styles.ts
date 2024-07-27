@@ -19,32 +19,29 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
 }
-
 html {
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
+  scrollbar-width: none;  
+  -ms-overflow-style: none;  
 }
 
 body {
   background-color: ${theme.colors.background};
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
+  overflow: scroll;  
 }
 
 button {
   background: none;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
+body::-webkit-scrollbar {
+  display: none; 
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
 
-::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   background-color: transparent;
 }
 `;
