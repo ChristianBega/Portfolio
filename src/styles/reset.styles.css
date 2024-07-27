@@ -40,6 +40,9 @@ body {
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
 }
 
 /* A elements that don't have a class get default styles */

@@ -19,25 +19,17 @@ export const StyledNavigation = styled(motion.nav)`
 `;
 
 export const StyledNavigationContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
   width: 100%;
 `;
 
 export const StyledNavigationBar = styled.div`
   display: flex;
-  align-items: center;
   width: 100%;
+  max-height: 60px;
+  align-items: center;
   justify-content: space-between;
+  z-index: 1;
 `;
 
-// move to nav list component
-
-export const StyledNavigationMenuList = styled(motion.ul)`
-  color: #fff;
-`;
-export const StyledNavigationMenuListItem = styled(motion.li)`
-  color: #fff;
-`;
