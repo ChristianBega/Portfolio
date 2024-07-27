@@ -16,12 +16,13 @@ export const StyledNavigation = styled(motion.nav)`
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  max-height: 361px;
 `;
 
 export const StyledNavigationContainer = styled.div`
-  /* display: flex; */
-  /* flex-wrap: wrap; */
   width: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const StyledNavigationBar = styled.div`
@@ -32,4 +33,3 @@ export const StyledNavigationBar = styled.div`
   justify-content: space-between;
   z-index: 1;
 `;
-

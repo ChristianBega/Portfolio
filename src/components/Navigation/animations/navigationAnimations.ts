@@ -12,7 +12,7 @@ export const navigationVariants: Variants = {
   },
   open: {
     borderRadius: "24px",
-    height: "304px",
+    height: "350px",
     transition: {
       ease: "easeInOut",
       duration: 0.5,

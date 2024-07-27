@@ -15,6 +15,9 @@ const App: React.FC = () => {
       <Typography component="h5">Heading 5</Typography>
       <Typography component="h6">Heading 6</Typography>
       <Typography component="p">This is a paragraph.</Typography>
+      <Typography component="p" variant="navigation_text" iconEnd={<Icon src="arrow-icon.svg" alt="Example Icon" />}>
+        This is a paragraph.
+      </Typography>
       <Typography component="span">This is a span.</Typography>
       <Typography component="p" variant="button_text">
         button text
