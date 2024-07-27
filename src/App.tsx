@@ -2,10 +2,12 @@ import React from "react";
 import Typography from "./components/Typography/typography";
 import Button from "./components/Button/button";
 import Icon from "./components/Icon/icon";
+import Navigation from "./components/Navigation/navigation";
 
 const App: React.FC = () => {
   return (
     <>
+      <Navigation />
       <Typography component="h1">Heading 1</Typography>
       <Typography component="h2">Heading 2</Typography>
       <Typography component="h3">Heading 3</Typography>
@@ -17,7 +19,6 @@ const App: React.FC = () => {
       <Typography component="p" variant="button_text">
         button text
       </Typography>
-
       <div style={{ marginTop: "2rem" }}>
         <Button variant="outlined" size="sm" iconEnd={<Icon src="arrow-icon.svg" alt="Example Icon" />}>
           Let's Talk

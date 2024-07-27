@@ -12,6 +12,7 @@ export const theme: DefaultTheme = {
     warning: "#FFD700",
     error: "#FF073A",
     info: "#0CF",
+    color_light: "rgba(255,255,255, 0.1)",
     color_1: "#667EFF",
     color_2: "#324EE7",
     color_3: "#415DEF",
@@ -125,6 +126,19 @@ export const theme: DefaultTheme = {
       responsive: {
         lg: {
           fontSize: "14px",
+        },
+      },
+    },
+    navigation_text: {
+      fontFamily: "CustomFont_Button",
+      fontSize: "16px",
+      letterSpacing: 1.2,
+      textTransform: "uppercase",
+      fontWeight: 500,
+      lineHeight: 1.3,
+      responsive: {
+        lg: {
+          fontSize: "16px",
         },
       },
     },
