@@ -28,6 +28,7 @@ export const theme: DefaultTheme = {
   gradients: {
     button_gradient: "linear-gradient(0deg, #324EE7 0%, #667EFF 100%)",
     button_gradient_2: "linear-gradient(0deg, #FF073A 0%, #39FF14 100%)",
+    link_hover_gradient: "linear-gradient(to-top, rgba(255,255,255, 0) 0%, rgba(255,255,255, 1) 100%)",
   },
   typography: {
     fontFamilyButton: "CustomFont_Button",
@@ -136,6 +137,10 @@ export const theme: DefaultTheme = {
       textTransform: "uppercase",
       fontWeight: 500,
       lineHeight: 1.3,
+      borderBottomHover: "1px solid #fff",
+      paddingHover: "12px",
+      backgroundHover: "linear-gradient(180deg, rgba(255,255,255, .01) 0%, rgba(255,255,255, .1) 90%)",
+      display: "inline",
       responsive: {
         lg: {
           fontSize: "16px",

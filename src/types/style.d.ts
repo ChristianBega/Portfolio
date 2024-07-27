@@ -30,6 +30,7 @@ declare module "styled-components" {
     gradients: {
       button_gradient: string;
       button_gradient_2: string;
+      link_hover_gradient: string;
     };
 
     typography: {
@@ -74,6 +75,10 @@ declare module "styled-components" {
     textTransform?: string;
     letterSpacing?: number;
     fontFamily?: string;
+    borderBottomHover?: string;
+    display?: string;
+    paddingHover?: string;
+    backgroundHover?: string;
     responsive?: {
       [key in keyof DefaultTheme["breakpoints"]]?: {
         fontSize: string;
