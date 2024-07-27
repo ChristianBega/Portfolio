@@ -3,6 +3,7 @@ import { StyledNavigationMenuList, StyledNavigationMenuListItem } from "./index.
 import Typography from "../../../../components/Typography/typography";
 import { MenuListItemProps, NavigationMenuListProps } from "./types";
 import { navigationLinkVariants } from "../../animations/navigationMenuList";
+import Icon from "../../../../components/Icon/icon";
 
 const menuListItems: MenuListItemProps[] = [
   { label: "Home", path: "" },
@@ -22,7 +23,7 @@ const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen }) => {
     >
       {menuListItems.map(({ path, label }, index) => (
         <StyledNavigationMenuListItem variants={navigationLinkVariants} key={index}>
-          <Typography component="p" variant="navigation_text">
+          <Typography component="p" variant="navigation_text" iconEnd={<Icon src="arrow-icon.svg" alt="Example Icon" size="12px" />}>
             {label}
           </Typography>
         </StyledNavigationMenuListItem>

@@ -5,11 +5,13 @@ export const StyledNavigationMenuList = styled(motion.ul)`
   color: #fff;
   width: 100%;
   height: 100%;
+  padding-top: 2rem;
 `;
 export const StyledNavigationMenuListItem = styled(motion.li)`
   color: #fff;
-  text-align: center;
   width: 100%;
   list-style: none;
-  margin-top: 2rem;
+  &:not(:first-child) {
+    margin-top: 2.5rem;
+  }
 `;
