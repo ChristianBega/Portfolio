@@ -21,9 +21,13 @@ const typographyStyles = css<TypographyProps>`
       ? props.theme.typography[props.variant].fontFamily
       : props.theme.typography.fontFamily};
   ${(props) => responsiveTypography("lg", props.component, props.variant)};
+  transition: background-image 0.6s ease-in-out, color 0.3s ease-in-out, border-bottom 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  border-bottom: 1px solid ${(props) => props.theme.colors.transparent};
+  background-image: ${(props) => props.theme.colors.transparent};
   &:hover {
-    border-bottom: ${(props) => (props.variant ? `${props.theme.typography[props.variant].borderBottomHover}` : "none")};
-    padding: ${(props) => (props.variant ? `${props.theme.typography[props.variant].paddingHover}` : "none")};
+    text-shadow: ${(props) => (props.variant ? `${props.theme.typography[props.variant].textShadowHover}` : "none")};
+    border-bottom: ${(props) =>
+      props.variant ? `${props.theme.typography[props.variant].borderBottomHover}` : `1px solid ${props.theme.colors.transparent}`};
     background-image: ${(props) => (props.variant ? props.theme.typography[props.variant].backgroundHover : "none")};
     color: ${(props) => (props.variant ? props.theme.typography[props.variant].colorHover : props.theme.colors.text)};
     img {
@@ -33,4 +37,3 @@ const typographyStyles = css<TypographyProps>`
 `;
 
 export default typographyStyles;
-//  display: "flex", alignItems: "center", gap: ".5rem", justifyContent: variant === "link_text" ? "center" : "none"

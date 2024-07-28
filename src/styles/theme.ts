@@ -161,11 +161,7 @@ export const theme: DefaultTheme = {
       lineHeight: 1.3,
       color: "#fff",
       cursor: "pointer",
-
-      // borderBottomHover: "1px solid #fff",
-      // paddingHover: "12px",
-      // backgroundHover: "linear-gradient(180deg, rgba(255,255,255, .01) 0%, rgba(255,255,255, .1) 90%)",
-      // display: "inline",
+      textShadowHover: "1px 1px 8px #fff",
       responsive: {
         lg: {
           fontSize: "16px",

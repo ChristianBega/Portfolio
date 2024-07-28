@@ -83,6 +83,7 @@ declare module "styled-components" {
     backgroundHover?: string;
     color?: string;
     colorHover?: string;
+    textShadowHover?: string;
     cursor?: string;
     responsive?: {
       [key in keyof DefaultTheme["breakpoints"]]?: {
