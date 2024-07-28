@@ -4,9 +4,12 @@ import Typography from "../../components/Typography/typography.tsx";
 import { StyledNavigation, StyledNavigationBar, StyledNavigationContainer, StyledNavigationWrapper } from "./index.styles.tsx";
 import NavigationMenuList from "./components/navigationMenuList/navigationMenuList.tsx";
 import { navigationVariants } from "./animations/navigationAnimations.ts";
+import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries.tsx";
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const { isMd } = useMediaQueries();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -17,9 +20,13 @@ const Navigation: React.FC = () => {
       <StyledNavigation id="navigation" initial="closed" animate={isOpen ? "open" : "closed"} variants={navigationVariants}>
         <StyledNavigationContainer id="navigation-container">
           <StyledNavigationBar id="navigation-bar">
-            <Typography component="p" variant="logo_text">
-              Christian Bega
-            </Typography>
+            {isMd ? (
+              <Typography component="p" variant="logo_text">
+                Christian Bega
+              </Typography>
+            ) : (
+              <>hello world</>
+            )}
             <Icon id="menu-icon" onClick={toggleDropdown} src={isOpen ? "close-icon.svg" : "menu.svg"} alt="Navigation menu icon" size="32px" />
           </StyledNavigationBar>
           <NavigationMenuList isOpen={isOpen} />
