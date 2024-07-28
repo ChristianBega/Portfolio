@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { theme } from "../../styles/theme";
 import { motion } from "framer-motion";
 import { StyledNavigationProps } from "./types";
 
@@ -9,7 +8,7 @@ export const StyledNavigationWrapper = styled.div`
   padding: 1rem;
 `;
 
-export const StyledNavigation = styled(motion.nav)`
+export const StyledNavigation = styled(motion.nav)<StyledNavigationProps>`
   display: flex;
   justify-content: space-between;
   padding: 16px 20px;
@@ -17,8 +16,13 @@ export const StyledNavigation = styled(motion.nav)`
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  min-height: 78px;
+  min-height: 60px;
   max-height: 361px;
+  ${({ isMd }) =>
+    isMd &&
+    `
+    min-height: 78px;
+      `}
 `;
 
 export const StyledNavigationContainer = styled.div`

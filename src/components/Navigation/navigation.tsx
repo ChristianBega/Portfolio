@@ -22,13 +22,13 @@ const Navigation: React.FC = () => {
       setIsOpen(false);
     }
   }, [isMd]);
-  
+
   return (
     <StyledNavigationWrapper id="navigation-wrapper">
-      <StyledNavigation id="navigation" initial="closed" animate={isOpen ? "open" : "closed"} variants={navigationVariants}>
+      <StyledNavigation isMd={isMd} id="navigation" initial="closed" animate={isOpen ? "open" : "closed"} variants={navigationVariants}>
         <StyledNavigationContainer id="navigation-container">
           <StyledNavigationBar id="navigation-bar">
-            <Typography  component="a" variant="logo_text">
+            <Typography component="a" variant="logo_text">
               Christian Bega
             </Typography>
             {isMd && <NavigationMenuList isOpen={isOpen} />}

@@ -9,5 +9,8 @@ export const StyledIcon = styled.img<IconProps>`
     cta &&
     `
     cursor : pointer;
-      `}
+    &:hover {
+    transform : scale(1.1)
+    }
+      `};
 `;
