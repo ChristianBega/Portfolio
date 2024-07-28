@@ -22,6 +22,7 @@ const Navigation: React.FC = () => {
       setIsOpen(false);
     }
   }, [isMd]);
+  
   return (
     <StyledNavigationWrapper id="navigation-wrapper">
       <StyledNavigation id="navigation" initial="closed" animate={isOpen ? "open" : "closed"} variants={navigationVariants}>
