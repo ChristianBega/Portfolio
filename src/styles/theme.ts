@@ -133,7 +133,7 @@ export const theme: DefaultTheme = {
     },
     link_text: {
       fontFamily: "CustomFont_Button",
-      fontSize: "16px",
+      fontSize: "14px",
       color: "#E9DEFF",
       letterSpacing: 1.2,
       textTransform: "uppercase",
@@ -146,7 +146,7 @@ export const theme: DefaultTheme = {
       display: "inline",
       responsive: {
         lg: {
-          fontSize: "16px",
+          fontSize: "14px",
         },
       },
     },
