@@ -29,7 +29,12 @@ const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen }) => {
         >
           {menuListItems.map(({ path, label }, index) => (
             <StyledNavigationMenuListItem isMd={isMd} variants={navigationLinkVariants} key={index}>
-              <Typography component="p" variant="link_text" iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" size="12px" />}>
+              <Typography
+                component="a"
+                route={path}
+                variant="link_text"
+                iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" size="12px" />}
+              >
                 {label}
               </Typography>
             </StyledNavigationMenuListItem>
@@ -45,7 +50,12 @@ const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen }) => {
         >
           {menuListItems.map(({ path, label }, index) => (
             <StyledNavigationMenuListItem variants={navigationLinkVariants} key={index} isMd={isMd}>
-              <Typography component="p" variant="link_text" iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" size="12px" />}>
+              <Typography
+                component="a"
+                route={path}
+                variant="link_text"
+                iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" size="12px" />}
+              >
                 {label}
               </Typography>
             </StyledNavigationMenuListItem>

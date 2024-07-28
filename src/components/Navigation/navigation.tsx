@@ -27,7 +27,7 @@ const Navigation: React.FC = () => {
       <StyledNavigation id="navigation" initial="closed" animate={isOpen ? "open" : "closed"} variants={navigationVariants}>
         <StyledNavigationContainer id="navigation-container">
           <StyledNavigationBar id="navigation-bar">
-            <Typography component="p" variant="logo_text">
+            <Typography component="a" variant="logo_text">
               Christian Bega
             </Typography>
             {isMd && <NavigationMenuList isOpen={isOpen} />}
