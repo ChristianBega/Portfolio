@@ -4,6 +4,7 @@ import { TypographyProps } from "./types";
 import { css } from "styled-components";
 
 const typographyStyles = css<TypographyProps>`
+  cursor: ${(props) => (props.variant ? props.theme.typography[props.variant].cursor : "default")};
   font-size: ${(props) =>
     props.variant ? props.theme.typography[props.variant].fontSize : getTypographyStyle(props.theme, props.component)?.fontSize};
   text-transform: ${(props) => (props.variant ? props.theme.typography[props.variant].textTransform : "")};
@@ -25,7 +26,6 @@ const typographyStyles = css<TypographyProps>`
     padding: ${(props) => (props.variant ? `${props.theme.typography[props.variant].paddingHover}` : "none")};
     background-image: ${(props) => (props.variant ? props.theme.typography[props.variant].backgroundHover : "none")};
     color: ${(props) => (props.variant ? props.theme.typography[props.variant].colorHover : props.theme.colors.text)};
-
     img {
       filter: saturate(0);
     }

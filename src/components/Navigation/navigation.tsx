@@ -36,7 +36,14 @@ const Navigation: React.FC = () => {
                 Let's Talk
               </Button>
             ) : (
-              <Icon id="menu-icon" onClick={toggleDropdown} src={isOpen ? "close-icon.svg" : "menu.svg"} alt="Navigation menu icon" size="32px" />
+              <Icon
+                cta={true}
+                id="menu-icon"
+                onClick={toggleDropdown}
+                src={isOpen ? "close-icon.svg" : "menu.svg"}
+                alt="Navigation menu icon"
+                size="32px"
+              />
             )}
           </StyledNavigationBar>
           {!isMd && <NavigationMenuList isOpen={isOpen} />}

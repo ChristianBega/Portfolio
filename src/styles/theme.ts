@@ -139,6 +139,8 @@ export const theme: DefaultTheme = {
       textTransform: "uppercase",
       fontWeight: 500,
       lineHeight: 1.3,
+      cursor: "pointer",
+
       borderBottomHover: "1px solid #fff",
       paddingHover: "12px",
       backgroundHover: "linear-gradient(180deg, rgba(255,255,255, .01) 0%, rgba(255,255,255, .1) 90%)",
@@ -158,6 +160,7 @@ export const theme: DefaultTheme = {
       fontWeight: 500,
       lineHeight: 1.3,
       color: "#fff",
+      cursor: "pointer",
 
       // borderBottomHover: "1px solid #fff",
       // paddingHover: "12px",
