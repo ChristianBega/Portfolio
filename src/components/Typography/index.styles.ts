@@ -25,6 +25,10 @@ const typographyStyles = css<TypographyProps>`
     padding: ${(props) => (props.variant ? `${props.theme.typography[props.variant].paddingHover}` : "none")};
     background-image: ${(props) => (props.variant ? props.theme.typography[props.variant].backgroundHover : "none")};
     color: ${(props) => (props.variant ? props.theme.typography[props.variant].colorHover : props.theme.colors.text)};
+
+    img {
+      filter: saturate(0);
+    }
   }
 `;
 

@@ -3,7 +3,9 @@ import { Variants } from "framer-motion";
 export const navigationVariants: Variants = {
   closed: {
     height: "60px",
-    borderRadius: "100px",
+    borderRadius: "44px",
+
+    // borderRadius: "100px",
     transition: {
       ease: "easeInOut",
       duration: 0.5,
@@ -11,7 +13,7 @@ export const navigationVariants: Variants = {
     },
   },
   open: {
-    borderRadius: "24px",
+    borderRadius: "34px",
     height: "350px",
     transition: {
       ease: "easeInOut",

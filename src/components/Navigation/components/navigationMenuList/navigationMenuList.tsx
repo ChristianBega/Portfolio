@@ -8,7 +8,7 @@ import Icon from "../../../../components/Icon/icon";
 const menuListItems: MenuListItemProps[] = [
   { label: "Home", path: "" },
   { label: "About", path: "" },
-  { label: "Services", path: "" },
+  { label: "Projects", path: "" },
   { label: "Contact", path: "" },
 ];
 
