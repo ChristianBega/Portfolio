@@ -130,7 +130,7 @@ export const theme: DefaultTheme = {
         },
       },
     },
-    navigation_text: {
+    link_text: {
       fontFamily: "CustomFont_Button",
       fontSize: "16px",
       letterSpacing: 1.2,
@@ -141,6 +141,23 @@ export const theme: DefaultTheme = {
       paddingHover: "12px",
       backgroundHover: "linear-gradient(180deg, rgba(255,255,255, .01) 0%, rgba(255,255,255, .1) 90%)",
       display: "inline",
+      responsive: {
+        lg: {
+          fontSize: "16px",
+        },
+      },
+    },
+    logo_text: {
+      fontFamily: "CustomFont_Button",
+      fontSize: "16px",
+      letterSpacing: 1.2,
+      textTransform: "uppercase",
+      fontWeight: 500,
+      lineHeight: 1.3,
+      // borderBottomHover: "1px solid #fff",
+      // paddingHover: "12px",
+      // backgroundHover: "linear-gradient(180deg, rgba(255,255,255, .01) 0%, rgba(255,255,255, .1) 90%)",
+      // display: "inline",
       responsive: {
         lg: {
           fontSize: "16px",

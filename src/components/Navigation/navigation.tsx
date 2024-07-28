@@ -17,7 +17,7 @@ const Navigation: React.FC = () => {
       <StyledNavigation id="navigation" initial="closed" animate={isOpen ? "open" : "closed"} variants={navigationVariants}>
         <StyledNavigationContainer id="navigation-container">
           <StyledNavigationBar id="navigation-bar">
-            <Typography component="p" variant="navigation_text">
+            <Typography component="p" variant="logo_text">
               Christian Bega
             </Typography>
             <Icon id="menu-icon" onClick={toggleDropdown} src={isOpen ? "close-icon.svg" : "menu.svg"} alt="Navigation menu icon" size="32px" />

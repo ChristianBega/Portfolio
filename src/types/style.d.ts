@@ -46,7 +46,8 @@ declare module "styled-components" {
       p: TypographyStyle;
       span: TypographyStyle;
       button_text: TypographyStyle;
-      navigation_text: TypographyStyle;
+      link_text: TypographyStyle;
+      logo_text: TypographyStyle;
     };
     buttons: {
       contained: ButtonStyles;
