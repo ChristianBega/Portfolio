@@ -12,7 +12,7 @@ const Typography: React.FC<TypographyProps> = ({ component = "p", variant, iconS
       {/* <div style={{ display: "flex", alignItems: "center", gap: ".5rem", justifyContent: variant === "link_text" ? "center" : "none" }}> */}
       {iconStart && <span>{iconStart}</span>}
       {children}
-      {iconEnd && <span>{iconEnd}</span>}
+      {iconEnd && <span style={{ marginLeft: ".5rem" }}>{iconEnd}</span>}
       {/* </div> */}
     </StyledTypography>
   );

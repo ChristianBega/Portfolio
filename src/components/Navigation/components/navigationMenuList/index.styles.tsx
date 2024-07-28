@@ -11,7 +11,9 @@ export const StyledNavigationMenuListItem = styled(motion.li)`
   color: #fff;
   width: 100%;
   list-style: none;
+  display: flex !important;
+  justify-content: center;
   &:not(:first-child) {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
   }
 `;

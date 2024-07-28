@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <Typography component="h5">Heading 5</Typography>
       <Typography component="h6">Heading 6</Typography>
       <Typography component="p">This is a paragraph.</Typography>
-      <Typography component="p" variant="link_text" iconEnd={<Icon src="arrow-icon.svg" alt="Example Icon" />}>
+      <Typography component="p" variant="link_text" iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" />}>
         This is a paragraph.
       </Typography>
       <Typography component="span">This is a span.</Typography>
@@ -23,15 +23,15 @@ const App: React.FC = () => {
         button text
       </Typography>
       <div style={{ marginTop: "2rem" }}>
-        <Button variant="outlined" size="sm" iconEnd={<Icon src="arrow-icon.svg" alt="Example Icon" />}>
+        <Button variant="outlined" size="sm" iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" />}>
           Let's Talk
         </Button>
         <div style={{ marginTop: "2rem", display: "flex", gap: "2rem" }}></div>
         <Button
           variant="contained"
           size="lg"
-          // iconStart={<Icon src="arrow-icon.svg" alt="Example Icon" />}
-          // iconEnd={<Icon src="arrow-icon.svg" alt="Example Icon" />}
+          // iconStart={<Icon src="arrow-icon-purple.svg" alt="Example Icon" />}
+          // iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" />}
         >
           Contact Me
         </Button>

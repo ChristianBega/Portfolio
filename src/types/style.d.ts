@@ -15,6 +15,7 @@ declare module "styled-components" {
       error: string;
       info: string;
       color_light: string;
+      color_link: string;
       color_1: string;
       color_2: string;
       color_3: string;
@@ -80,6 +81,8 @@ declare module "styled-components" {
     display?: string;
     paddingHover?: string;
     backgroundHover?: string;
+    color?: string;
+    colorHover?: string;
     responsive?: {
       [key in keyof DefaultTheme["breakpoints"]]?: {
         fontSize: string;

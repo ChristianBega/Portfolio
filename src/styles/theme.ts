@@ -13,6 +13,7 @@ export const theme: DefaultTheme = {
     error: "#FF073A",
     info: "#0CF",
     color_light: "rgba(255,255,255, 0.1)",
+    color_link: "#E9DEFF",
     color_1: "#667EFF",
     color_2: "#324EE7",
     color_3: "#415DEF",
@@ -133,6 +134,7 @@ export const theme: DefaultTheme = {
     link_text: {
       fontFamily: "CustomFont_Button",
       fontSize: "16px",
+      color: "#E9DEFF",
       letterSpacing: 1.2,
       textTransform: "uppercase",
       fontWeight: 500,
@@ -140,6 +142,7 @@ export const theme: DefaultTheme = {
       borderBottomHover: "1px solid #fff",
       paddingHover: "12px",
       backgroundHover: "linear-gradient(180deg, rgba(255,255,255, .01) 0%, rgba(255,255,255, .1) 90%)",
+      colorHover: "#fff",
       display: "inline",
       responsive: {
         lg: {
@@ -154,6 +157,8 @@ export const theme: DefaultTheme = {
       textTransform: "uppercase",
       fontWeight: 500,
       lineHeight: 1.3,
+      color: "#fff",
+
       // borderBottomHover: "1px solid #fff",
       // paddingHover: "12px",
       // backgroundHover: "linear-gradient(180deg, rgba(255,255,255, .01) 0%, rgba(255,255,255, .1) 90%)",
