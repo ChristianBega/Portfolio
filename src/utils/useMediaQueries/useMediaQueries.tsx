@@ -9,12 +9,23 @@ const useMediaQueries = (): MediaQueries => {
   const isLg = useMediaQuery({ query: `(min-width: ${theme.breakpoints.lg})` });
   const isXl = useMediaQuery({ query: `(min-width: ${theme.breakpoints.xl})` });
 
+  const isXsMax = useMediaQuery({ query: `(max-width: ${theme.breakpoints.xs})` });
+  const isSmMax = useMediaQuery({ query: `(max-width: ${theme.breakpoints.sm})` });
+  const isMdMax = useMediaQuery({ query: `(max-width: ${theme.breakpoints.md})` });
+  const isLgMax = useMediaQuery({ query: `(max-width: ${theme.breakpoints.lg})` });
+  const isXlMax = useMediaQuery({ query: `(max-width: ${theme.breakpoints.xl})` });
+
   return {
     isXs,
     isSm,
     isMd,
     isLg,
     isXl,
+    isXsMax,
+    isSmMax,
+    isMdMax,
+    isLgMax,
+    isXlMax,
   };
 };
 
