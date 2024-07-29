@@ -6,6 +6,7 @@ export const StyledNavigationWrapper = styled.div`
   position: sticky;
   top: 0;
   padding: 1rem;
+  z-index: 1000;
 `;
 
 export const StyledNavigation = styled(motion.nav)<StyledNavigationProps>`
