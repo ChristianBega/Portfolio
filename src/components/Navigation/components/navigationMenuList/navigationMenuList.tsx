@@ -1,33 +1,30 @@
 import React from "react";
-import { StyledNavigationMenuList, StyledNavigationMenuListItem } from "./index.styles";
-import Typography from "../../../../components/Typography/typography";
-import { MenuListItemProps, NavigationMenuListProps } from "./types";
-import { navigationLinkVariants } from "../../animations/navigationMenuList";
-import Icon from "../../../../components/Icon/icon";
+import { StyledNavigationMenuList } from "./index.styles";
+import { NavigationMenuListProps } from "./types";
+import { desktopNavigationLinkVariants, navigationLinkVariants } from "../../animations/navigationMenuList";
+import useMediaQueries from "../../../../utils/useMediaQueries/useMediaQueries";
+import NavigationMenuItems from "../navigationMenuItems/navigationMenuItems";
 
-const menuListItems: MenuListItemProps[] = [
+const menuListItems = [
   { label: "Home", path: "" },
   { label: "About", path: "" },
-  { label: "Services", path: "" },
+  { label: "Projects", path: "" },
   { label: "Contact", path: "" },
 ];
 
 const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen }) => {
+  const { isMd } = useMediaQueries();
+
   return (
     <StyledNavigationMenuList
+      isMd={isMd}
       role="list"
       id="navigation-menu"
-      initial="closed"
-      animate={isOpen ? "open" : "closed"}
-      variants={navigationLinkVariants}
+      initial={isMd ? "open" : "closed"}
+      animate={isMd ? (isOpen ? "open" : "open") : isOpen ? "open" : "closed"}
+      variants={isMd ? desktopNavigationLinkVariants : navigationLinkVariants}
     >
-      {menuListItems.map(({ path, label }, index) => (
-        <StyledNavigationMenuListItem variants={navigationLinkVariants} key={index}>
-          <Typography component="p" variant="navigation_text" iconEnd={<Icon src="arrow-icon.svg" alt="Example Icon" size="12px" />}>
-            {label}
-          </Typography>
-        </StyledNavigationMenuListItem>
-      ))}
+      <NavigationMenuItems items={menuListItems} isMd={isMd} variant={navigationLinkVariants} />
     </StyledNavigationMenuList>
   );
 };

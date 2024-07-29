@@ -8,6 +8,7 @@ declare module "styled-components" {
       secondary: string;
       background: string;
       text: string;
+      text_light: string;
       border: string;
       accent: string;
       success: string;
@@ -15,6 +16,7 @@ declare module "styled-components" {
       error: string;
       info: string;
       color_light: string;
+      color_link: string;
       color_1: string;
       color_2: string;
       color_3: string;
@@ -30,6 +32,7 @@ declare module "styled-components" {
     gradients: {
       button_gradient: string;
       button_gradient_2: string;
+      link_hover_gradient: string;
     };
 
     typography: {
@@ -45,7 +48,8 @@ declare module "styled-components" {
       p: TypographyStyle;
       span: TypographyStyle;
       button_text: TypographyStyle;
-      navigation_text: TypographyStyle;
+      link_text: TypographyStyle;
+      logo_text: TypographyStyle;
     };
     buttons: {
       contained: ButtonStyles;
@@ -74,6 +78,14 @@ declare module "styled-components" {
     textTransform?: string;
     letterSpacing?: number;
     fontFamily?: string;
+    borderBottomHover?: string;
+    display?: string;
+    paddingHover?: string;
+    backgroundHover?: string;
+    color?: string;
+    colorHover?: string;
+    textShadowHover?: string;
+    cursor?: string;
     responsive?: {
       [key in keyof DefaultTheme["breakpoints"]]?: {
         fontSize: string;

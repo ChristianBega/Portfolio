@@ -13,6 +13,7 @@ export const theme: DefaultTheme = {
     error: "#FF073A",
     info: "#0CF",
     color_light: "rgba(255,255,255, 0.1)",
+    color_link: "#E9DEFF",
     color_1: "#667EFF",
     color_2: "#324EE7",
     color_3: "#415DEF",
@@ -28,6 +29,7 @@ export const theme: DefaultTheme = {
   gradients: {
     button_gradient: "linear-gradient(0deg, #324EE7 0%, #667EFF 100%)",
     button_gradient_2: "linear-gradient(0deg, #FF073A 0%, #39FF14 100%)",
+    link_hover_gradient: "linear-gradient(to-top, rgba(255,255,255, 0) 0%, rgba(255,255,255, 1) 100%)",
   },
   typography: {
     fontFamilyButton: "CustomFont_Button",
@@ -129,13 +131,37 @@ export const theme: DefaultTheme = {
         },
       },
     },
-    navigation_text: {
+    link_text: {
+      fontFamily: "CustomFont_Button",
+      fontSize: "14px",
+      color: "#E9DEFF",
+      letterSpacing: 1.2,
+      textTransform: "uppercase",
+      fontWeight: 500,
+      lineHeight: 1.3,
+      cursor: "pointer",
+
+      borderBottomHover: "1px solid #fff",
+      paddingHover: "12px",
+      backgroundHover: "linear-gradient(180deg, rgba(255,255,255, .01) 0%, rgba(255,255,255, .1) 90%)",
+      colorHover: "#fff",
+      display: "inline",
+      responsive: {
+        lg: {
+          fontSize: "14px",
+        },
+      },
+    },
+    logo_text: {
       fontFamily: "CustomFont_Button",
       fontSize: "16px",
       letterSpacing: 1.2,
       textTransform: "uppercase",
       fontWeight: 500,
       lineHeight: 1.3,
+      color: "#fff",
+      cursor: "pointer",
+      textShadowHover: "1px 1px 8px #fff",
       responsive: {
         lg: {
           fontSize: "16px",

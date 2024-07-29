@@ -1,17 +1,18 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { StyledNavigationProps } from "../../types";
 
-export const StyledNavigationMenuList = styled(motion.ul)`
-  color: #fff;
+export const StyledNavigationMenuList = styled(motion.ul)<StyledNavigationProps>`
   width: 100%;
   height: 100%;
-  padding-top: 2rem;
-`;
-export const StyledNavigationMenuListItem = styled(motion.li)`
-  color: #fff;
-  width: 100%;
-  list-style: none;
-  &:not(:first-child) {
-    margin-top: 2.5rem;
-  }
+  padding-top: 1rem;
+  ${({ isMd }) =>
+    isMd &&
+    `
+    display: flex !important;
+    flex-direction: row;
+    width: 550px;
+    padding-top: 0rem;
+
+      `}
 `;
