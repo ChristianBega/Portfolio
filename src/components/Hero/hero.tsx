@@ -10,14 +10,16 @@ const Hero: React.FC = () => {
   return (
     <StyledHeroSection id="hero-section" isMd={isMd}>
       <BackgroundGrid />
-      <div style={{ display: "flex", flexDirection: "column", textAlign: "center", justifyContent: "center", marginTop: "100px" }}>
+      <div style={{ display: "flex", flexDirection: "column", textAlign: "center", justifyContent: "center", marginTop: "100px", padding: "1rem" }}>
         <img src="/public/profile-image.svg" style={{ height: "145px", marginBottom: "52px" }}></img>
-        <Typography component="h1">Hey, I'm Christian</Typography>
-        <Typography component="p" color="text_light">
+        <Typography component="h1" justifyContent="center" mb="25px">
+          Hey, I'm Christian
+        </Typography>
+        <Typography component="p" justifyContent="center" mb="">
           A full stack web developer, transforming your ideas into digital realities
         </Typography>
         <div>
-          <Button backgroundGradient="button_gradient" variant="contained" size="lg">
+          <Button mt="2rem" backgroundGradient="button_gradient" variant="contained" size="lg">
             Contact Me
           </Button>
         </div>

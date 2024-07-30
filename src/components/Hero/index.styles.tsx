@@ -5,7 +5,6 @@ export const StyledHeroSection = styled.section<MediaQueries>`
   position: relative;
   height: 530px;
   width: 100%;
-  padding-inline: 1rem;
   ${({ isMd }) =>
     isMd &&
     `

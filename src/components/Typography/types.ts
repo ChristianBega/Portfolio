@@ -10,4 +10,6 @@ export interface TypographyProps extends HTMLAttributes<HTMLElement> {
   children?: ReactNode;
   route?: string;
   href?: string;
+  justifyContent?: string;
+  mb?: string;
 }

@@ -7,6 +7,8 @@ export const StyledNavigationWrapper = styled.div`
   top: 0;
   padding: 1rem;
   z-index: 1000;
+  max-width: 1310px;
+  margin: auto;
 `;
 
 export const StyledNavigation = styled(motion.nav)<StyledNavigationProps>`
