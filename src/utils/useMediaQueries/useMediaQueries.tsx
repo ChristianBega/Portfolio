@@ -10,6 +10,8 @@ const useMediaQueries = (): MediaQueries => {
   const isXl = useMediaQuery({ query: `(min-width: ${theme.breakpoints.xl})` });
   const isXXl = useMediaQuery({ query: `(min-width: ${theme.breakpoints.xxl})` });
 
+  const isNavigation = useMediaQuery({ query: `(min-width: ${theme.breakpoints.navigation})` });
+
   const is400 = useMediaQuery({ query: `(min-width: 400px` });
   const is500 = useMediaQuery({ query: `(min-width: 500px` });
   const is600 = useMediaQuery({ query: `(min-width: 600px` });
@@ -33,6 +35,7 @@ const useMediaQueries = (): MediaQueries => {
     isMdMax,
     isLgMax,
     isXlMax,
+    isNavigation,
     is400,
     is500,
     is730,

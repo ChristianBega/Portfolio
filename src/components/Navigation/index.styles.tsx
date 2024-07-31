@@ -1,14 +1,20 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { StyledNavigationProps } from "./types";
+import { MediaQueries } from "utils/useMediaQueries/types";
 
-export const StyledNavigationWrapper = styled.div`
+export const StyledNavigationWrapper = styled.div<MediaQueries>`
   position: sticky;
   top: 0;
   padding: 1rem;
   z-index: 1000;
   max-width: 1310px;
-  margin: auto;
+  margin: 0 1rem;
+  ${({ isNavigation }) =>
+    isNavigation &&
+    `
+     margin: 0 auto !important;  
+    `}
 `;
 
 export const StyledNavigation = styled(motion.nav)<StyledNavigationProps>`
@@ -21,6 +27,9 @@ export const StyledNavigation = styled(motion.nav)<StyledNavigationProps>`
   border: 1px solid rgba(255, 255, 255, 0.2);
   min-height: 60px;
   max-height: 361px;
+  position: absolute;
+  left: 0;
+  width: 100%;
   ${({ isMd }) =>
     isMd &&
     `

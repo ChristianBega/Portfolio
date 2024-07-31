@@ -66,6 +66,7 @@ declare module "styled-components" {
       lg: string;
       xl: string;
       xxl: string;
+      navigation: string;
     };
   }
 

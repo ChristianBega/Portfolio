@@ -16,4 +16,6 @@ export interface MediaQueries {
   is500?: boolean;
   is600?: boolean;
   is730?: boolean;
+
+  isNavigation?: boolean;
 }

@@ -196,6 +196,7 @@ export const theme: DefaultTheme = {
     sm: "768px",
     md: "1024px",
     lg: "1280px",
+    navigation: "1310px",
     xl: "1440px",
     xxl: "1730px",
   },

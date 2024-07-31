@@ -10,7 +10,7 @@ import Button from "../../components/Button/button.tsx";
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const { isMd } = useMediaQueries();
+  const { isMd, isNavigation } = useMediaQueries();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -24,7 +24,7 @@ const Navigation: React.FC = () => {
   }, [isMd]);
 
   return (
-    <StyledNavigationWrapper id="navigation-wrapper">
+    <StyledNavigationWrapper isNavigation={isNavigation} id="navigation-wrapper">
       <StyledNavigation isMd={isMd} id="navigation" initial="closed" animate={isOpen ? "open" : "closed"} variants={navigationVariants}>
         <StyledNavigationContainer id="navigation-container">
           <StyledNavigationBar id="navigation-bar">
