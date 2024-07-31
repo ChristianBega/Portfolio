@@ -8,6 +8,12 @@ const useMediaQueries = (): MediaQueries => {
   const isMd = useMediaQuery({ query: `(min-width: ${theme.breakpoints.md})` });
   const isLg = useMediaQuery({ query: `(min-width: ${theme.breakpoints.lg})` });
   const isXl = useMediaQuery({ query: `(min-width: ${theme.breakpoints.xl})` });
+  const isXXl = useMediaQuery({ query: `(min-width: ${theme.breakpoints.xxl})` });
+
+  const is400 = useMediaQuery({ query: `(min-width: 400px` });
+  const is500 = useMediaQuery({ query: `(min-width: 500px` });
+  const is600 = useMediaQuery({ query: `(min-width: 600px` });
+  const is730 = useMediaQuery({ query: `(min-width: 730px` });
 
   const isXsMax = useMediaQuery({ query: `(max-width: ${theme.breakpoints.xs})` });
   const isSmMax = useMediaQuery({ query: `(max-width: ${theme.breakpoints.sm})` });
@@ -21,11 +27,16 @@ const useMediaQueries = (): MediaQueries => {
     isMd,
     isLg,
     isXl,
+    isXXl,
     isXsMax,
     isSmMax,
     isMdMax,
     isLgMax,
     isXlMax,
+    is400,
+    is500,
+    is730,
+    is600,
   };
 };
 
