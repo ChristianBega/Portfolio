@@ -4,6 +4,7 @@ import { TypographyProps } from "./types";
 import { css } from "styled-components";
 
 const typographyStyles = css<TypographyProps>`
+  justify-content: ${(props) => (props.justifyContent ? props.justifyContent : "flex-start")};
   cursor: ${(props) => (props.variant ? props.theme.typography[props.variant].cursor : "default")};
   font-size: ${(props) =>
     props.variant ? props.theme.typography[props.variant].fontSize : getTypographyStyle(props.theme, props.component)?.fontSize};
@@ -12,6 +13,7 @@ const typographyStyles = css<TypographyProps>`
   font-weight: ${(props) => getTypographyStyle(props.theme, props.component)?.fontWeight};
   line-height: ${(props) => getTypographyStyle(props.theme, props.component)?.lineHeight};
   margin: ${(props) => getTypographyStyle(props.theme, props.component)?.margin};
+  margin-bottom: ${(props) => (props.mb ? props.mb : "none")};
   color: ${(props) => (props.variant ? props.theme.typography[props.variant].color : props.theme.colors.text)};
   padding: ${(props) => (props.variant ? `${props.theme.typography[props.variant].paddingHover}` : "none")};
   font-family: ${(props) =>

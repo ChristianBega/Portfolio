@@ -3,6 +3,7 @@ import { getButtonStyles } from "./getButtonStyles";
 import { ButtonProps } from "./types";
 
 const buttonStyles = css<ButtonProps>`
+  margin-top: ${(props) => (props.mt ? props.mt : "none")};
   display: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "flex" : "inline-block")};
   align-items: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "center" : "initial")};
   justify-content: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "center" : "initial")};

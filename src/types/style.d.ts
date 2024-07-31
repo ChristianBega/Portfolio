@@ -8,7 +8,6 @@ declare module "styled-components" {
       secondary: string;
       background: string;
       text: string;
-      text_light: string;
       border: string;
       accent: string;
       success: string;
@@ -66,6 +65,8 @@ declare module "styled-components" {
       md: string;
       lg: string;
       xl: string;
+      xxl: string;
+      navigation: string;
     };
   }
 

@@ -27,7 +27,7 @@ export const theme: DefaultTheme = {
     none: "none",
   },
   gradients: {
-    button_gradient: "linear-gradient(0deg, #324EE7 0%, #667EFF 100%)",
+    button_gradient: "linear-gradient(0deg, #667EFF 0%, #324EE7  100%)",
     button_gradient_2: "linear-gradient(0deg, #FF073A 0%, #39FF14 100%)",
     link_hover_gradient: "linear-gradient(to-top, rgba(255,255,255, 0) 0%, rgba(255,255,255, 1) 100%)",
   },
@@ -36,8 +36,8 @@ export const theme: DefaultTheme = {
     fontFamilyHeader: "CustomFont_H1",
     fontFamily: "Poppins, sans-serif",
     h1: {
-      fontSize: "56px",
-      fontWeight: 700,
+      fontSize: "48px",
+      fontWeight: 400,
       lineHeight: 1.3,
       margin: "0 0 .5rem 0",
       responsive: {
@@ -196,6 +196,8 @@ export const theme: DefaultTheme = {
     sm: "768px",
     md: "1024px",
     lg: "1280px",
+    navigation: "1310px",
     xl: "1440px",
+    xxl: "1730px",
   },
 };
