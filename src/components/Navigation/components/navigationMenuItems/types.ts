@@ -5,6 +5,6 @@ interface MenuListItemProps {
 
 export interface NavigationMenuItemsProps {
   items: MenuListItemProps[];
-  isMd: boolean;
+  isMd?: boolean;
   variant?: any;
 }
