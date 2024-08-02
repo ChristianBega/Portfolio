@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
     <StyledHeroSection id="hero-section" isMd={isMd}>
       <BackgroundGrid />
       <div style={{ display: "flex", flexDirection: "column", textAlign: "center", justifyContent: "center", marginTop: "100px", padding: "1rem" }}>
-        <img src="/public/profile-image.svg" style={{ height: "145px", marginBottom: "52px" }}></img>
+        <img src="/profile-image.svg" style={{ height: "145px", marginBottom: "52px" }}></img>
 
         <Typography component="h1" justifyContent="center" mb="25px">
           Hey, I'm Christian
