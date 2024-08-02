@@ -6,4 +6,9 @@ export interface TextBlockProps {
   tag?: string;
   button?: ReactNode;
   img?: ReactNode;
+  containerStyles?: object;
+}
+
+export interface StyledTextBlockContainerProps {
+  containerStyles?: object;
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import { TextBlockProps } from "./types";
-import { StyledTextBlockContainer } from "./index.styles";
+import Typography from "../Typography/typography";
 
-const TextBlock: React.FC<TextBlockProps> = ({ title, paragraph, tag, button, img, containerStyles }) => {
+const TextBlock: React.FC<TextBlockProps> = ({ title, paragraph, tag, button, img }) => {
   return (
-    <StyledTextBlockContainer containerStyles={containerStyles}>
+    <div style={{ display: "flex", flexDirection: "column", textAlign: "center", justifyContent: "center", marginTop: "100px", padding: "1rem" }}>
       {tag && <div>Tag</div>}
       {img && img}
       {title}
@@ -15,10 +15,12 @@ const TextBlock: React.FC<TextBlockProps> = ({ title, paragraph, tag, button, im
           ))}
         </>
       ) : (
-        paragraph
+        <Typography component="p" justifyContent="center">
+          {paragraph}
+        </Typography>
       )}
       {button && <div>{button}</div>}
-    </StyledTextBlockContainer>
+    </div>
   );
 };
 
