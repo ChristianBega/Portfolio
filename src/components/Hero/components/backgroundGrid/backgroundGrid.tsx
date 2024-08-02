@@ -4,7 +4,7 @@ import { StyledBackgroundGrid } from "./index.styles";
 
 const BackgroundGrid: React.FC = () => {
   const { isMd } = useMediaQueries();
-  return <StyledBackgroundGrid src={isMd ? "/public/grid-large.svg" : "/public/grid-small.svg"}></StyledBackgroundGrid>;
+  return <StyledBackgroundGrid src={isMd ? "/grid-large.svg" : "/grid-small.svg"}></StyledBackgroundGrid>;
 };
 
 export default BackgroundGrid;
