@@ -3,14 +3,17 @@ import Navigation from "./components/Navigation/navigation";
 import Hero from "./components/Hero/hero";
 import AboutMe from "./components/AboutMe/aboutMe";
 import Skills from "./components/Skills/skills";
+import GridContainer from "./components/GridContainer/gridContainer";
 
 const App: React.FC = () => {
   return (
     <>
       <Navigation />
       <Hero />
-      <Skills />
-      <AboutMe />
+      <GridContainer spacing={2}>
+        <Skills />
+        <AboutMe />
+      </GridContainer>
     </>
   );
 };

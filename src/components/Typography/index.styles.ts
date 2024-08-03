@@ -39,7 +39,7 @@ const typographyStyles = css<TypographyProps>`
     border-bottom: ${(props) =>
       props.variant ? `${props.theme.typography[props.variant].borderBottomHover}` : `1px solid ${props.theme.colors.transparent}`};
     background-image: ${(props) => (props.variant ? props.theme.typography[props.variant].backgroundHover : "none")};
-    color: ${(props) => (props.variant ? props.theme.typography[props.variant].colorHover : props.theme.colors.text_secondary)};
+    color: ${(props) => (props.variant ? props.theme.typography[props.variant].colorHover : "")};
     img {
       filter: saturate(0);
     }
