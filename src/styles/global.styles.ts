@@ -27,6 +27,7 @@ html {
 body {
   background-color: ${theme.colors.background};
   overflow: scroll;  
+  height : 200vh;
 }
 
 button {

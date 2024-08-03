@@ -3,9 +3,10 @@ import { MediaQueries } from "utils/useMediaQueries/types";
 
 export const StyledHeroSection = styled.section<MediaQueries>`
   position: relative;
-  height: 530px;
+  /* height: 530px; */
   width: 100%;
   z-index: 1;
+  margin-bottom: 92px;
   ${({ isMd }) =>
     isMd &&
     `
@@ -18,5 +19,4 @@ export const textBlockHeroStyles = {
   textAlign: "center",
   justifyContent: "center",
   marginTop: "100px",
-  padding: "1rem",
 };
