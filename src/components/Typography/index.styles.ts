@@ -9,7 +9,7 @@ const typographyStyles = css<TypographyProps>`
   font-size: ${(props) =>
     props.variant ? props.theme.typography[props.variant].fontSize : getTypographyStyle(props.theme, props.component)?.fontSize};
   text-transform: ${(props) => (props.variant ? props.theme.typography[props.variant].textTransform : "")};
-  display: ${(props) => (props.variant ? props.theme.typography[props.variant].display : "flex")};
+  display: ${(props) => (props.variant ? props.theme.typography[props.variant].display : "")};
   font-weight: ${(props) => getTypographyStyle(props.theme, props.component)?.fontWeight};
   line-height: ${(props) => getTypographyStyle(props.theme, props.component)?.lineHeight};
   margin: ${(props) => getTypographyStyle(props.theme, props.component)?.margin};

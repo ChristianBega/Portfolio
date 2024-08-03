@@ -5,7 +5,9 @@ export const theme: DefaultTheme = {
     primary: "#667EFF",
     secondary: "#324EE7",
     background: "#000416",
-    text: "#FFFFFF",
+    text: "rgba(255,255,255, 1)",
+    text_secondary: "rgba(255,255,255, .6)",
+
     border: "#FFFFFF",
     accent: "#3760EE",
     success: "#39FF14",
@@ -105,6 +107,7 @@ export const theme: DefaultTheme = {
       fontSize: "16px",
       fontWeight: 500,
       lineHeight: 1.3,
+      fontColor: "text_secondary",
       responsive: {
         lg: {
           fontSize: "18px",
