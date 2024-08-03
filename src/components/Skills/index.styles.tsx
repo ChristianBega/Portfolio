@@ -2,6 +2,5 @@ import styled, { css } from "styled-components";
 import { StyledTextBlockContainerProps } from "./types";
 
 export const StyledTextBlockContainer = styled.div<StyledTextBlockContainerProps>`
-  padding-inline: 1rem;
   ${(props) => css({ ...props.containerStyles })}
 `;
