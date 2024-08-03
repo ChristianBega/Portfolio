@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-export type TypographyVariant = "button_text" | "link_text" | "logo_text";
+export type TypographyVariant = "button_text" | "link_text" | "logo_text" | "tag_text";
 
 export interface TypographyProps extends HTMLAttributes<HTMLElement> {
   component: keyof JSX.IntrinsicElements | React.ComponentType<any>;

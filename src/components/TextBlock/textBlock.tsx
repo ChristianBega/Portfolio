@@ -1,11 +1,25 @@
 import React from "react";
 import { TextBlockProps } from "./types";
-import { StyledTextBlockContainer } from "./index.styles";
+import { StyledTextBlockContainer, StyledTextBlockTag, StyledTextBlockTagList } from "./index.styles";
+import Typography from "../../components/Typography/typography";
 
 const TextBlock: React.FC<TextBlockProps> = ({ title, paragraph, tag, button, img, containerStyles }) => {
   return (
     <StyledTextBlockContainer containerStyles={containerStyles}>
-      {tag && <div>Tag</div>}
+      {tag &&
+        (Array.isArray(tag) ? (
+          <StyledTextBlockTagList role="list">
+            {tag.map((text, index) => (
+              <StyledTextBlockTag key={index}>
+                <Typography component={"span"} variant="tag_text">
+                  {text}
+                </Typography>
+              </StyledTextBlockTag>
+            ))}
+          </StyledTextBlockTagList>
+        ) : (
+          <StyledTextBlockTag>{tag}</StyledTextBlockTag>
+        ))}
       {img && img}
       {title}
       {Array.isArray(paragraph) ? (

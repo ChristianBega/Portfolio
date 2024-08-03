@@ -4,6 +4,7 @@ import Hero from "./components/Hero/hero";
 import AboutMe from "./components/AboutMe/aboutMe";
 import Skills from "./components/Skills/skills";
 import GridContainer from "./components/GridContainer/gridContainer";
+import ProjectCard from "./components/ProjectCard/projectCard";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Skills />
         <AboutMe />
       </GridContainer>
+      <ProjectCard></ProjectCard>
     </>
   );
 };

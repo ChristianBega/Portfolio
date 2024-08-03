@@ -21,6 +21,8 @@ export const theme: DefaultTheme = {
     color_3: "#415DEF",
     color_4: "#1A56F0",
     color_5: "#3941FF",
+    color_5_rgba: "rgba(57, 64, 255, 0.1)",
+
     color_6: "#0038FF",
     color_7: "#3D2DF7",
     color_8: "#000F43",
@@ -142,7 +144,6 @@ export const theme: DefaultTheme = {
       fontWeight: 500,
       lineHeight: 1.3,
       cursor: "pointer",
-
       borderBottomHover: "1px solid #fff",
       paddingHover: "12px",
       backgroundHover: "linear-gradient(180deg, rgba(255,255,255, .01) 0%, rgba(255,255,255, .1) 90%)",
@@ -169,6 +170,14 @@ export const theme: DefaultTheme = {
           fontSize: "16px",
         },
       },
+    },
+    tag_text: {
+      fontFamily: "fontFamily",
+      color: "color_5_rgba",
+      fontWeight: 800,
+      fontSize: "12px",
+      lineHeight: 1.3,
+      letterSpacing: 1,
     },
   },
   buttons: {

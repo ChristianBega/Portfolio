@@ -22,6 +22,7 @@ declare module "styled-components" {
       color_3: string;
       color_4: string;
       color_5: string;
+      color_5_rgba: string;
       color_6: string;
       color_7: string;
       color_8: string;
@@ -50,6 +51,7 @@ declare module "styled-components" {
       button_text: TypographyStyle;
       link_text: TypographyStyle;
       logo_text: TypographyStyle;
+      tag_text: TypographyStyle;
     };
     buttons: {
       contained: ButtonStyles;
