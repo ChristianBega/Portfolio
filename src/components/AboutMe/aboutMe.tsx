@@ -1,11 +1,14 @@
+import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries";
 import GridItem from "../../components/GridItem/gridItem";
 import TextBlock from "../../components/TextBlock/textBlock";
 import Typography from "../Typography/typography";
 import React from "react";
 
 const AboutMe: React.FC = () => {
+  const { isMd } = useMediaQueries();
+
   return (
-    <GridItem xs={12} md={6} lg={8}>
+    <GridItem xs={12} md={6} lg={8} order={isMd ? 0 : 1}>
       <TextBlock
         title={
           <Typography component="h2" mb="48px">
