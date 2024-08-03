@@ -7,7 +7,7 @@ declare module "styled-components" {
       primary: string;
       secondary: string;
       background: string;
-      text: string;
+      text_primary: string;
       text_secondary: string;
       border: string;
       accent: string;
@@ -88,7 +88,6 @@ declare module "styled-components" {
     colorHover?: string;
     textShadowHover?: string;
     cursor?: string;
-    fontColor?: string;
     responsive?: {
       [key in keyof DefaultTheme["breakpoints"]]?: {
         fontSize: string;

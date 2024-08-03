@@ -5,8 +5,8 @@ export const theme: DefaultTheme = {
     primary: "#667EFF",
     secondary: "#324EE7",
     background: "#000416",
-    text: "rgba(255,255,255, 1)",
-    text_secondary: "rgba(255,255,255, .6)",
+    text_primary: "rgba(255,255,255,.6)",
+    text_secondary: "rgba(255,255,255, 1)",
 
     border: "#FFFFFF",
     accent: "#3760EE",
@@ -107,7 +107,6 @@ export const theme: DefaultTheme = {
       fontSize: "16px",
       fontWeight: 500,
       lineHeight: 1.3,
-      fontColor: "text_secondary",
       responsive: {
         lg: {
           fontSize: "18px",
@@ -178,14 +177,14 @@ export const theme: DefaultTheme = {
       backgroundColorHover: "color_9",
       borderColor: "transparent",
       borderColorHover: "primary",
-      color: "text",
+      color: "text_secondary",
     },
     outlined: {
       backgroundColor: "color_9",
       backgroundColorHover: "primary",
       borderColor: "primary",
       borderColorHover: "transparent",
-      color: "text",
+      color: "text_secondary",
     },
   },
   spacing: (factor: number) => `${factor * 8}px`,
