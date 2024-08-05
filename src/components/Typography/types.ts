@@ -7,7 +7,7 @@ export interface TypographyProps extends HTMLAttributes<HTMLElement> {
   variant?: TypographyVariant;
   iconStart?: ReactNode;
   iconEnd?: ReactNode;
-  children?: string;
+  children?: ReactNode | string;
   keyWords?: string[];
   route?: string;
   href?: string;
