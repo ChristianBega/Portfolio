@@ -8,4 +8,5 @@ export const StyledGridContainer = styled.div<GridContainerProps>`
   max-width: ${theme.breakpoints.navigation};
   margin-inline: auto;
   grid-gap: ${(props) => (props.spacing ? props.theme.spacing(props.spacing) : `0`)};
+  margin-bottom: 92px;
 `;
