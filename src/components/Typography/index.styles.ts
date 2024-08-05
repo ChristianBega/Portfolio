@@ -2,7 +2,6 @@ import responsiveTypography from "../../utils/responsiveTypography";
 import { getTypographyStyle } from "./getTypographyStyle";
 import { TypographyProps } from "./types";
 import { css } from "styled-components";
-/* color: ${(props) => (props.variant ? props.theme.typography[props.variant].color : props.theme.colors.text)}; */
 
 const typographyStyles = css<TypographyProps>`
   justify-content: ${(props) => (props.justifyContent ? props.justifyContent : "flex-start")};
@@ -16,7 +15,7 @@ const typographyStyles = css<TypographyProps>`
   margin: ${(props) => getTypographyStyle(props.theme, props.component)?.margin};
   margin-bottom: ${(props) => (props.mb ? props.mb : "none")};
   padding: ${(props) => (props.variant ? `${props.theme.typography[props.variant].paddingHover}` : "none")};
-
+  letter-spacing: ${(props) => (props.variant ? `${props.theme.typography[props.variant].letterSpacing}rem` : "")};
   color: ${(props) =>
     ["h1", "h2", "h3", "h4", "h5", "h6"].includes(props.component as string)
       ? props.theme.colors.text_secondary

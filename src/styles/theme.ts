@@ -7,7 +7,6 @@ export const theme: DefaultTheme = {
     background: "#000416",
     text_primary: "rgba(255,255,255,.6)",
     text_secondary: "rgba(255,255,255, 1)",
-
     border: "#FFFFFF",
     accent: "#3760EE",
     success: "#39FF14",
@@ -22,7 +21,6 @@ export const theme: DefaultTheme = {
     color_4: "#1A56F0",
     color_5: "#3941FF",
     color_5_rgba: "rgba(57, 64, 255, 0.1)",
-
     color_6: "#0038FF",
     color_7: "#3D2DF7",
     color_8: "#000F43",
@@ -139,7 +137,6 @@ export const theme: DefaultTheme = {
       fontFamily: "CustomFont_Button",
       fontSize: "14px",
       color: "#E9DEFF",
-      letterSpacing: 1.2,
       textTransform: "uppercase",
       fontWeight: 500,
       lineHeight: 1.3,
@@ -158,7 +155,7 @@ export const theme: DefaultTheme = {
     logo_text: {
       fontFamily: "CustomFont_Button",
       fontSize: "16px",
-      letterSpacing: 1.2,
+      letterSpacing: 0.1,
       textTransform: "uppercase",
       fontWeight: 500,
       lineHeight: 1.3,
@@ -172,12 +169,13 @@ export const theme: DefaultTheme = {
       },
     },
     tag_text: {
-      fontFamily: "fontFamily",
+      fontFamily: "CustomFont_Button",
       color: "color_5_rgba",
       fontWeight: 800,
       fontSize: "12px",
       lineHeight: 1.3,
-      letterSpacing: 1,
+      letterSpacing: 0.1,
+      textTransform: "capitalize",
     },
   },
   buttons: {
