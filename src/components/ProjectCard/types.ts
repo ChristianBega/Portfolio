@@ -1,14 +1,5 @@
-// import { ReactNode } from "react";
+import { CreateProjectProps } from "components/ProjectCards/generateProjectData";
 
-// export interface TextBlockProps {
-//   title: ReactNode;
-//   paragraph: ReactNode | ReactNode[];
-//   tag?: string;
-//   button?: ReactNode;
-//   img?: ReactNode;
-//   containerStyles?: object;
-// }
-
-// export interface StyledTextBlockContainerProps {
-//   containerStyles?: object;
-// }
+export interface ProjectCardProps {
+  data: CreateProjectProps;
+}

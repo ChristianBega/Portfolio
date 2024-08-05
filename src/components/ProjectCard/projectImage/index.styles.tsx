@@ -26,15 +26,14 @@ export const StyledProjectImageContainer = styled.div<MediaQueries>`
     background: linear-gradient(0deg, rgba(0, 4, 22, 1) 0%, rgba(0, 4, 22, 0) 100%);
   }
 
-  ${({ isLg }) =>
-    isLg &&
+  ${({ isMd }) =>
+    isMd &&
     `
     padding-top : 0;
     min-height : 720px;
     flex-direction : column;
     align-items: center;
     justify-content : space-between;
-
     `};
 `;
 
@@ -44,11 +43,24 @@ export const StyledProjectImageFrame = styled.img<MediaQueries>`
   border-radius: 38.77px;
   position: absolute;
   z-index: -1;
-  ${({ isLg }) =>
-    isLg &&
+  ${({ isSm }) =>
+    isSm &&
+    `
+    top : 100px;
+    max-width : 525px;
+    max-height : 510.36px;
+    `};
+
+  ${({ isMd }) =>
+    isMd &&
     `
     max-width : 866px;
     max-height : 1154.67px;
+    top : 252px;
+    `};
+  ${({ isLg }) =>
+    isLg &&
+    `
     top : 300px;
     `};
 `;
@@ -58,29 +70,69 @@ export const StyledProjectImage = styled.img<MediaQueries>`
   margin-top: 10px;
   width: 216px;
   height: 467.45px;
+  object-fit: cover;
+  ${({ isSm }) =>
+    isSm &&
+    `
+    margin-top: 91px;
+    border-radius: 5px;
+    width : 396px;
+    height : 315px;
+
+    `};
+  ${({ isMd }) =>
+    isMd &&
+    `
+    margin-top: -15px;
+    width : 658.83px;
+    height : 365.36px;
+    border-radius: 18px;
+    `};
   ${({ isLg }) =>
     isLg &&
     `
-    width : 658.83px;
-    height : 510.36px;
-    border-radius: 18px;
+    margin-top: 10px;
     `};
 `;
 
 export const StyledProjectCardBackgroundBlur = styled.div<MediaQueries>`
   width: 375px;
-  height: 250px;
+  height: 285px;
   background: linear-gradient(180deg, #0066ff, #33cc33);
   border-radius: 60% 100% 100% 90% / 100% 100% 50% 90%;
   transform: rotate(10deg);
   position: absolute;
-  filter: blur(40px);
-  -webkit-filter: blur(40px);
-  bottom: 0px;
+  filter: blur(70px);
+  -webkit-filter: blur(70px);
+  bottom: -20px;
   left: -50px;
-  z-index: -100;
-  ${({ isLg }) =>
-    isLg &&
+  z-index: -1000;
+  ${({ isXs }) =>
+    isXs &&
+    `
+    width : 450px;
+    height : 300px;
+    `};
+
+  ${({ is600 }) =>
+    is600 &&
+    `
+    width : 500px;
+    height : 400px;
+    bottom : -100px;
+    left: 0px;
+
+    `};
+  ${({ isSm }) =>
+    isSm &&
+    `
+    width : 600px;
+    height : 400px;
+    bottom : -120px
+    `};
+
+  ${({ isMd }) =>
+    isMd &&
     `
     width : 600px;
     height : 500px;
@@ -96,12 +148,13 @@ export const textBlocProjectCardStylesMobile = {
   justifyContent: "center",
   flexDirection: "column",
 };
+
 export const textBlocProjectCardStylesDeskTop = {
   display: "flex",
   justifyContent: "center",
   flexDirection: "column",
   alignItems: "center",
   padding: "48px 0 70px 0",
-  maxWidth: "800px",
+  maxWidth: "600px",
   textAlign: "center",
 };

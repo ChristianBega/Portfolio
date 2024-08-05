@@ -4,8 +4,7 @@ import Hero from "./components/Hero/hero";
 import AboutMe from "./components/AboutMe/aboutMe";
 import Skills from "./components/Skills/skills";
 import GridContainer from "./components/GridContainer/gridContainer";
-import ProjectCard from "./components/ProjectCard/projectCard";
-import { theme } from "./styles/theme";
+import ProjectCards from "./components/ProjectCards/projectCards";
 
 const App: React.FC = () => {
   return (
@@ -16,9 +15,7 @@ const App: React.FC = () => {
         <Skills />
         <AboutMe />
       </GridContainer>
-      <div style={{ padding: "1rem", maxWidth: theme.breakpoints.navigation, margin: "auto" }}>
-        <ProjectCard></ProjectCard>
-      </div>
+      <ProjectCards />
     </>
   );
 };

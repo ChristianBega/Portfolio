@@ -7,21 +7,18 @@ import ProjectImage from "./projectImage/projectImage";
 import { textBlocProjectCardStylesDeskTop, textBlocProjectCardStylesMobile } from "./projectImage/index.styles";
 import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries";
 import { MediaQueries } from "utils/useMediaQueries/types";
+import { ProjectCardProps } from "./types";
 
-const renderProjectTextBlock: React.FC<MediaQueries> = ({ isLg }) => (
+const renderProjectTextBlock: React.FC<MediaQueries & ProjectCardProps> = ({ isMd, data }) => (
   <TextBlock
-    containerStyles={isLg ? textBlocProjectCardStylesDeskTop : textBlocProjectCardStylesMobile}
-    tag={["Tag#1", "Tag#2"]}
+    containerStyles={isMd ? textBlocProjectCardStylesDeskTop : textBlocProjectCardStylesMobile}
+    tag={[data.projectTag]}
     title={
       <Typography component="h3" mb="32px">
-        Project Title
+        {data.name}
       </Typography>
     }
-    paragraph={
-      <Typography component="p">
-        You can add what outcomes has this project brought after your design! For example, can show some real data.
-      </Typography>
-    }
+    paragraph={<Typography component="p">{data.description}</Typography>}
     button={
       <Button
         mt={"24px"}
@@ -36,13 +33,13 @@ const renderProjectTextBlock: React.FC<MediaQueries> = ({ isLg }) => (
   />
 );
 
-const ProjectCard: React.FC<MediaQueries> = () => {
-  const { isLg } = useMediaQueries();
+const ProjectCard: React.FC<MediaQueries & ProjectCardProps> = ({ data }) => {
+  const { isMd } = useMediaQueries();
   return (
-    <>
-      <ProjectImage>{renderProjectTextBlock({ isLg })}</ProjectImage>
-      {!isLg && renderProjectTextBlock({ isLg })}
-    </>
+    <div style={{ marginBottom: "80px" }}>
+      <ProjectImage imageUrl={data.imageDemo}>{renderProjectTextBlock({ isMd, data })}</ProjectImage>
+      {!isMd && renderProjectTextBlock({ isMd, data })}
+    </div>
   );
 };
 
