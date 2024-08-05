@@ -9,6 +9,7 @@ export interface CreateProjectProps {
   longDescription: string;
   imageDemo: string;
   link: string;
+  pathUrl?: string;
   repo: string;
   technology: string[];
   role: string[];
@@ -28,6 +29,7 @@ export const featuredProjectsData: CreateProjectProps[] = [
       "Overland Baseball's website is a single page React application that provides its users a convenient way to access and browse different team information. The application is built with React and Material UI to provide a polished and functional front end. Additionally, the website features working forms using Email Js, image sliders, and timelines.",
     imageDemo: OverlandBaseballImage,
     link: "https://overlandbaseball.com/",
+    pathUrl: "/project-details",
     repo: "https://github.com/ChristianBega/Overland-Baseball-Website",
     technology: ["React", "Material UI", "Framer motion", "Email Js", "React Form Hook"],
     role: [

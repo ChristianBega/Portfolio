@@ -1,3 +1,5 @@
+import { ProjectCardProps } from "components/ProjectCard/types";
+import { CreateProjectProps } from "components/ProjectCards/generateProjectData";
 import { ReactNode } from "react";
 import { DefaultTheme } from "styled-components";
 
@@ -16,4 +18,6 @@ export interface ButtonProps {
   iconEnd?: ReactNode;
   children?: ReactNode;
   mt?: string;
+  data?: object;
+  component?: ReactNode | string;
 }

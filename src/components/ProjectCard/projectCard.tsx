@@ -21,6 +21,8 @@ const renderProjectTextBlock: React.FC<MediaQueries & ProjectCardProps> = ({ isM
     paragraph={<Typography component="p">{data.description}</Typography>}
     button={
       <Button
+        component={"link"}
+        data={data}
         mt={"24px"}
         variant="contained"
         backgroundGradient="button_gradient"

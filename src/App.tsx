@@ -1,21 +1,19 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+// Components
 import Navigation from "./components/Navigation/navigation";
-import Hero from "./components/Hero/hero";
-import AboutMe from "./components/AboutMe/aboutMe";
-import Skills from "./components/Skills/skills";
-import GridContainer from "./components/GridContainer/gridContainer";
-import ProjectCards from "./components/ProjectCards/projectCards";
+// Pages
+import ProjectDetails from "./pages/ProjectDetails/projectDetails";
+import Home from "./pages/Home/home";
 
 const App: React.FC = () => {
   return (
     <>
       <Navigation />
-      <Hero />
-      <GridContainer spacing={2}>
-        <Skills />
-        <AboutMe />
-      </GridContainer>
-      <ProjectCards />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/project-details" element={<ProjectDetails />}></Route>
+      </Routes>
     </>
   );
 };
