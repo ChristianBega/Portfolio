@@ -6,12 +6,11 @@ import ProjectPreview from "./components/projectPreview/projectPreview";
 const ProjectDetails: React.FC = () => {
   const { state } = useLocation();
   console.log(state);
-  const { name, description, link, repo, imageDemo } = state;
+  const { title, description, deployedLink, repoLink, imageUrl } = state;
   // title, desc, github, deployed, image
   return (
     <div style={{ marginTop: "100px" }}>
-      <ProjectPreview title={name} description={description} repoLink={repo} deployedLink={link} imageUrl={imageDemo} />
-      {/* <Typography component={"h1"}>projectDetails Preview - back button, text block, image</Typography> */}
+      <ProjectPreview title={title} description={description} repoLink={repoLink} deployedLink={deployedLink} imageUrl={imageUrl} />
       <Typography component={"h1"}>projectDetails Summary - tech, summary, role (text blocks)</Typography>
     </div>
   );

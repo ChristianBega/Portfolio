@@ -15,7 +15,7 @@ const renderProjectTextBlock: React.FC<MediaQueries & ProjectCardProps> = ({ isM
     tag={[data.projectTag]}
     title={
       <Typography component="h3" mb="32px">
-        {data.name}
+        {data.title}
       </Typography>
     }
     paragraph={<Typography component="p">{data.description}</Typography>}
@@ -39,7 +39,7 @@ const ProjectCard: React.FC<MediaQueries & ProjectCardProps> = ({ data }) => {
   const { isMd } = useMediaQueries();
   return (
     <div style={{ marginBottom: "80px" }}>
-      <ProjectImage imageUrl={data.imageDemo}>{renderProjectTextBlock({ isMd, data })}</ProjectImage>
+      <ProjectImage imageUrl={data.imageUrl}>{renderProjectTextBlock({ isMd, data })}</ProjectImage>
       {!isMd && renderProjectTextBlock({ isMd, data })}
     </div>
   );
