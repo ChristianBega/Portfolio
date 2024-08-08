@@ -1,5 +1,4 @@
 import { StyledHeroSection, textBlockHeroStyles } from "./index.styles";
-import BackgroundGrid from "./components/backgroundGrid/backgroundGrid";
 import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries";
 import Typography from "../../components/Typography/typography";
 import Button from "../../components/Button/button";
@@ -12,7 +11,7 @@ const Hero: React.FC = () => {
 
   return (
     <StyledHeroSection id="hero-section" isMd={isMd}>
-      <BackgroundGrid />
+      {/* <BackgroundGrid /> */}
       <TextBlock
         containerStyles={textBlockHeroStyles}
         title={
