@@ -6,6 +6,7 @@ export interface TextBlockProps {
   tag?: string[];
   button?: ReactNode;
   img?: ReactNode;
+  icons?: ReactNode | ReactNode[];
   containerStyles?: object;
 }
 

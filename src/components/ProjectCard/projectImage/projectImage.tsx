@@ -4,7 +4,6 @@ import useMediaQueries from "../../../utils/useMediaQueries/useMediaQueries";
 import { ProjectImageProps } from "./types";
 
 const ProjectImage: React.FC<ProjectImageProps> = ({ children, imageUrl }) => {
-  console.log(imageUrl);
   const { isXs, is600, isSm, isLg, isMd } = useMediaQueries();
   return (
     <StyledProjectImageContainer isMd={isMd}>
