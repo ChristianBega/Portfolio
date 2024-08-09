@@ -1,13 +1,14 @@
 import { ReactNode } from "react";
 
 export interface TextBlockProps {
-  title: ReactNode;
-  paragraph: ReactNode | ReactNode[];
+  // title: ReactNode;
+  // paragraph: ReactNode | ReactNode[];
   tag?: string[];
-  button?: ReactNode;
+  // button?: ReactNode;
   img?: ReactNode;
-  icons?: ReactNode | ReactNode[];
+  // icons?: ReactNode | ReactNode[];
   containerStyles?: object;
+  children: ReactNode;
 }
 
 export interface StyledTextBlockContainerProps {

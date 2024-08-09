@@ -10,11 +10,10 @@ import Image from "../../../../components/Image/image";
 const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, imageUrl }) => {
   return (
     <div>
-      <TextBlock
-        containerStyles={textBlockProjectDetailStyles}
-        title={<Typography component="h2">{title}</Typography>}
-        paragraph={<Typography component="p">{description}</Typography>}
-        icons={[
+      <TextBlock containerStyles={textBlockProjectDetailStyles}>
+        <Typography component="h2">{title}</Typography>
+        <Typography component="p">{description}</Typography>
+        <div style={{ display: "flex", justifyContent: "center", gap: "3rem" }}>
           <Button
             variant="contained"
             backgroundColor="transparent"
@@ -23,7 +22,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, ima
             iconEnd={<Icon src="arrow-icon-purple.svg" size="16px" alt="Right arrow icon"></Icon>}
           >
             GitHub
-          </Button>,
+          </Button>
           <Button
             variant="contained"
             backgroundColor="transparent"
@@ -32,10 +31,9 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, ima
             iconEnd={<Icon src="arrow-icon-purple.svg" size="16px" alt="Right arrow icon"></Icon>}
           >
             Website
-          </Button>,
-        ]}
-      />
-
+          </Button>
+        </div>
+      </TextBlock>
       <Image src={imageUrl} alt={title} height="467px" />
     </div>
   );
