@@ -4,35 +4,29 @@ import Typography from "../../components/Typography/typography";
 import Icon from "../../components/Icon/icon";
 import React from "react";
 import ProjectImage from "./projectImage/projectImage";
-import { textBlocProjectCardStylesDeskTop, textBlocProjectCardStylesMobile } from "./projectImage/index.styles";
+import { textBlockProjectCardStylesDeskTop, textBlockProjectCardStylesMobile } from "./projectImage/index.styles";
 import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries";
 import { MediaQueries } from "utils/useMediaQueries/types";
 import { ProjectCardProps } from "./types";
 
 const renderProjectTextBlock: React.FC<MediaQueries & ProjectCardProps> = ({ isMd, data }) => (
-  <TextBlock
-    containerStyles={isMd ? textBlocProjectCardStylesDeskTop : textBlocProjectCardStylesMobile}
-    tag={[data.projectTag]}
-    title={
-      <Typography component="h3" mb="32px">
-        {data.title}
-      </Typography>
-    }
-    paragraph={<Typography component="p">{data.description}</Typography>}
-    button={
-      <Button
-        component={"link"}
-        data={data}
-        mt={"24px"}
-        variant="contained"
-        backgroundGradient="button_gradient"
-        size="md"
-        iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" size="12px" />}
-      >
-        View Project
-      </Button>
-    }
-  />
+  <TextBlock containerStyles={isMd ? textBlockProjectCardStylesDeskTop : textBlockProjectCardStylesMobile} tag={[data.projectTag]}>
+    <Typography component="h3" mb="32px">
+      {data.title}
+    </Typography>
+    <Typography component="p">{data.description}</Typography>
+    <Button
+      component={"link"}
+      data={data}
+      mt={"24px"}
+      variant="contained"
+      backgroundGradient="button_gradient"
+      size="md"
+      iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" size="12px" />}
+    >
+      View Project
+    </Button>
+  </TextBlock>
 );
 
 const ProjectCard: React.FC<MediaQueries & ProjectCardProps> = ({ data }) => {

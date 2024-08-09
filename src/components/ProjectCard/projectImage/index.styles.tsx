@@ -143,13 +143,13 @@ export const StyledProjectCardBackgroundBlur = styled.div<MediaQueries>`
     `};
 `;
 
-export const textBlocProjectCardStylesMobile = {
+export const textBlockProjectCardStylesMobile = {
   display: "flex",
   justifyContent: "center",
   flexDirection: "column",
 };
 
-export const textBlocProjectCardStylesDeskTop = {
+export const textBlockProjectCardStylesDeskTop = {
   display: "flex",
   justifyContent: "center",
   flexDirection: "column",
