@@ -4,7 +4,7 @@ import Typography from "../../../../components/Typography/typography";
 import TextBlock from "../../../../components/TextBlock/textBlock";
 import Button from "../../../../components/Button/button";
 import Icon from "../../../../components/Icon/icon";
-import { textBlockProjectDetailStyles } from "../../index.styles";
+import { textBlockProjectDetailStyles } from "../../projectDetails.styles";
 import Image from "../../../../components/Image/image";
 //  repoLink, deployedLink,
 const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, imageUrl }) => {

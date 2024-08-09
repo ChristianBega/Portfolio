@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Icon from "../../components/Icon/icon";
 import Typography from "../../components/Typography/typography.tsx";
-import { StyledNavigation, StyledNavigationBar, StyledNavigationContainer, StyledNavigationWrapper } from "./index.styles.tsx";
+import { StyledNavigation, StyledNavigationBar, StyledNavigationContainer, StyledNavigationWrapper } from "./navigation.styles.tsx";
 import NavigationMenuList from "./components/navigationMenuList/navigationMenuList.tsx";
 import { navigationVariants } from "./animations/navigationAnimations.ts";
 import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries.tsx";

@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { ButtonProps } from "./types";
-import buttonStyles from "./index.styles";
+import buttonStyles from "./button.styles";
 import Typography from "../../components/Typography/typography";
 import { useNavigate } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-import { StyledHeroSection, textBlockHeroStyles } from "./index.styles";
+import { StyledHeroSection, textBlockHeroStyles } from "./hero.styles";
 import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries";
 import Typography from "../../components/Typography/typography";
 import Button from "../../components/Button/button";

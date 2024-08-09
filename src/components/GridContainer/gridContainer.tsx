@@ -1,4 +1,4 @@
-import { StyledGridContainer } from "./index.styles";
+import { StyledGridContainer } from "./gridContainer.styles";
 import { GridContainerProps } from "./types";
 
 const GridContainer: React.FC<GridContainerProps> = ({ children, ...props }) => {

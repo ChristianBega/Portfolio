@@ -1,5 +1,5 @@
 import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries";
-import { StyledGridItem } from "./index.styles";
+import { StyledGridItem } from "./gridItem.styles";
 import { GridItemProps } from "./types";
 
 const GridItem: React.FC<GridItemProps> = ({ children, ...props }) => {
