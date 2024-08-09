@@ -1,5 +1,3 @@
-import { ProjectCardProps } from "components/ProjectCard/types";
-import { CreateProjectProps } from "components/ProjectCards/generateProjectData";
 import { ReactNode } from "react";
 import { DefaultTheme } from "styled-components";
 
