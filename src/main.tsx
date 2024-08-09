@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./styles/reset.styles.css";
 import { ThemeProvider } from "styled-components";
-import { router } from "./routes.tsx";
 import { BrowserRouter } from "react-router-dom";
 
 // Styles

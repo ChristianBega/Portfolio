@@ -6,8 +6,8 @@ import Button from "../../../../components/Button/button";
 import Icon from "../../../../components/Icon/icon";
 import { textBlockProjectDetailStyles } from "../../index.styles";
 import Image from "../../../../components/Image/image";
-
-const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, repoLink, deployedLink, imageUrl }) => {
+//  repoLink, deployedLink,
+const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, imageUrl }) => {
   return (
     <div>
       <TextBlock
@@ -42,9 +42,3 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, rep
 };
 
 export default ProjectPreview;
-{
-  /* <Typography component="h4">{repoLink}</Typography> */
-}
-{
-  /* <Typography component="h4">{deployedLink}</Typography> */
-}
