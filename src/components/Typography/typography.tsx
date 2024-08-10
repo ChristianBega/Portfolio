@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import typographyStyles from "./index.styles";
+import typographyStyles from "./typography.styles";
 import { TypographyProps } from "./types";
 import { ReactNode } from "react";
 

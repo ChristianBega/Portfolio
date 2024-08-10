@@ -1,4 +1,4 @@
-import { StyledHeroSection, textBlockHeroStyles } from "./index.styles";
+import { StyledHeroSection, textBlockHeroStyles } from "./hero.styles";
 import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries";
 import Typography from "../../components/Typography/typography";
 import Button from "../../components/Button/button";
@@ -12,26 +12,20 @@ const Hero: React.FC = () => {
   return (
     <StyledHeroSection id="hero-section" isMd={isMd}>
       {/* <BackgroundGrid /> */}
-      <TextBlock
-        containerStyles={textBlockHeroStyles}
-        title={
-          <Typography component="h1" justifyContent="center" mb="25px">
-            Hey, I'm Christian
-          </Typography>
-        }
-        img={<Image src="/profile-image.svg" height="145px" alt="Profile Emoji" mb="52px" />}
-        paragraph={
-          <Typography component="p" justifyContent="center" mb="">
-            A full stack web developer, transforming your ideas into digital realities
-          </Typography>
-        }
-        button={
+      <TextBlock containerStyles={textBlockHeroStyles} img={<Image src="/profile-image.svg" height="145px" alt="Profile Emoji" mb="52px" />}>
+        <Typography component="h1" justifyContent="center" mb="25px">
+          Hey, I'm Christian
+        </Typography>
+        <Typography component="p" justifyContent="center" mb="">
+          A full stack web developer, transforming your ideas into digital realities
+        </Typography>
+        <div>
           <Button mt="2rem" backgroundGradient="button_gradient" variant="contained" size="lg">
             Contact Me
           </Button>
-        }
-      />
-      <HeroOrb></HeroOrb>
+        </div>
+      </TextBlock>
+      <HeroOrb />
     </StyledHeroSection>
   );
 };
