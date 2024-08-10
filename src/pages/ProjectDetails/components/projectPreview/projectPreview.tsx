@@ -5,7 +5,6 @@ import TextBlock from "../../../../components/TextBlock/textBlock";
 import Button from "../../../../components/Button/button";
 import Icon from "../../../../components/Icon/icon";
 import { textBlockProjectDetailStyles } from "../../projectDetails.styles";
-import Image from "../../../../components/Image/image";
 import ProjectImage from "../../../../components/ProjectImage/projectImage";
 //  repoLink, deployedLink,
 const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, imageUrl }) => {
@@ -36,7 +35,6 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, ima
         </div>
       </TextBlock>
       <ProjectImage imageUrl={imageUrl} />
-      {/* <Image src={imageUrl} alt={title} height="467px" /> */}
     </div>
   );
 };
