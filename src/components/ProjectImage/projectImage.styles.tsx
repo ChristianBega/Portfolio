@@ -92,24 +92,26 @@ export const StyledProjectImage = styled.img<MediaQueries & ProjectImageContaine
   ${({ isSm }) =>
     isSm &&
     `
-    width : 490px;
-    height : 316px;
-    border-radius: 12px;
-    top: 48.5%;
+    width : 492px;
+    height : 318px;
+    border-radius: 12px 12px 0 0px;
+    top: 48.2%;
+    z-index: -1;
   `};
   ${({ isMd }) =>
     isMd &&
-    ` 
-    width : 600px;
-    height : 387px;
-    top : 48.5%;
+    `
+    width : 604px;
+    height : 393px;
+    top : 48.1%;
     `};
   ${({ isLg }) =>
     isLg &&
     ` 
     width : 604px;
-    height : 387px;
-    border-radius: 10px;
+    height : 394px;
+    top : 48.2%;
+
     `};
 
   ${({ includeBgWrapper, isMd, isSm }) =>
