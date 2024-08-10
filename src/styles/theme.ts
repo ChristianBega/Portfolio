@@ -49,7 +49,7 @@ export const theme: DefaultTheme = {
       },
     },
     h2: {
-      fontSize: "48px",
+      fontSize: "36px",
       fontWeight: 700,
       lineHeight: 1.3,
       margin: "0 0 .5rem 0",
@@ -145,7 +145,7 @@ export const theme: DefaultTheme = {
       paddingHover: "12px",
       backgroundHover: "linear-gradient(180deg, rgba(255,255,255, .01) 0%, rgba(255,255,255, .1) 90%)",
       colorHover: "#fff",
-      display: "inline",
+      display: "flex",
       responsive: {
         lg: {
           fontSize: "14px",
@@ -153,6 +153,7 @@ export const theme: DefaultTheme = {
       },
     },
     logo_text: {
+      display: "flex",
       fontFamily: "CustomFont_Button",
       fontSize: "16px",
       letterSpacing: 0.1,
@@ -199,6 +200,7 @@ export const theme: DefaultTheme = {
   shadows: {
     button_shadow:
       "0 0 19px 9px rgba(61, 45, 247, 0.1), 0 0 46.85px 0 rgba(49, 45, 247, 0.1), 0 0 25.48px 0 rgba(49, 45, 247, 0.1), 0 0 13px 0 rgba(73, 45, 247, 0.1), 0 0 6.52px 0 rgba(45, 41, 247, 0.1), 0 0 3.15px 0 rgba(45, 41, 247, 0.1);",
+    button_shadow_transparent: "0 0 19px 9px rgba(255, 255, 255, 0), 0 0 46.85px 0 rgba(255, 255, 255, 0)",
   },
   breakpoints: {
     xs: "480px",

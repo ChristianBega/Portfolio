@@ -61,6 +61,7 @@ declare module "styled-components" {
     border: {};
     shadows: {
       button_shadow: string;
+      button_shadow_transparent: string;
     };
     breakpoints: {
       xs: string;

@@ -16,7 +16,7 @@ const buttonStyles = css<ButtonProps>`
   font-size: ${(props) => (props.size === "sm" ? "14px" : props.size === "md" ? "16px" : "24px")};
   cursor: pointer;
   font-family: ${(props) => props.theme.typography.fontFamilyButton};
-  box-shadow: ${(props) => props.theme.shadows.button_shadow};
+  box-shadow: ${(props) => (props.boxShadow ? props.theme.shadows[props.boxShadow] : props.theme.shadows.button_shadow)};
   text-transform: uppercase;
   line-height: 1;
   transition: all 1s ease;

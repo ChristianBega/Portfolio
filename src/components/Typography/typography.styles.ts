@@ -5,6 +5,7 @@ import { css } from "styled-components";
 
 const typographyStyles = css<TypographyProps>`
   justify-content: ${(props) => (props.justifyContent ? props.justifyContent : "flex-start")};
+  align-items: center;
   cursor: ${(props) => (props.variant ? props.theme.typography[props.variant].cursor : "default")};
   font-size: ${(props) =>
     props.variant ? props.theme.typography[props.variant].fontSize : getTypographyStyle(props.theme, props.component)?.fontSize};
@@ -28,7 +29,6 @@ const typographyStyles = css<TypographyProps>`
       : props.variant
       ? props.theme.typography[props.variant].fontFamily
       : props.theme.typography.fontFamily};
-
   ${(props) => responsiveTypography("lg", props.component, props.variant)};
   transition: background-image 0.6s ease-in-out, color 0.3s ease-in-out, border-bottom 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
   border-bottom: 1px solid ${(props) => props.theme.colors.transparent};
