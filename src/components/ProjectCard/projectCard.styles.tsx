@@ -1,5 +1,16 @@
-// import styled, { css } from "styled-components";
+export const textBlockProjectCardStylesMobile = {
+  display: "flex",
+  justifyContent: "center",
+  flexDirection: "column",
+};
 
-// export const StyledTextBlockContainer = styled.div<StyledTextBlockContainerProps>`
-//   ${(props) => css({ ...props.containerStyles })}
-// `;
+export const textBlockProjectCardStylesDeskTop = {
+  display: "flex",
+  justifyContent: "center",
+  flexDirection: "column",
+  alignItems: "center",
+  // padding: "48px 0 70px 0",
+  maxWidth: "600px",
+  textAlign: "center",
+  margin: "0 auto auto auto",
+};

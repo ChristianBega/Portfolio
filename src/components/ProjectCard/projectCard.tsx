@@ -3,11 +3,11 @@ import TextBlock from "../../components/TextBlock/textBlock";
 import Typography from "../../components/Typography/typography";
 import Icon from "../../components/Icon/icon";
 import React from "react";
-import ProjectImage from "./projectImage/projectImage";
-import { textBlockProjectCardStylesDeskTop, textBlockProjectCardStylesMobile } from "./projectImage/projectImage.styles";
+import ProjectImage from "../ProjectImage/projectImage";
 import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries";
 import { MediaQueries } from "utils/useMediaQueries/types";
 import { ProjectCardProps } from "./types";
+import { textBlockProjectCardStylesDeskTop, textBlockProjectCardStylesMobile } from "./projectCard.styles";
 
 const renderProjectTextBlock: React.FC<MediaQueries & ProjectCardProps> = ({ isMd, data }) => (
   <TextBlock containerStyles={isMd ? textBlockProjectCardStylesDeskTop : textBlockProjectCardStylesMobile} tag={[data.projectTag]}>
@@ -34,8 +34,10 @@ const renderProjectTextBlock: React.FC<MediaQueries & ProjectCardProps> = ({ isM
 const ProjectCard: React.FC<MediaQueries & ProjectCardProps> = ({ data }) => {
   const { isMd } = useMediaQueries();
   return (
-    <div style={{ marginBottom: "80px", border: "1px solid orange" }}>
-      <ProjectImage imageUrl={data.imageUrl}>{renderProjectTextBlock({ isMd, data })}</ProjectImage>
+    <div style={{ marginBottom: "80px" }}>
+      <ProjectImage includeBgOrb={true} includeBgWrapper={true} imageUrl={data.imageUrl}>
+        {renderProjectTextBlock({ isMd, data })}
+      </ProjectImage>
       {!isMd && renderProjectTextBlock({ isMd, data })}
     </div>
   );
