@@ -12,7 +12,7 @@ import useMediaQueries from "../../../../utils/useMediaQueries/useMediaQueries";
 const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, imageUrl, repoLink, deployedLink }) => {
   const { isSm } = useMediaQueries();
   return (
-    <GridContainer>
+    <GridContainer mb={isSm ? "0" : "92px"}>
       <GridItem order={isSm ? 1 : 0}>
         <ProjectImage imageUrl={imageUrl} />
       </GridItem>

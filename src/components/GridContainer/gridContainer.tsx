@@ -9,7 +9,7 @@ const GridContainer: React.FC<GridContainerProps & MediaQueries> = ({ children, 
   return (
     <StyledGridContainer isSm={isSm} {...props}>
       {children}
-    </StyledGridContainer>
+    </StyledGridContainer>                                    
   );
 };
 
