@@ -4,4 +4,5 @@ export interface GridContainerProps {
   spacing?: number;
   mb?: string;
   mt?: string;
+  id: string;
 }

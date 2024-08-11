@@ -2,7 +2,7 @@ import { theme } from "../../styles/theme";
 import styled from "styled-components";
 import { GridContainerProps } from "./types";
 
-export const StyledGridContainer = styled.div<GridContainerProps>`
+export const StyledGridContainer = styled.section<GridContainerProps>`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   max-width: ${theme.breakpoints.navigation};

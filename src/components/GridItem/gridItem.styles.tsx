@@ -2,9 +2,11 @@ import { MediaQueries } from "../../utils/useMediaQueries/types";
 import styled from "styled-components";
 import { GridItemProps } from "./types";
 
-export const StyledGridItem = styled.div<GridItemProps & MediaQueries>`
+export const StyledGridItem = styled.section<GridItemProps & MediaQueries>`
   grid-column: ${(props) => (props.xs ? `span ${props.xs}` : `span 12`)};
   order: ${(props) => props.order && `${props.order}`};
+  padding: 1rem;
+  margin-bottom: ${(props) => (props.mb ? props.mb : "")};
 
   ${({ isXs, xs }) =>
     isXs &&
