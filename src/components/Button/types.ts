@@ -1,7 +1,10 @@
 import { ReactNode } from "react";
 import { DefaultTheme } from "styled-components";
 
-//^ Defines the structure and types of the button props
+export interface NavigationOptions {
+  path: string;
+  data?: object;
+}
 export interface ButtonProps {
   variant: "contained" | "outlined";
   backgroundColor?: keyof DefaultTheme["colors"];
@@ -17,6 +20,5 @@ export interface ButtonProps {
   iconEnd?: ReactNode;
   children?: ReactNode;
   mt?: string;
-  data?: object;
-  component?: ReactNode | string;
+  navigationOptions?: NavigationOptions;
 }
