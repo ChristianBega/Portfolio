@@ -201,6 +201,7 @@ export const theme: DefaultTheme = {
       borderColorHover: "transparent",
       color: "text_secondary",
       padding: "8px",
+      borderRadius: "50%",
     },
   },
   spacing: (factor: number) => `${factor * 8}px`,

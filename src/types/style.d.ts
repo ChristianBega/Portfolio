@@ -107,5 +107,6 @@ declare module "styled-components" {
     borderColorHover: keyof DefaultTheme["colors"];
     color: keyof DefaultTheme["colors"];
     padding?: string;
+    borderRadius?: string;
   }
 }
