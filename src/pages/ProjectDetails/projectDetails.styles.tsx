@@ -1,8 +1,16 @@
-export const textBlockProjectDetailStyles = {
+export const textBlockProjectDetailStylesDesktop = {
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
   justifyContent: "center",
-  maxWidth: "640px",
   margin: "auto",
+  maxWidth: "640px",
+};
+export const textBlockProjectDetailStylesMobile = {
+  display: "flex",
+  flexDirection: "column",
+  textAlign: "center",
+  justifyContent: "center",
+  margin: "auto",
+  maxWidth: "540px",
 };

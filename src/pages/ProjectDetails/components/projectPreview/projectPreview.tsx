@@ -2,40 +2,47 @@ import React from "react";
 import { ProjectPreviewProps } from "./types";
 import Typography from "../../../../components/Typography/typography";
 import TextBlock from "../../../../components/TextBlock/textBlock";
-import Button from "../../../../components/Button/button";
 import Icon from "../../../../components/Icon/icon";
-import { textBlockProjectDetailStyles } from "../../projectDetails.styles";
+import { textBlockProjectDetailStylesDesktop, textBlockProjectDetailStylesMobile } from "../../projectDetails.styles";
 import ProjectImage from "../../../../components/ProjectImage/projectImage";
-//  repoLink, deployedLink,
-const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, imageUrl }) => {
+import GridContainer from "../../../../components/GridContainer/gridContainer";
+import GridItem from "../../../../components/GridItem/gridItem";
+import useMediaQueries from "../../../../utils/useMediaQueries/useMediaQueries";
+
+const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, imageUrl, repoLink, deployedLink }) => {
+  const { isSm } = useMediaQueries();
   return (
-    <div>
-      <TextBlock containerStyles={textBlockProjectDetailStyles}>
-        <Typography component="h2">{title}</Typography>
-        <Typography component="p">{description}</Typography>
-        <div style={{ display: "flex", justifyContent: "center", gap: "3rem" }}>
-          <Button
-            variant="contained"
-            backgroundColor="transparent"
-            size="md"
-            iconStart={<Icon src="github-icon.svg" size="16px" alt="Right arrow icon"></Icon>}
-            iconEnd={<Icon src="arrow-icon-purple.svg" size="16px" alt="Right arrow icon"></Icon>}
-          >
-            GitHub
-          </Button>
-          <Button
-            variant="contained"
-            backgroundColor="transparent"
-            size="md"
-            iconStart={<Icon src="website-icon.svg" size="16px" alt="Right arrow icon"></Icon>}
-            iconEnd={<Icon src="arrow-icon-purple.svg" size="16px" alt="Right arrow icon"></Icon>}
-          >
-            Website
-          </Button>
-        </div>
-      </TextBlock>
-      <ProjectImage imageUrl={imageUrl} />
-    </div>
+    <GridContainer mb={isSm ? "0" : "92px"}>
+      <GridItem order={isSm ? 1 : 0}>
+        <ProjectImage imageUrl={imageUrl} />
+      </GridItem>
+      <GridItem order={isSm ? 0 : 1}>
+        <TextBlock containerStyles={isSm ? textBlockProjectDetailStylesDesktop : textBlockProjectDetailStylesMobile}>
+          <Typography component="h2">{title}</Typography>
+          <Typography component="p">{description}</Typography>
+          <div style={{ display: "flex", justifyContent: "center", gap: "2rem", marginTop: "2rem" }}>
+            <Typography
+              component="a"
+              href={repoLink}
+              variant="link_text"
+              iconStart={<Icon src="github-icon.svg" size="16px" alt="Right arrow icon"></Icon>}
+              iconEnd={<Icon src="arrow-icon-purple.svg" size="16px" alt="Right arrow icon"></Icon>}
+            >
+              Github
+            </Typography>
+            <Typography
+              component="a"
+              href={deployedLink}
+              variant="link_text"
+              iconStart={<Icon src="website-icon.svg" size="16px" alt="Right arrow icon"></Icon>}
+              iconEnd={<Icon src="arrow-icon-purple.svg" size="16px" alt="Right arrow icon"></Icon>}
+            >
+              Website
+            </Typography>
+          </div>
+        </TextBlock>
+      </GridItem>
+    </GridContainer>
   );
 };
 

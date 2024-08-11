@@ -45,4 +45,5 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
   background-color: transparent;
 }
+
 `;

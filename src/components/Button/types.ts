@@ -8,6 +8,7 @@ export interface ButtonProps {
   backgroundColorHover?: keyof DefaultTheme["colors"];
   backgroundGradient?: keyof DefaultTheme["gradients"];
   backgroundGradientHover?: keyof DefaultTheme["gradients"];
+  boxShadow?: keyof DefaultTheme["shadows"];
   textColor?: keyof DefaultTheme["colors"];
   borderColor?: keyof DefaultTheme["colors"];
   borderColorHover?: keyof DefaultTheme["colors"];
