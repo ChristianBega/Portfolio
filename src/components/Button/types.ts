@@ -22,4 +22,5 @@ export interface ButtonProps {
   children?: ReactNode;
   mt?: string;
   navigationOptions?: NavigationOptions;
+  buttonStyles?: object;
 }

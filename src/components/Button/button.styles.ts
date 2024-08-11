@@ -18,11 +18,18 @@ const buttonStyles = css<ButtonProps>`
   align-items: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "center" : "initial")};
   justify-content: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "center" : "initial")};
 
-  border-radius: ${(props) => (props.size === "sm" ? "19px" : props.size === "md" ? "12px" : "100px")};
   font-size: ${(props) => (props.size === "sm" ? "14px" : props.size === "md" ? "16px" : "24px")};
   font-family: ${(props) => props.theme.typography.fontFamilyButton};
   box-shadow: ${(props) => (props.boxShadow ? props.theme.shadows[props.boxShadow] : props.theme.shadows.button_shadow)};
 
+  border-radius: ${(props) =>
+    props.variant === "circular"
+      ? props.theme.buttons[props.variant].borderRadius
+      : props.size === "sm"
+      ? "19px"
+      : props.size === "md"
+      ? "12px"
+      : "100px"};
   padding: ${(props) =>
     props.variant === "circular"
       ? props.theme.buttons[props.variant].padding
@@ -67,10 +74,7 @@ const buttonStyles = css<ButtonProps>`
   &:hover::after {
     opacity: 1;
   }
+  ${(props) => css({ ...props.buttonStyles })};
 `;
 
 export default buttonStyles;
-
-// bgColor, bgColorHover
-// borderColor, borderColorHover
-// color

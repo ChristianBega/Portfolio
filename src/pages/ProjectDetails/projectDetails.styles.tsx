@@ -14,3 +14,10 @@ export const textBlockProjectDetailStylesMobile = {
   margin: "auto",
   maxWidth: "540px",
 };
+
+export const buttonStylesBackButton = {
+  position: "absolute",
+  top: "16px",
+  left: "0",
+  marginLeft: "1rem",
+};
