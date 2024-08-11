@@ -3,25 +3,36 @@ import { getButtonStyles } from "./getButtonStyles";
 import { ButtonProps } from "./types";
 
 const buttonStyles = css<ButtonProps>`
-  margin-top: ${(props) => (props.mt ? props.mt : "none")};
-  display: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "flex" : "inline-block")};
-  align-items: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "center" : "initial")};
-  justify-content: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "center" : "initial")};
-  border: none;
-  background: none;
   position: relative;
+  background: none;
   color: ${(props) => getButtonStyles(props).color};
-  padding: ${(props) => (props.size === "sm" ? "10px 14px" : props.size === "md" ? "13px 16px" : "12px 24px")};
-  border-radius: ${(props) => (props.size === "sm" ? "19px" : props.size === "md" ? "12px" : "100px")};
-  font-size: ${(props) => (props.size === "sm" ? "14px" : props.size === "md" ? "16px" : "24px")};
+  border: none;
   cursor: pointer;
-  font-family: ${(props) => props.theme.typography.fontFamilyButton};
-  box-shadow: ${(props) => (props.boxShadow ? props.theme.shadows[props.boxShadow] : props.theme.shadows.button_shadow)};
-  text-transform: uppercase;
+  text-transform: capitalize;
   line-height: 1;
   transition: all 1s ease;
   z-index: 1;
 
+  margin-top: ${(props) => (props.mt ? props.mt : "none")};
+  display: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "flex" : "inline-block")};
+  align-items: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "center" : "initial")};
+  justify-content: ${({ iconStart, iconEnd }) => (iconStart || iconEnd ? "center" : "initial")};
+
+  border-radius: ${(props) => (props.size === "sm" ? "19px" : props.size === "md" ? "12px" : "100px")};
+  font-size: ${(props) => (props.size === "sm" ? "14px" : props.size === "md" ? "16px" : "24px")};
+  font-family: ${(props) => props.theme.typography.fontFamilyButton};
+  box-shadow: ${(props) => (props.boxShadow ? props.theme.shadows[props.boxShadow] : props.theme.shadows.button_shadow)};
+
+  padding: ${(props) =>
+    props.variant === "circular"
+      ? props.theme.buttons[props.variant].padding
+      : props.size === "sm"
+      ? "10px 14px"
+      : props.size === "md"
+      ? "13px 16px"
+      : "12px 24px"};
+
+  /* Hover Gradients */
   &::before,
   &::after {
     content: "";
@@ -34,7 +45,6 @@ const buttonStyles = css<ButtonProps>`
     transition: opacity 0.5s linear;
     border-radius: inherit;
   }
-
   &::before {
     border: ${(props) => `1px solid ${getButtonStyles(props).border}`};
     background-image: ${(props) =>
@@ -43,7 +53,6 @@ const buttonStyles = css<ButtonProps>`
         : `linear-gradient(0deg, ${getButtonStyles(props).background} 0%, ${getButtonStyles(props).background} 100%)`};
     opacity: 1;
   }
-
   &::after {
     border: ${(props) => (props.variant === "outlined" ? "none" : `1px solid ${getButtonStyles(props).borderHover}`)};
     background-image: ${(props) =>
@@ -55,10 +64,13 @@ const buttonStyles = css<ButtonProps>`
   &:hover::before {
     opacity: 0;
   }
-
   &:hover::after {
     opacity: 1;
   }
 `;
 
 export default buttonStyles;
+
+// bgColor, bgColorHover
+// borderColor, borderColorHover
+// color

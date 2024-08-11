@@ -17,8 +17,7 @@ const renderProjectTextBlock: React.FC<MediaQueries & ProjectCardProps> = ({ isM
     <Typography component="p">{data.description}</Typography>
     <div>
       <Button
-        component={"link"}
-        data={data}
+        navigationOptions={{ path: "/project-details", data }}
         mt={"24px"}
         variant="contained"
         backgroundGradient="button_gradient"
