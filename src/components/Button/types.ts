@@ -5,8 +5,9 @@ export interface NavigationOptions {
   path: string;
   data?: object;
 }
+
 export interface ButtonProps {
-  variant: "contained" | "outlined";
+  variant: "contained" | "outlined" | "circular";
   backgroundColor?: keyof DefaultTheme["colors"];
   backgroundColorHover?: keyof DefaultTheme["colors"];
   backgroundGradient?: keyof DefaultTheme["gradients"];

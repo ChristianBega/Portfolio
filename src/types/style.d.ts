@@ -56,6 +56,7 @@ declare module "styled-components" {
     buttons: {
       contained: ButtonStyles;
       outlined: ButtonStyles;
+      circular: ButtonStyles;
     };
     spacing: (factor: number) => string;
     border: {};
@@ -105,5 +106,6 @@ declare module "styled-components" {
     borderColor: keyof DefaultTheme["colors"];
     borderColorHover: keyof DefaultTheme["colors"];
     color: keyof DefaultTheme["colors"];
+    padding?: string;
   }
 }

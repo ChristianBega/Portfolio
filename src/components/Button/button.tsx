@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styled from "styled-components";
 import { ButtonProps } from "./types";
 import buttonStyles from "./button.styles";
@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({ variant = "contained", size = "md", ico
 
   return (
     <StyledButton onClick={() => navigationOptions && handleNavigation(navigate, navigationOptions)} variant={variant} size={size} {...props}>
-      <div style={{ display: "flex", alignItems: "center", gap: ".5rem" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: variant !== "circular" ? ".5rem" : "0rem" }}>
         {iconStart && <span>{iconStart}</span>}
         <Typography component="p" variant="button_text">
           {children}
