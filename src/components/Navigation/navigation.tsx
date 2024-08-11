@@ -6,6 +6,7 @@ import NavigationMenuList from "./components/navigationMenuList/navigationMenuLi
 import { navigationVariants } from "./animations/navigationAnimations.ts";
 import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries.tsx";
 import Button from "../../components/Button/button.tsx";
+import { Link } from "react-router-dom";
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -28,7 +29,7 @@ const Navigation: React.FC = () => {
       <StyledNavigation isMd={isMd} id="navigation" initial="closed" animate={isOpen ? "open" : "closed"} variants={navigationVariants}>
         <StyledNavigationContainer id="navigation-container">
           <StyledNavigationBar id="navigation-bar">
-            <Typography component="a" variant="logo_text">
+            <Typography route={"/"} component={Link} variant="logo_text">
               Christian Bega
             </Typography>
             {isMd && <NavigationMenuList isOpen={isOpen} />}

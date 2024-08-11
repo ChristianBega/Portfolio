@@ -10,7 +10,7 @@ const NavigationMenuItems: React.FC<NavigationMenuItemsProps> = ({ items, isMd, 
     <>
       {items.map(({ path, label }, index) => (
         <StyledNavigationMenuListItem key={index} isMd={isMd} variants={variant || navigationLinkVariants}>
-          <Typography component="a" route={path} variant="link_text" iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" size="12px" />}>
+          <Typography component="a" href={path} variant="link_text" iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" size="12px" />}>
             {label}
           </Typography>
         </StyledNavigationMenuListItem>

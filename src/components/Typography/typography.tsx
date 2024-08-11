@@ -2,7 +2,6 @@ import styled from "styled-components";
 import typographyStyles from "./typography.styles";
 import { TypographyProps } from "./types";
 import { ReactNode } from "react";
-
 const StyledTypography = styled.div<TypographyProps>`
   ${typographyStyles}
 `;
@@ -29,7 +28,7 @@ const Typography: React.FC<TypographyProps> = ({ component = "p", variant, iconS
   };
 
   return (
-    <StyledTypography href={href && href} route={route && route} as={component} component={component} variant={variant} {...props}>
+    <StyledTypography href={href && href} to={route && route} as={component} component={component} variant={variant} {...props}>
       {iconStart && <span style={{ marginRight: ".5rem" }}>{iconStart}</span>}
       {renderContent()}
       {iconEnd && <span style={{ marginLeft: ".5rem" }}>{iconEnd}</span>}
