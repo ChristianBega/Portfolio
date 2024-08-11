@@ -4,13 +4,17 @@ import { theme } from "../../styles/theme";
 
 export const StyledTextBlockContainer = styled.div<StyledTextBlockContainerProps>`
   padding-inline: 1rem;
-  ${(props) => css({ ...props.containerStyles })}
+  margin-bottom: ${(props) => props.mb && props.mb};
+  margin-top: ${(props) => props.mt && props.mt};
+
+  ${(props) => css({ ...props.containerStyles })};
 `;
 
 export const StyledTextBlockTagList = styled.ul`
   display: flex;
   gap: 1rem;
   margin-bottom: 1.5rem !important;
+  flex-wrap: wrap;
 `;
 export const StyledTextBlockTag = styled.li`
   color: #fff;
