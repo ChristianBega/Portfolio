@@ -2,19 +2,17 @@ import Typography from "../../components/Typography/typography";
 import React from "react";
 import { useLocation } from "react-router-dom";
 import ProjectPreview from "./components/projectPreview/projectPreview";
-import { theme } from "../../styles/theme";
 import TextBlock from "../../components/TextBlock/textBlock";
 
 const ProjectDetails: React.FC = () => {
   const { state } = useLocation();
-  const { title, description, longDescription, deployedLink, repoLink, imageUrl, technology } = state;
-  // title, desc, github, deployed, image
+  const { title, description, longDescription, deployedLink, repoLink, imageUrl, technology, role } = state;
   return (
     <div
       style={{
         marginTop: "100px",
-        maxWidth: theme.breakpoints.navigation,
         marginInline: "auto",
+        maxWidth: "800px",
       }}
     >
       <ProjectPreview title={title} description={description} repoLink={repoLink} deployedLink={deployedLink} imageUrl={imageUrl} />
@@ -31,13 +29,11 @@ const ProjectDetails: React.FC = () => {
           {longDescription}
         </Typography>
       </TextBlock>
-      <TextBlock mb="40px">
+      <TextBlock mb="40px" roles={role}>
         <Typography component="h3" mb="20px">
           Role
         </Typography>
-        <Typography component="p" justifyContent="center">
-          "list element"
-        </Typography>
+        {/* build list component instead of passing roles prop to render list */}
       </TextBlock>
     </div>
   );

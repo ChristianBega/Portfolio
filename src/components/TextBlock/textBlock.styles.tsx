@@ -24,3 +24,14 @@ export const StyledTextBlockTag = styled.li`
   background-color: ${theme.colors.color_5_rgba};
   color: ${theme.colors.color_5};
 `;
+export const StyledRolesList = styled.ul`
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem !important;
+  flex-wrap: wrap;
+`;
+export const StyledRoleItem = styled.li`
+  color: #fff;
+  list-style: disc;
+  margin-left: 1rem;
+`;

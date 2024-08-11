@@ -13,7 +13,11 @@ export interface TagProps {
   techTag?: string[];
 }
 
-export type CombinedTextBlockProps = TextBlockProps & TagProps;
+export interface ListProps {
+  roles?: string[];
+}
+
+export type CombinedTextBlockProps = TextBlockProps & TagProps & ListProps;
 
 export interface StyledTextBlockContainerProps {
   containerStyles?: object;

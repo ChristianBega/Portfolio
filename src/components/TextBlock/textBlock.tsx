@@ -1,6 +1,6 @@
 import React from "react";
-import { CombinedTextBlockProps, TagProps } from "./types";
-import { StyledTextBlockContainer, StyledTextBlockTag, StyledTextBlockTagList } from "./textBlock.styles";
+import { CombinedTextBlockProps, ListProps, TagProps } from "./types";
+import { StyledRoleItem, StyledRolesList, StyledTextBlockContainer, StyledTextBlockTag, StyledTextBlockTagList } from "./textBlock.styles";
 import Typography from "../../components/Typography/typography";
 
 const renderTags: React.FC<TagProps> = ({ tag, techTag }) => {
@@ -18,14 +18,25 @@ const renderTags: React.FC<TagProps> = ({ tag, techTag }) => {
   );
 };
 
-const TextBlock: React.FC<CombinedTextBlockProps> = ({ tag, techTag, img, mb, mt, containerStyles, children }) => {
-  console.log(tag || techTag);
+const renderList: React.FC<ListProps> = ({ roles }) => {
+  return (
+    <StyledRolesList role="list">
+      {roles?.map((role, index) => (
+        <StyledRoleItem key={index}>
+          <Typography component={"p"}>{role}</Typography>
+        </StyledRoleItem>
+      ))}
+    </StyledRolesList>
+  );
+};
+const TextBlock: React.FC<CombinedTextBlockProps> = ({ tag, techTag, img, mb, mt, roles, containerStyles, children }) => {
   return (
     <StyledTextBlockContainer mb={mb} mt={mt} containerStyles={containerStyles}>
       {tag && renderTags({ tag })}
       {img && img}
       {children}
       {techTag && renderTags({ techTag })}
+      {roles && renderList({ roles })}
     </StyledTextBlockContainer>
   );
 };
