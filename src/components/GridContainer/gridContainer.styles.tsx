@@ -10,4 +10,5 @@ export const StyledGridContainer = styled.section<GridContainerProps>`
   grid-gap: ${(props) => (props.spacing ? props.theme.spacing(props.spacing) : `0`)};
   margin-bottom: ${(props) => (props.mb ? props.mb : `92px`)};
   margin-top: ${(props) => (props.mt ? props.mt : `0`)};
+  height: 100%;
 `;
