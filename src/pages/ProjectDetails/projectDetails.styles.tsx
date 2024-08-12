@@ -1,4 +1,4 @@
-export const textBlockProjectDetailStylesDesktop = {
+export const textBlockProjectPreviewStylesDesktop = {
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
@@ -6,13 +6,18 @@ export const textBlockProjectDetailStylesDesktop = {
   margin: "auto",
   maxWidth: "640px",
 };
-export const textBlockProjectDetailStylesMobile = {
+export const textBlockProjectPreviewStylesMobile = {
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
   justifyContent: "center",
   margin: "auto",
   maxWidth: "540px",
+};
+
+export const textBlockProjectDetailStyles = {
+  maxWidth: "800px",
+  margin: "auto",
 };
 
 export const buttonStylesBackButton = {

@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { GridItemProps } from "./types";
 
 export const StyledGridItem = styled.section<GridItemProps & MediaQueries>`
+  position: relative;
   grid-column: ${(props) => (props.xs ? `span ${props.xs}` : `span 12`)};
   order: ${(props) => props.order && `${props.order}`};
-  padding: 1rem;
   margin-bottom: ${(props) => (props.mb ? props.mb : "")};
-
+  padding-inline: ${(props) => (props.paddingX ? props.paddingX : "1rem")};
   ${({ isXs, xs }) =>
     isXs &&
     `

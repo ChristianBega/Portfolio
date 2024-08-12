@@ -11,4 +11,5 @@ export interface GridItemProps {
   id: string;
   mb?: string;
   mt?: string;
+  paddingX?: string;
 }
