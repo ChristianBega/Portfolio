@@ -8,13 +8,14 @@ const Home: React.FC = () => {
   return (
     <>
       <Hero />
-      <GridContainer spacing={2}>
+      <GridContainer id="main-grid-container" spacing={2}>
         <Skills />
         <AboutMe />
+        <ProjectCards />
       </GridContainer>
-      <ProjectCards />
     </>
   );
 };
 
 export default Home;
+// 193 & 70

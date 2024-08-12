@@ -8,4 +8,8 @@ export interface GridItemProps {
   lg?: number;
   xl?: number;
   children: ReactNode;
+  id: string;
+  mb?: string;
+  mt?: string;
+  paddingX?: string;
 }

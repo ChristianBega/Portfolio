@@ -3,10 +3,8 @@ import { StyledTextBlockContainerProps } from "./types";
 import { theme } from "../../styles/theme";
 
 export const StyledTextBlockContainer = styled.div<StyledTextBlockContainerProps>`
-  padding-inline: 1rem;
   margin-bottom: ${(props) => props.mb && props.mb};
   margin-top: ${(props) => props.mt && props.mt};
-
   ${(props) => css({ ...props.containerStyles })};
 `;
 

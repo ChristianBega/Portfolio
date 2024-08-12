@@ -1,15 +1,19 @@
 import React from "react";
-import { theme } from "../../styles/theme";
 import ProjectCard from "../../components/ProjectCard/projectCard";
 import { featuredProjectsData } from "./generateProjectData";
+import GridItem from "../../components/GridItem/gridItem";
+import Typography from "../../components/Typography/typography";
 
 const ProjectCards: React.FC = () => {
   return (
-    <div style={{ padding: "1rem", maxWidth: theme.breakpoints.navigation, margin: "auto" }}>
+    <GridItem id="featured-projects" order={3}>
+      <Typography component="h2" mb="48px">
+        Projects
+      </Typography>
       {featuredProjectsData.map((data, index) => (
         <ProjectCard data={data} key={index}></ProjectCard>
       ))}
-    </div>
+    </GridItem>
   );
 };
 
