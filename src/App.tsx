@@ -6,10 +6,12 @@ import Navigation from "./components/Navigation/navigation";
 import ProjectDetails from "./pages/ProjectDetails/projectDetails";
 import Home from "./pages/Home/home";
 import BackgroundGrid from "./components/Hero/components/backgroundGrid/backgroundGrid";
+import ScrollToTop from "./components/ScrollToTop/scrollToTop";
 
 const App: React.FC = () => {
   return (
     <>
+      <ScrollToTop />
       <Navigation />
       {/* Refactor - move this from the hero to a global component that uses the image component */}
       <BackgroundGrid />
