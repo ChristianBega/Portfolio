@@ -14,15 +14,17 @@ export const StyledGridItem = styled.section<GridItemProps & MediaQueries>`
     grid-column: ${xs ? `span ${xs}` : `span 12`};
     `};
 
-  ${({ isSm, sm, xs }) =>
+  ${({ isSm, sm, xs, paddingX }) =>
     isSm &&
     `
+    padding-inline: ${paddingX ? paddingX : "2rem"};
     grid-column: ${sm ? `span ${sm}` : xs ? `span ${xs}` : `span 12`};
     `};
 
   ${({ isMd, md, sm, xs }) =>
     isMd &&
     `
+    
     grid-column: ${md ? `span ${md}` : sm ? `span ${sm}` : xs ? `span ${xs}` : `span 12`};
     `};
 

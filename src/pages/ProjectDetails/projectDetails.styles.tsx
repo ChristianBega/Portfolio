@@ -22,7 +22,7 @@ export const textBlockProjectDetailStyles = {
 
 export const buttonStylesBackButton = {
   position: "absolute",
-  top: "16px",
+  top: "0",
   left: "0",
   marginLeft: "1rem",
 };

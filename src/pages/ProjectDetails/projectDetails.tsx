@@ -8,12 +8,14 @@ import Icon from "../../components/Icon/icon";
 import { buttonStylesBackButton, textBlockProjectDetailStyles } from "./projectDetails.styles";
 import GridContainer from "../../components/GridContainer/gridContainer";
 import GridItem from "../../components/GridItem/gridItem";
+import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries";
 
 const ProjectDetails: React.FC = () => {
   const { state } = useLocation();
   const { title, description, longDescription, deployedLink, repoLink, imageUrl, technology, role } = state;
+  const { isSm } = useMediaQueries();
   return (
-    <GridContainer id="project-details" spacing={2} mt="100px">
+    <GridContainer id="project-details" spacing={2} mt={isSm ? "120px" : "85px"}>
       <GridItem id="project-preview-section">
         <Button
           buttonStyles={buttonStylesBackButton}
@@ -24,15 +26,15 @@ const ProjectDetails: React.FC = () => {
         ></Button>
         <ProjectPreview title={title} description={description} repoLink={repoLink} deployedLink={deployedLink} imageUrl={imageUrl} />
       </GridItem>
-      <GridItem id="technology">
-        <TextBlock containerStyles={textBlockProjectDetailStyles} techTag={technology} mb="40px">
+      <GridItem mb="40px" id="technology">
+        <TextBlock containerStyles={textBlockProjectDetailStyles} techTag={technology}>
           <Typography component="h3" mb="20px">
             Technologies
           </Typography>
         </TextBlock>
       </GridItem>
-      <GridItem id="summary">
-        <TextBlock containerStyles={textBlockProjectDetailStyles} mb="40px">
+      <GridItem mb="40px" id="summary">
+        <TextBlock containerStyles={textBlockProjectDetailStyles}>
           <Typography component="h3" mb="20px">
             Summary
           </Typography>
@@ -41,8 +43,8 @@ const ProjectDetails: React.FC = () => {
           </Typography>
         </TextBlock>
       </GridItem>
-      <GridItem id="role">
-        <TextBlock containerStyles={textBlockProjectDetailStyles} mb="40px" roles={role}>
+      <GridItem mb="40px" id="role">
+        <TextBlock containerStyles={textBlockProjectDetailStyles} roles={role}>
           <Typography component="h3" mb="20px">
             Role
           </Typography>

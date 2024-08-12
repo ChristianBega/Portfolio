@@ -20,7 +20,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, ima
         <TextBlock containerStyles={isSm ? textBlockProjectPreviewStylesDesktop : textBlockProjectPreviewStylesMobile}>
           <Typography component="h2">{title}</Typography>
           <Typography component="p">{description}</Typography>
-          <div style={{ display: "flex", justifyContent: "center", gap: "2rem", marginTop: "2rem" }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: "2rem", marginTop: "20px" }}>
             <Typography
               component="a"
               href={repoLink}
