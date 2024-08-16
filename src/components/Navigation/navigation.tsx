@@ -7,6 +7,7 @@ import { navigationVariants } from "./animations/navigationAnimations.ts";
 import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries.tsx";
 import Button from "../../components/Button/button.tsx";
 import { Link } from "react-router-dom";
+import { navigationWrapperVariants } from "./animations/navigatonWrapper.ts";
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -46,9 +47,8 @@ const Navigation: React.FC = () => {
 
   return (
     <StyledNavigationWrapper
-      initial={{ y: 0 }}
-      animate={{ y: scrollDirection === "down" ? "-400%" : "0%" }}
-      transition={{ duration: 0.3 }}
+      animate={scrollDirection === "down" ? "down" : "up"}
+      variants={navigationWrapperVariants}
       isNavigation={isNavigation}
       id="navigation-wrapper"
     >
