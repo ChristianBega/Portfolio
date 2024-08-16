@@ -7,16 +7,37 @@ import { navigationVariants } from "./animations/navigationAnimations.ts";
 import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries.tsx";
 import Button from "../../components/Button/button.tsx";
 import { Link } from "react-router-dom";
+import { navigationWrapperVariants } from "./animations/navigatonWrapper.ts";
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
   const { isMd, isNavigation } = useMediaQueries();
 
-  const toggleDropdown = () => {
+  const [scrollDirection, setScrollDirection] = useState<"up" | "down" | null>(null);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
+  const toggleDropdown = (): void => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        setScrollDirection("down");
+        if (isOpen) {
+          setIsOpen(false);
+        }
+      } else if (scrollTop < lastScrollTop) {
+        setScrollDirection("up");
+      }
+      setLastScrollTop(scrollTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollTop, isOpen]);
   // ! quick fix to close menu when open on mobile and screen size changes to isMd breakpoint, need to find a better solution
   useEffect(() => {
     if (isMd) {
@@ -25,7 +46,12 @@ const Navigation: React.FC = () => {
   }, [isMd]);
 
   return (
-    <StyledNavigationWrapper isNavigation={isNavigation} id="navigation-wrapper">
+    <StyledNavigationWrapper
+      animate={scrollDirection === "down" ? "down" : "up"}
+      variants={navigationWrapperVariants}
+      isNavigation={isNavigation}
+      id="navigation-wrapper"
+    >
       <StyledNavigation isMd={isMd} id="navigation" initial="closed" animate={isOpen ? "open" : "closed"} variants={navigationVariants}>
         <StyledNavigationContainer id="navigation-container">
           <StyledNavigationBar id="navigation-bar">
@@ -48,7 +74,7 @@ const Navigation: React.FC = () => {
               />
             )}
           </StyledNavigationBar>
-          {!isMd && <NavigationMenuList isOpen={isOpen} />}
+          {!isMd && <NavigationMenuList isOpen={isOpen} handleClose={toggleDropdown} />}
         </StyledNavigationContainer>
       </StyledNavigation>
     </StyledNavigationWrapper>

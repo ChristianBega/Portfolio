@@ -6,13 +6,13 @@ import useMediaQueries from "../../../../utils/useMediaQueries/useMediaQueries";
 import NavigationMenuItems from "../navigationMenuItems/navigationMenuItems";
 
 const menuListItems = [
-  { label: "Home", path: "" },
-  { label: "About", path: "" },
-  { label: "Projects", path: "" },
-  { label: "Contact", path: "" },
+  { label: "Home", path: "/#top" },
+  { label: "About", path: "/#about-section" },
+  { label: "Projects", path: "/#featured-projects-section" },
+  { label: "Contact", path: "/#contact" },
 ];
 
-const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen }) => {
+const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen, handleClose }) => {
   const { isMd } = useMediaQueries();
 
   return (
@@ -24,7 +24,7 @@ const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen }) => {
       animate={isMd ? (isOpen ? "open" : "open") : isOpen ? "open" : "closed"}
       variants={isMd ? desktopNavigationLinkVariants : navigationLinkVariants}
     >
-      <NavigationMenuItems items={menuListItems} isMd={isMd} variant={navigationLinkVariants} />
+      <NavigationMenuItems handleClose={handleClose} items={menuListItems} isMd={isMd} variant={navigationLinkVariants} />
     </StyledNavigationMenuList>
   );
 };
