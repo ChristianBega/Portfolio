@@ -6,10 +6,10 @@ import useMediaQueries from "../../../../utils/useMediaQueries/useMediaQueries";
 import NavigationMenuItems from "../navigationMenuItems/navigationMenuItems";
 
 const menuListItems = [
-  { label: "Home", path: "" },
-  { label: "About", path: "" },
-  { label: "Projects", path: "" },
-  { label: "Contact", path: "" },
+  { label: "Home", path: "/#top" },
+  { label: "About", path: "/#about-section" },
+  { label: "Projects", path: "/#featured-projects-section" },
+  { label: "Contact", path: "/#contact" },
 ];
 
 const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen }) => {

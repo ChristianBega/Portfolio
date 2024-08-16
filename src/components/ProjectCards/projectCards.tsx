@@ -6,7 +6,7 @@ import Typography from "../../components/Typography/typography";
 
 const ProjectCards: React.FC = () => {
   return (
-    <GridItem id="featured-projects" order={3}>
+    <GridItem id="featured-projects-section" order={3}>
       <Typography component="h2" mb="48px">
         Projects
       </Typography>
