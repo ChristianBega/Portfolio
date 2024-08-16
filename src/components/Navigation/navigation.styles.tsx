@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { StyledNavigationProps } from "./types";
 import { MediaQueries } from "utils/useMediaQueries/types";
 
-export const StyledNavigationWrapper = styled.div<MediaQueries>`
+export const StyledNavigationWrapper = styled(motion.div)<MediaQueries>`
   position: sticky;
   top: 0;
   padding: 1rem;
