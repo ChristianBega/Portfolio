@@ -6,7 +6,18 @@ const StyledTypography = styled.div<TypographyProps>`
   ${typographyStyles}
 `;
 
-const Typography: React.FC<TypographyProps> = ({ component = "p", variant, iconStart, iconEnd, href, route, children, keyWords, ...props }) => {
+const Typography: React.FC<TypographyProps> = ({
+  component = "p",
+  variant,
+  iconStart,
+  iconEnd,
+  href,
+  route,
+  children,
+  keyWords,
+  handleClose,
+  ...props
+}) => {
   const highlightKeywords = (text: string, keywords: string[]): ReactNode[] => {
     const regex = new RegExp(`(${keywords.join("|")})`, "gi");
     return text.split(regex).map((part, index) =>
@@ -28,7 +39,7 @@ const Typography: React.FC<TypographyProps> = ({ component = "p", variant, iconS
   };
 
   return (
-    <StyledTypography href={href && href} to={route && route} as={component} component={component} variant={variant} {...props}>
+    <StyledTypography onClick={handleClose} href={href && href} to={route && route} as={component} component={component} variant={variant} {...props}>
       {iconStart && <span style={{ marginRight: ".5rem" }}>{iconStart}</span>}
       {renderContent()}
       {iconEnd && <span style={{ marginLeft: ".5rem" }}>{iconEnd}</span>}

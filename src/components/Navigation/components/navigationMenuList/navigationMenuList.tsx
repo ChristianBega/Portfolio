@@ -12,7 +12,7 @@ const menuListItems = [
   { label: "Contact", path: "/#contact" },
 ];
 
-const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen }) => {
+const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen, handleClose }) => {
   const { isMd } = useMediaQueries();
 
   return (
@@ -24,7 +24,7 @@ const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen }) => {
       animate={isMd ? (isOpen ? "open" : "open") : isOpen ? "open" : "closed"}
       variants={isMd ? desktopNavigationLinkVariants : navigationLinkVariants}
     >
-      <NavigationMenuItems items={menuListItems} isMd={isMd} variant={navigationLinkVariants} />
+      <NavigationMenuItems handleClose={handleClose} items={menuListItems} isMd={isMd} variant={navigationLinkVariants} />
     </StyledNavigationMenuList>
   );
 };

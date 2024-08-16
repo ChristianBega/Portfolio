@@ -13,7 +13,7 @@ const Navigation: React.FC = () => {
 
   const { isMd, isNavigation } = useMediaQueries();
 
-  const toggleDropdown = () => {
+  const toggleDropdown = (): void => {
     setIsOpen(!isOpen);
   };
 
@@ -48,7 +48,7 @@ const Navigation: React.FC = () => {
               />
             )}
           </StyledNavigationBar>
-          {!isMd && <NavigationMenuList isOpen={isOpen} />}
+          {!isMd && <NavigationMenuList isOpen={isOpen} handleClose={toggleDropdown} />}
         </StyledNavigationContainer>
       </StyledNavigation>
     </StyledNavigationWrapper>
