@@ -12,7 +12,7 @@ import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries";
 
 const ProjectDetails: React.FC = () => {
   const { state } = useLocation();
-  const { title, description, longDescription, deployedLink, repoLink, imageUrl, technology, role } = state;
+  const { title, description, longDescription, deployedLink, repoLink, videoUrl, technology, role } = state;
   const { isSm } = useMediaQueries();
   return (
     <GridContainer id="project-details" spacing={2} mt={isSm ? "120px" : "85px"}>
@@ -24,7 +24,7 @@ const ProjectDetails: React.FC = () => {
           size="md"
           iconStart={<Icon alt="Back arrow" src="back-arrow.svg" size="24px"></Icon>}
         ></Button>
-        <ProjectPreview title={title} description={description} repoLink={repoLink} deployedLink={deployedLink} imageUrl={imageUrl} />
+        <ProjectPreview title={title} description={description} repoLink={repoLink} deployedLink={deployedLink} videoUrl={videoUrl} />
       </GridItem>
       <GridItem mb="40px" id="technology">
         <TextBlock containerStyles={textBlockProjectDetailStyles} techTag={technology}>
