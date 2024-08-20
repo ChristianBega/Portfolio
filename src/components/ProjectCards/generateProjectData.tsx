@@ -1,14 +1,15 @@
-import OverlandBaseballImage from "../../../public/overlandBaseball.png";
-import BlogSiteImage from "../../../public/blogSite.png";
-import FinancialTrackerImage from "../../../public/FinaicalTracker.png";
-import AlmadelicVideoPreview from "../../../public/almadelic-preview.mov";
+// import OverlandBaseballImage from "../../../public/overlandBaseball.png";
+// import BlogSiteImage from "../../../public/blogSite.png";
+// import FinancialTrackerImage from "../../../public/FinaicalTracker.png";
+import AlmadelicVideoMobile from "../../../public/almadelic-mobile.mp4";
+import OverlandVideoMobile from "../../../public/overland-mobile.mp4";
+import NextFlixVideoMobile from "../../../public/nextflix-mobile.mp4";
 
 export interface CreateProjectProps {
   title: string;
   projectTag: string;
   description: string;
   longDescription: string;
-  imageUrl: string;
   videoUrl: string;
   deployedLink: string;
   pathUrl?: string;
@@ -100,8 +101,8 @@ export const featuredProjectsData: CreateProjectProps[] = [
     description:
       "A full-stack telehealth platform designed to make transformative, personalized ketamine therapy accessible, convenient, and effective—all from the comfort of your home.",
     longDescription: "  ",
-    videoUrl: AlmadelicVideoPreview,
-    imageUrl: BlogSiteImage,
+    videoUrl: AlmadelicVideoMobile,
+
     deployedLink: "https://deployed.com/",
     repoLink: "https://github.com/ChristianBega/Blog-Site",
     technology: ["React", "MongoDB", "Tailwind", "Daisy UI", "Express", "Node", "MongoDb", "JWT", "Bcrypt"],
@@ -119,8 +120,8 @@ export const featuredProjectsData: CreateProjectProps[] = [
     description: "A front-end single page application that allows players a coaches a convenient platform to access and browse team information.",
     longDescription:
       "Overland Baseball's website is a single page React application that provides its users a convenient way to access and browse different team information. The application is built with React and Material UI to provide a polished and functional front end. Additionally, the website features working forms using Email Js, image sliders, and timelines.",
-    videoUrl: AlmadelicVideoPreview,
-    imageUrl: OverlandBaseballImage,
+    videoUrl: OverlandVideoMobile,
+
     deployedLink: "https://overlandbaseball.com/",
     pathUrl: "/project-details",
     repoLink: "https://github.com/ChristianBega/Overland-Baseball-Website",
@@ -139,8 +140,8 @@ export const featuredProjectsData: CreateProjectProps[] = [
     description: "A MERN full stack finance tracking web application that allows users monitor their bills, savings, and expenses.",
     longDescription:
       "Golden Goose Finance is a full-stack MERN web application that provides users with an intuitive and user-friendly solution for tracking their finances. The application is built with MongoDB, Express, Node.js, React, and Material UI, allowing users to track their expenses, savings, and bills in an organized manner. Additionally, users can view their financial data through charts and graphs to gain insight into their financial habits.",
-    videoUrl: AlmadelicVideoPreview,
-    imageUrl: FinancialTrackerImage,
+    videoUrl: NextFlixVideoMobile,
+
     deployedLink: "https://golden-goose-finance.herokuapp.com/",
     repoLink: "https://github.com/ChristianBega/Golden-Goose-Finance",
     technology: [

@@ -9,7 +9,7 @@ const ProjectVideo: React.FC<CombinedProjectVideoProps> = ({ children, videoUrl,
     <StyledProjectVideoContainer includeBgWrapper={includeBgWrapper} isMd={isMd}>
       {includeBgOrb && <StyledProjectCardBackgroundBlur isXs={isXs} is600={is600} isSm={isSm} isLg={isLg} isMd={isMd} />}
       {isMd && children}
-      <StyledVideo includeBgWrapper={includeBgWrapper} isLg={isLg} isSm={isSm} isMd={isMd} src={videoUrl} />
+      <StyledVideo includeBgWrapper={includeBgWrapper} isLg={isLg} isSm={isSm} isMd={isMd} src={videoUrl} autoPlay />
       <StyledProjectImageFrame
         includeBgWrapper={includeBgWrapper}
         isMd={isMd}
