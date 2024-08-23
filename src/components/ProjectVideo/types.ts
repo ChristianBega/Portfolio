@@ -2,7 +2,10 @@ import { ReactNode } from "react";
 
 export interface ProjectVideoProps {
   children?: ReactNode;
-  videoUrl: string;
+  videoUrl: {
+    mobile: string;
+    desktop: string;
+  };
 }
 export interface ProjectVideoContainerProps {
   includeBgWrapper?: boolean;

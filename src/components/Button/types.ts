@@ -7,7 +7,7 @@ export interface NavigationOptions {
 }
 
 export interface ButtonProps {
-  variant: "contained" | "outlined" | "circular";
+  variant: "contained" | "outlined" | "circular" | "replay";
   backgroundColor?: keyof DefaultTheme["colors"];
   backgroundColorHover?: keyof DefaultTheme["colors"];
   backgroundGradient?: keyof DefaultTheme["gradients"];
@@ -22,5 +22,6 @@ export interface ButtonProps {
   children?: ReactNode;
   mt?: string;
   navigationOptions?: NavigationOptions;
+  handleClick?: () => void;
   buttonStyles?: object;
 }

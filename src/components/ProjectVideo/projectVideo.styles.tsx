@@ -6,7 +6,6 @@ export const StyledProjectVideoContainer = styled.div<ProjectVideoContainerProps
   position: relative;
   width: 100%;
   margin: auto auto 40px auto;
-
   ${({ includeBgWrapper, isMd }) =>
     includeBgWrapper &&
     `
@@ -82,22 +81,22 @@ export const StyledProjectImageFrame = styled.img<MediaQueries & ProjectVideoCon
 export const StyledVideo = styled.video<MediaQueries & ProjectVideoContainerProps>`
   height: 465px;
   width: 215px;
+  object-fit: cover;
   border-radius: 30px;
   position: absolute;
-  object-fit: cover;
   pointer-events: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   ${({ isSm }) =>
     isSm &&
     `
     width : 492px;
-    height : 318px;
+    height: 330px;
     border-radius: 12px 12px 0 0;
     top: 48.2%;
     z-index: -1;
+
   `};
 
   ${({ isMd }) =>
@@ -110,7 +109,7 @@ export const StyledVideo = styled.video<MediaQueries & ProjectVideoContainerProp
 
   ${({ isLg }) =>
     isLg &&
-    ` 
+    `
     width : 604px;
     height : 394px;
     top : 48.2%;
@@ -125,14 +124,14 @@ export const StyledVideo = styled.video<MediaQueries & ProjectVideoContainerProp
       `
       top: 71.5%;
     `
-    }   
+    }
     ${
       isMd &&
       `
       top: 77.5%;
       margin-top : 2rem;
     `
-    } 
+    }
     `};
 `;
 
