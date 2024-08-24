@@ -4,5 +4,8 @@ export interface ProjectPreviewProps {
   deployedLink: string;
   repoLink: string;
   imageUrl?: string;
-  videoUrl?: string;
+  videoUrl: {
+    mobile: string;
+    desktop: string;
+  };
 }
