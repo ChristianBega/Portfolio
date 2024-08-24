@@ -2,7 +2,7 @@ import { useMediaQuery } from "react-responsive";
 import { theme } from "../../styles/theme";
 import { MediaQueries } from "./types";
 
-const useMediaQueries = (): MediaQueries => {
+const  useMediaQueries = (): MediaQueries => {
   const isXs = useMediaQuery({ query: `(min-width: ${theme.breakpoints.xs})` });
   const isSm = useMediaQuery({ query: `(min-width: ${theme.breakpoints.sm})` });
   const isMd = useMediaQuery({ query: `(min-width: ${theme.breakpoints.md})` });

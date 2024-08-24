@@ -9,7 +9,7 @@ import { HashLink } from "react-router-hash-link";
 const NavigationMenuItems: React.FC<NavigationMenuItemsProps> = ({ items, isMd, variant, handleClose }) => {
   const scrollWithOffset = (el: HTMLElement): void => {
     const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
-    const yOffset = -135;
+    const yOffset = -25;
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
   };
 

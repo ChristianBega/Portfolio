@@ -4,17 +4,17 @@ import Typography from "../../../../components/Typography/typography";
 import TextBlock from "../../../../components/TextBlock/textBlock";
 import Icon from "../../../../components/Icon/icon";
 import { textBlockProjectPreviewStylesDesktop, textBlockProjectPreviewStylesMobile } from "../../projectDetails.styles";
-import ProjectImage from "../../../../components/ProjectImage/projectImage";
+import ProjectImage from "../../../../components/ProjectVideo/projectVideo";
 import GridContainer from "../../../../components/GridContainer/gridContainer";
 import GridItem from "../../../../components/GridItem/gridItem";
 import useMediaQueries from "../../../../utils/useMediaQueries/useMediaQueries";
 
-const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, imageUrl, repoLink, deployedLink }) => {
+const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, videoUrl, repoLink, deployedLink }) => {
   const { isSm } = useMediaQueries();
   return (
     <GridContainer id="project-preview-section" mb={isSm ? "0" : "92px"}>
       <GridItem paddingX="0px" id="project-image-section" order={isSm ? 1 : 0}>
-        <ProjectImage imageUrl={imageUrl} />
+        <ProjectImage type="video" videoUrl={videoUrl} />
       </GridItem>
       <GridItem paddingX="0px" id="project-content-section" order={isSm ? 0 : 1}>
         <TextBlock containerStyles={isSm ? textBlockProjectPreviewStylesDesktop : textBlockProjectPreviewStylesMobile}>

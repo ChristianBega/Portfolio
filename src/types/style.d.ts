@@ -57,12 +57,14 @@ declare module "styled-components" {
       contained: ButtonStyles;
       outlined: ButtonStyles;
       circular: ButtonStyles;
+      replay: ButtonStyles;
     };
     spacing: (factor: number) => string;
     border: {};
     shadows: {
       button_shadow: string;
       button_shadow_transparent: string;
+      replay_button_shadow_transparent: string;
     };
     breakpoints: {
       xs: string;

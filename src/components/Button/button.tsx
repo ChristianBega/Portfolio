@@ -10,11 +10,25 @@ const StyledButton = styled.button<ButtonProps>`
   ${buttonStyles}
 `;
 
-const Button: React.FC<ButtonProps> = ({ variant = "contained", size = "md", iconStart, iconEnd, navigationOptions, children, ...props }) => {
+const Button: React.FC<ButtonProps> = ({
+  variant = "contained",
+  size = "md",
+  iconStart,
+  iconEnd,
+  navigationOptions,
+  handleClick,
+  children,
+  ...props
+}) => {
   const navigate = useNavigate();
 
   return (
-    <StyledButton onClick={() => navigationOptions && handleNavigation(navigate, navigationOptions)} variant={variant} size={size} {...props}>
+    <StyledButton
+      onClick={() => (navigationOptions ? handleNavigation(navigate, navigationOptions) : handleClick ? handleClick() : null)}
+      variant={variant}
+      size={size}
+      {...props}
+    >
       <div style={{ display: "flex", alignItems: "center", gap: variant !== "circular" ? ".5rem" : "0rem" }}>
         {iconStart && <span>{iconStart}</span>}
         <Typography component="p" variant="button_text">

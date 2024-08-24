@@ -23,14 +23,18 @@ const Navigation: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      if (scrollTop > lastScrollTop) {
-        setScrollDirection("down");
-        if (isOpen) {
-          setIsOpen(false);
+
+      if (scrollTop > 200) {
+        if (scrollTop > lastScrollTop) {
+          setScrollDirection("down");
+          if (isOpen) {
+            setIsOpen(false);
+          }
+        } else if (scrollTop < lastScrollTop) {
+          setScrollDirection("up");
         }
-      } else if (scrollTop < lastScrollTop) {
-        setScrollDirection("up");
       }
+
       setLastScrollTop(scrollTop);
     };
 
@@ -38,6 +42,7 @@ const Navigation: React.FC = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollTop, isOpen]);
+
   // ! quick fix to close menu when open on mobile and screen size changes to isMd breakpoint, need to find a better solution
   useEffect(() => {
     if (isMd) {

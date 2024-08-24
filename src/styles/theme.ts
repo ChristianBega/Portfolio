@@ -203,6 +203,13 @@ export const theme: DefaultTheme = {
       padding: "8px",
       borderRadius: "50%",
     },
+    replay: {
+      backgroundColor: "transparent",
+      backgroundColorHover: "transparent",
+      borderColor: "transparent",
+      borderColorHover: "transparent",
+      color: "text_secondary",
+    },
   },
   spacing: (factor: number) => `${factor * 8}px`,
   border: {},
@@ -210,6 +217,7 @@ export const theme: DefaultTheme = {
     button_shadow:
       "0 0 19px 9px rgba(61, 45, 247, 0.1), 0 0 46.85px 0 rgba(49, 45, 247, 0.1), 0 0 25.48px 0 rgba(49, 45, 247, 0.1), 0 0 13px 0 rgba(73, 45, 247, 0.1), 0 0 6.52px 0 rgba(45, 41, 247, 0.1), 0 0 3.15px 0 rgba(45, 41, 247, 0.1);",
     button_shadow_transparent: "0 0 19px 9px rgba(255, 255, 255, 0), 0 0 46.85px 0 rgba(255, 255, 255, 0)",
+    replay_button_shadow_transparent: " 0 0 10px 5px rgba(255, 255, 255, 0.2), 0 0 50px 8px rgba(255, 255, 255, .2)",
   },
   breakpoints: {
     xs: "480px",

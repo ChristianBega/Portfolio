@@ -3,5 +3,6 @@ export interface ProjectPreviewProps {
   description: string;
   deployedLink: string;
   repoLink: string;
-  imageUrl: string;
+  imageUrl?: string;
+  videoUrl?: string;
 }
