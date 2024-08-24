@@ -135,10 +135,10 @@ export const StyledVideo = styled.video<MediaQueries & ProjectVideoContainerProp
     `};
 `;
 
-export const StyledProjectCardBackgroundBlur = styled.div<MediaQueries>`
+export const StyledProjectCardBackgroundBlur = styled.div<MediaQueries & ProjectVideoContainerProps>`
   width: 375px;
   height: 285px;
-  background: linear-gradient(180deg, #0066ff, #33cc33);
+  background: ${(props) => props.backgroundGradient && `${props.backgroundGradient}`};
   border-radius: 60% 100% 100% 90% / 100% 100% 50% 90%;
   transform: rotate(10deg);
   position: absolute;

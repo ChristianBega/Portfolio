@@ -6,7 +6,7 @@ import { useInView } from "framer-motion";
 import Icon from "../../components/Icon/icon";
 import Button from "../../components/Button/button";
 
-const ProjectVideo: React.FC<CombinedProjectVideoProps> = ({ children, videoUrl, includeBgOrb, includeBgWrapper }) => {
+const ProjectVideo: React.FC<CombinedProjectVideoProps> = ({ children, videoUrl, includeBgOrb, includeBgWrapper, backgroundGradient }) => {
   const { isXs, is600, isSm, isLg, isMd } = useMediaQueries();
   const videoRef = useRef<HTMLVideoElement>(null);
   const videoContainerRef = useRef(null);
@@ -16,12 +16,12 @@ const ProjectVideo: React.FC<CombinedProjectVideoProps> = ({ children, videoUrl,
 
   useEffect(() => {
     if (includeBgWrapper) return;
-    if (isInView && videoRef.current) {
+    if (isInView && videoRef.current && !videoEnded) {
       videoRef.current.play();
     } else if (videoRef.current) {
       videoRef.current.pause();
     }
-  }, [isInView]);
+  }, [isInView, videoEnded]);
 
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -46,7 +46,9 @@ const ProjectVideo: React.FC<CombinedProjectVideoProps> = ({ children, videoUrl,
   };
   return (
     <StyledProjectVideoContainer ref={videoContainerRef} includeBgWrapper={includeBgWrapper} isMd={isMd}>
-      {includeBgOrb && <StyledProjectCardBackgroundBlur isXs={isXs} is600={is600} isSm={isSm} isLg={isLg} isMd={isMd} />}
+      {includeBgOrb && (
+        <StyledProjectCardBackgroundBlur backgroundGradient={backgroundGradient} isXs={isXs} is600={is600} isSm={isSm} isLg={isLg} isMd={isMd} />
+      )}
       {isMd && children}
       <StyledVideo
         ref={videoRef}
@@ -55,6 +57,7 @@ const ProjectVideo: React.FC<CombinedProjectVideoProps> = ({ children, videoUrl,
         isSm={isSm}
         isMd={isMd}
         src={isSm ? videoUrl.desktop : videoUrl.mobile}
+        muted
       />
       <StyledProjectImageFrame
         includeBgWrapper={includeBgWrapper}

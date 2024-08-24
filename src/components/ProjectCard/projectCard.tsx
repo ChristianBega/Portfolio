@@ -34,7 +34,12 @@ const ProjectCard: React.FC<MediaQueries & ProjectCardProps> = ({ data }) => {
   const { isMd } = useMediaQueries();
   return (
     <div style={{ marginBottom: "80px" }}>
-      <ProjectVideo includeBgOrb={true} includeBgWrapper={true} videoUrl={data.videoUrl}>
+      <ProjectVideo
+        includeBgOrb={true}
+        includeBgWrapper={true}
+        backgroundGradient={data.backgroundGradient}
+        videoUrl={{ desktop: data.videoUrl.desktop, mobile: data.videoUrl.mobile }}
+      >
         {renderProjectTextBlock({ isMd, data })}
       </ProjectVideo>
       {!isMd && renderProjectTextBlock({ isMd, data })}
