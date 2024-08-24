@@ -1,11 +1,11 @@
-import AlmadelicVideoMobile from "../../../public/almadelic-mobile.mp4";
-import AlmadelicVideoDesktop from "../../../public/almadelic-desktop.mp4";
+import AlmadelicVideoMobile from "/almadelic-mobile.mp4";
+import AlmadelicVideoDesktop from "/almadelic-desktop.mp4";
 
-import OverlandVideoMobile from "../../../public/overland-mobile.mp4";
-import OverlandVideoDesktop from "../../../public/overland-desktop.mp4";
+import OverlandVideoMobile from "/overland-mobile.mp4";
+import OverlandVideoDesktop from "/overland-desktop.mp4";
 
-import NextFlixVideoMobile from "../../../public/nextflix-mobile.mp4";
-import NextFlixVideoDesktop from "../../../public/nextflix-desktop.mp4";
+import NextFlixVideoMobile from "/nextflix-mobile.mp4";
+import NextFlixVideoDesktop from "/nextflix-desktop.mp4";
 
 export interface CreateProjectProps {
   title: string;
