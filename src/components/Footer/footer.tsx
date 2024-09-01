@@ -23,13 +23,13 @@ const Footer: React.FC<MediaQueries> = () => {
           </Typography>
           <ul className="footer-content-children" role="list" style={{ display: "flex", gap: "2rem" }}>
             <li style={{ ...listItemStyle }}>
-              <Icon src="/public/icons/Mail-Icon.svg" size="32px" alt="Github Icon"></Icon>
+              <Icon src="/icons/Mail-Icon.svg" size="32px" alt="Github Icon"></Icon>
             </li>
             <li style={{ ...listItemStyle }}>
-              <Icon src="/public/icons/LinkedIn-Icon.svg" size="32px" alt="Github Icon"></Icon>
+              <Icon src="/icons/LinkedIn-Icon.svg" size="32px" alt="Github Icon"></Icon>
             </li>
             <li style={{ ...listItemStyle }}>
-              <Icon src="/public/icons/github-icon.svg" size="28px" alt="Github Icon"></Icon>
+              <Icon src="/icons/github-icon.svg" size="28px" alt="Github Icon"></Icon>
             </li>
           </ul>
         </div>
