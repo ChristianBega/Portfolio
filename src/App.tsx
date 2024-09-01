@@ -7,6 +7,7 @@ import ProjectDetails from "./pages/ProjectDetails/projectDetails";
 import Home from "./pages/Home/home";
 import BackgroundGrid from "./components/Hero/components/backgroundGrid/backgroundGrid";
 import ScrollToTop from "./components/ScrollToTop/scrollToTop";
+import Footer from "./components/Footer/footer";
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />}></Route>
         <Route path="/project-details" element={<ProjectDetails />}></Route>
       </Routes>
+      <Footer />
     </>
   );
 };
