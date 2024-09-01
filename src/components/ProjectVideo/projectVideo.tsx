@@ -58,8 +58,7 @@ const ProjectVideo: React.FC<CombinedProjectVideoProps> = ({ children, videoUrl,
         isMd={isMd}
         src={isSm ? videoUrl.desktop : videoUrl.mobile}
         muted
-        // playsinline
-        webkit-playsinline
+        playsInline
       />
       <StyledProjectImageFrame
         includeBgWrapper={includeBgWrapper}
