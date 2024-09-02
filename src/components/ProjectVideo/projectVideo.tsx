@@ -15,7 +15,7 @@ const ProjectVideo: React.FC<CombinedProjectVideoProps> = ({ children, videoUrl,
   const isInView = useInView(videoContainerRef);
 
   useEffect(() => {
-    if (includeBgWrapper) return;
+    // if (includeBgWrapper) return;
     if (isInView && videoRef.current && !videoEnded) {
       videoRef.current.play();
     } else if (videoRef.current) {
