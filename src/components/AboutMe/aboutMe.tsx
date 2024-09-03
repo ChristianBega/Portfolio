@@ -8,7 +8,7 @@ const AboutMe: React.FC = () => {
   const { isMd } = useMediaQueries();
 
   return (
-    <GridItem mb={isMd ? "192px" : "70px"} id="about-section" xs={12} md={6} lg={8} order={isMd ? 0 : 1}>
+    <GridItem mb={isMd ? "192px" : "70px"} id="about-section" xs={12}>
       <TextBlock>
         <Typography component="h2" mb="48px">
           About Me

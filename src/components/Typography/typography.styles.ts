@@ -4,6 +4,7 @@ import { TypographyProps } from "./types";
 import { css } from "styled-components";
 
 const typographyStyles = css<TypographyProps>`
+  text-align: ${(props) => (props.textAlign ? props.textAlign : "")};
   justify-content: ${(props) => (props.justifyContent ? props.justifyContent : "flex-start")};
   align-items: center;
   cursor: ${(props) => (props.variant ? props.theme.typography[props.variant].cursor : "default")};

@@ -12,6 +12,7 @@ export interface TypographyProps extends HTMLAttributes<HTMLElement> {
   route?: string;
   href?: string;
   justifyContent?: string;
+  textAlign?: string;
   mb?: string;
   to?: string;
   scroll?: object;
