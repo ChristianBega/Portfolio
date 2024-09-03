@@ -41,7 +41,7 @@ const Skills: React.FC = () => {
         </GridItem>
         <GridItem id="skills-icons-section" xs={12} sm={isMd ? 12 : 6} paddingX="0">
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center", maxWidth: "550px", margin: "auto" }}>
-            {skillsObject.map(({ name, imageUrl }) => (
+            {skillsObject.map(({ imageUrl }) => (
               <>
                 {/* <>{name}</> */}
                 <img style={{ width: "60px", height: "60px", objectFit: "contain" }} src={imageUrl} alt="" />
