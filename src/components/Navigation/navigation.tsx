@@ -8,6 +8,7 @@ import useMediaQueries from "../../utils/useMediaQueries/useMediaQueries.tsx";
 import Button from "../../components/Button/button.tsx";
 import { Link } from "react-router-dom";
 import { navigationWrapperVariants } from "./animations/navigatonWrapper.ts";
+import { handleScrollTo } from "../../utils/navigateTo/navigateTo.utils";
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -65,7 +66,12 @@ const Navigation: React.FC = () => {
             </Typography>
             {isMd && <NavigationMenuList isOpen={isOpen} />}
             {isMd ? (
-              <Button variant="outlined" size="sm" iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" size="12px" />}>
+              <Button
+                handleClick={() => handleScrollTo("contact-section")}
+                variant="outlined"
+                size="sm"
+                iconEnd={<Icon src="arrow-icon-purple.svg" alt="Example Icon" size="12px" />}
+              >
                 Let's Talk
               </Button>
             ) : (

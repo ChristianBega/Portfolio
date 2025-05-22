@@ -4,6 +4,9 @@ import AboutMe from "../../components/AboutMe/aboutMe";
 // import Skills from "../../components/Skills/skills";
 import GridContainer from "../../components/GridContainer/gridContainer";
 import ProjectCards from "../../components/ProjectCards/projectCards";
+import ContactForm from "../../components/ContactForm/contact";
+// import { FormspreeProvider } from "@formspree/react";
+
 const Home: React.FC = () => {
   return (
     <>
@@ -12,6 +15,7 @@ const Home: React.FC = () => {
         {/* <Skills /> */}
         <AboutMe />
         <ProjectCards />
+        <ContactForm />
       </GridContainer>
     </>
   );

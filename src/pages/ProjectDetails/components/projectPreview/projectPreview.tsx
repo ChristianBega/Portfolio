@@ -22,8 +22,11 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, vid
           <Typography component="p">{description}</Typography>
           <div style={{ display: "flex", justifyContent: "center", gap: "2rem", marginTop: "20px" }}>
             <Typography
+              disabled={repoLink === "unavailable"}
               component="a"
               href={repoLink}
+              target="_blank"
+              rel="noopener noreferrer"
               variant="link_text"
               iconStart={<Icon src="github-icon.svg" size="16px" alt="Right arrow icon"></Icon>}
               iconEnd={<Icon src="arrow-icon-purple.svg" size="16px" alt="Right arrow icon"></Icon>}
@@ -31,8 +34,11 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ title, description, vid
               Github
             </Typography>
             <Typography
+              disabled={deployedLink === "unavailable"}
               component="a"
               href={deployedLink}
+              target="_blank"
+              rel="noopener noreferrer"
               variant="link_text"
               iconStart={<Icon src="website-icon.svg" size="16px" alt="Right arrow icon"></Icon>}
               iconEnd={<Icon src="arrow-icon-purple.svg" size="16px" alt="Right arrow icon"></Icon>}

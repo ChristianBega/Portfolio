@@ -5,6 +5,7 @@ import Button from "../../components/Button/button";
 import HeroOrb from "./components/backgroundOrb/backgroundOrb";
 import TextBlock from "../TextBlock/textBlock";
 import Image from "../../components/Image/image";
+import { handleScrollTo } from "../../utils/navigateTo/navigateTo.utils";
 
 const Hero: React.FC = () => {
   const { isMd } = useMediaQueries();
@@ -20,7 +21,7 @@ const Hero: React.FC = () => {
           A full stack web developer, transforming your ideas into digital realities
         </Typography>
         <div>
-          <Button mt="2rem" backgroundGradient="button_gradient" variant="contained" size="lg">
+          <Button handleClick={() => handleScrollTo("contact-section")} mt="2rem" backgroundGradient="button_gradient" variant="contained" size="lg">
             Contact Me
           </Button>
         </div>

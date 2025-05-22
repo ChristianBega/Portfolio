@@ -24,4 +24,6 @@ export interface ButtonProps {
   navigationOptions?: NavigationOptions;
   handleClick?: () => void;
   buttonStyles?: object;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }

@@ -38,7 +38,7 @@ export const theme: DefaultTheme = {
     fontFamilyHeader: "CustomFont_H1",
     fontFamily: "Poppins, sans-serif",
     h1: {
-      fontSize: "48px",
+      fontSize: "50px",
       fontWeight: 400,
       lineHeight: 1.3,
       margin: "0 0 .5rem 0",
@@ -49,7 +49,7 @@ export const theme: DefaultTheme = {
       },
     },
     h2: {
-      fontSize: "36px",
+      fontSize: "40px",
       fontWeight: 700,
       lineHeight: 1.3,
       margin: "0 0 .5rem 0",
@@ -60,7 +60,7 @@ export const theme: DefaultTheme = {
       },
     },
     h3: {
-      fontSize: "37.25px",
+      fontSize: "32px",
       fontWeight: 700,
       lineHeight: 1.3,
       margin: "0 0 .5rem 0",

@@ -6,3 +6,16 @@ export const handleNavigation = (navigate: NavigateFunction, options: Navigation
 
   navigate(path, { state: { ...data } });
 };
+
+export const handleScrollTo = (id: string, topOffset: number = 20) => {
+  const element = document.getElementById(id);
+  if (element) {
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - topOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+};
