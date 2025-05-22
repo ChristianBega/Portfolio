@@ -7,19 +7,13 @@ import { navigationLinkVariants } from "../../animations/navigationMenuList";
 import { HashLink } from "react-router-hash-link";
 
 const NavigationMenuItems: React.FC<NavigationMenuItemsProps> = ({ items, isMd, variant, handleClose }) => {
-  const scrollWithOffset = (el: HTMLElement): void => {
-    const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
-    const yOffset = -25;
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
-  };
-
   return (
     <>
       {items.map(({ path, label }, index) => (
         <StyledNavigationMenuListItem key={index} isMd={isMd} variants={variant || navigationLinkVariants}>
           <Typography
             handleClose={handleClose}
-            scroll={scrollWithOffset}
+            // scroll={scrollWithOffset}
             component={HashLink}
             to={path}
             variant="link_text"

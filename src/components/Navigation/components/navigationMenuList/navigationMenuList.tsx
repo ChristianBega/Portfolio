@@ -9,7 +9,6 @@ const menuListItems = [
   { label: "Home", path: "/#top" },
   { label: "About", path: "/#about-section" },
   { label: "Projects", path: "/#featured-projects-section" },
-  { label: "Contact", path: "/#contact" },
 ];
 
 const NavigationMenuList: React.FC<NavigationMenuListProps> = ({ isOpen, handleClose }) => {

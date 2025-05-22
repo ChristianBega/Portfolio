@@ -16,6 +16,7 @@ const Typography: React.FC<TypographyProps> = ({
   children,
   keyWords,
   handleClose,
+  disabled,
   ...props
 }) => {
   const highlightKeywords = (text: string, keywords: string[]): ReactNode[] => {
@@ -39,7 +40,18 @@ const Typography: React.FC<TypographyProps> = ({
   };
 
   return (
-    <StyledTypography onClick={handleClose} href={href && href} to={route && route} as={component} component={component} variant={variant} {...props}>
+    <StyledTypography
+      disabled={disabled}
+      onClick={disabled ? undefined : handleClose}
+      href={disabled ? undefined : href && href}
+      to={disabled ? undefined : route && route}
+      as={component}
+      component={component}
+      variant={variant}
+      // target={component === "a" ? "_blank" : undefined}
+      // rel={component === "a" ? "noopener noreferrer" : undefined}
+      {...props}
+    >
       {iconStart && <span style={{ marginRight: ".5rem" }}>{iconStart}</span>}
       {renderContent()}
       {iconEnd && <span style={{ marginLeft: ".5rem" }}>{iconEnd}</span>}

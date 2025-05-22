@@ -17,4 +17,7 @@ export interface TypographyProps extends HTMLAttributes<HTMLElement> {
   to?: string;
   scroll?: object;
   handleClose?: () => void;
+  disabled?: boolean;
+  target?: string;
+  rel?: string;
 }

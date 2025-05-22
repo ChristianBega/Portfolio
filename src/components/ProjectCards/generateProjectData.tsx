@@ -41,8 +41,8 @@ export const featuredProjectsData: CreateProjectProps[] = [
       mobile: AlmadelicVideoMobile,
       desktop: AlmadelicVideoDesktop,
     },
-    deployedLink: "https://deployed.com/",
-    repoLink: "https://github.com/ChristianBega/Blog-Site",
+    deployedLink: "https://almadelic.com/",
+    repoLink: "unavailable",
     technology: [
       "React",
       "Material UI",

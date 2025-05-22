@@ -7,7 +7,7 @@ const typographyStyles = css<TypographyProps>`
   text-align: ${(props) => (props.textAlign ? props.textAlign : "")};
   justify-content: ${(props) => (props.justifyContent ? props.justifyContent : "flex-start")};
   align-items: center;
-  cursor: ${(props) => (props.variant ? props.theme.typography[props.variant].cursor : "default")};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : props.variant ? props.theme.typography[props.variant].cursor : "default")};
   font-size: ${(props) =>
     props.variant ? props.theme.typography[props.variant].fontSize : getTypographyStyle(props.theme, props.component)?.fontSize};
   text-transform: ${(props) => (props.variant ? props.theme.typography[props.variant].textTransform : "")};
