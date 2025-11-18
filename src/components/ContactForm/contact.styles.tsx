@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../styles/theme";
 export const FormContainer = styled.div`
   margin: 0 auto;
-  padding: 2.5rem;
+  padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -10,6 +10,9 @@ export const FormContainer = styled.div`
   border-radius: 10.62px;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
+  @media (min-width: 768px) {
+    padding: 2.5rem;
+  }
 `;
 
 export const FormTitle = styled.h3`
