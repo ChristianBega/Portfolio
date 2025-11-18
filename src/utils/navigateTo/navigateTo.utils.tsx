@@ -8,7 +8,13 @@ export const handleNavigation = (navigate: NavigateFunction, options: Navigation
 };
 
 export const handleScrollTo = (id: string, topOffset: number = 20) => {
-  const element = document.getElementById(id);
+  let element = document.getElementById(id);
+
+  // If contact section not found, try the success variant
+  if (!element && id === "contact-section") {
+    element = document.getElementById("contact-section-success");
+  }
+
   if (element) {
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.scrollY - topOffset;
