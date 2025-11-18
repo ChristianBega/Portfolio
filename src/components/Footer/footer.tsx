@@ -24,7 +24,13 @@ const Footer: React.FC<MediaQueries> = () => {
           </Typography>
           <ul className="footer-content-children" role="list" style={{ display: "flex", gap: "2rem" }}>
             <li style={{ ...listItemStyle }}>
-              <a target="_blank" rel="noopener noreferrer" href="mailto:cbega1227@gmail.com" aria-label="Send an email to me!">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:chrisb3ga@gmail.com
+"
+                aria-label="Send an email to me!"
+              >
                 <Icon src="/icons/Mail-Icon.svg" size="32px" alt="Github Icon"></Icon>
               </a>
             </li>
