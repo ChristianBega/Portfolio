@@ -7,7 +7,7 @@ export const StyledNavigationWrapper = styled(motion.div)<MediaQueries>`
   position: sticky;
   top: 0;
   padding: 1rem;
-  z-index: 1000;
+  z-index: 2000;
   max-width: 1310px;
   margin: 0 1rem;
   ${({ isNavigation }) =>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../styles/theme";
 export const FormContainer = styled.div`
   margin: 0 auto;
-  padding: 2.5rem;
+  padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -10,6 +10,10 @@ export const FormContainer = styled.div`
   border-radius: 10.62px;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
+  /* In other components, we are passing a useMediaQueries prop to the styled component to handle media queries, for now this is okay, but pick one and stick with it - cb 11/18/2025 */
+  @media (min-width: 768px) {
+    padding: 2.5rem;
+  }
 `;
 
 export const FormTitle = styled.h3`

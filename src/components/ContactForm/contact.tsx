@@ -64,7 +64,15 @@ const ContactForm: React.FC = () => {
               errors={state.errors}
             />
           </FormGrid>
-          <ContactField id="subject" name="subject" label="Subject" placeholder="What is this about?" icon={<FaPaperPlane />} errors={state.errors} />
+          <ContactField
+            id="subject"
+            name="subject"
+            label="Subject"
+            placeholder="What is this about?"
+            icon={<FaPaperPlane />}
+            errors={state.errors}
+            required
+          />
           <ContactField
             id="message"
             name="message"
