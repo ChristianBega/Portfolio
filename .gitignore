@@ -36,3 +36,11 @@ next-env.d.ts
 *.njsproj
 *.sln
 *.sw?
+
+
+# AI
+.claude/
+worktrees/
+dist/
+out/
+.next/
