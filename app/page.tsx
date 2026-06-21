@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import HomeLayout from '@/layouts/HomeLayout'
 import PersonaColumn from '@/components/organisms/PersonaColumn'
 import MobileFooterBar from '@/components/organisms/MobileFooterBar'
@@ -34,13 +35,13 @@ export default function Home() {
           </div>
 
           {/* More projects link */}
-          <a
+          <Link
             href="/projects"
             className="inline-flex items-center gap-[8px] text-accent font-mono text-mono-md mt-[30px] py-[6px] transition-all hover:gap-[12px]"
           >
             <i className="ti ti-arrow-right" aria-hidden="true" />
             More projects, experiments &amp; home-lab notes
-          </a>
+          </Link>
         </main>
       }
     />
