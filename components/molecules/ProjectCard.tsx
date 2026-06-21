@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { AccentMetric } from '@/components/atoms/AccentMetric'
 import { DomainTag } from '@/components/atoms/DomainTag'
 
@@ -33,7 +34,7 @@ export default function ProjectCard({
   }
 
   return (
-    <a
+    <Link
       href={`/projects/${slug}`}
       className="group grid grid-cols-[1fr_auto] py-[26px] px-[8px] border-t border-border-card transition-all duration-[180ms] hover:bg-[rgba(138,144,240,0.05)] hover:shadow-card-hover"
     >
@@ -53,6 +54,6 @@ export default function ProjectCard({
         className="ti ti-arrow-up-right text-text-faint text-[17px] mt-[6px]"
         aria-hidden="true"
       />
-    </a>
+    </Link>
   )
 }
