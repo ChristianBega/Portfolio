@@ -2,7 +2,7 @@ import { IconLink } from '@/components/atoms/IconLink'
 
 export default function PersonaColumn() {
   return (
-    <aside className="sticky top-0 h-screen overflow-visible border-r border-border-subtle flex flex-col justify-between pt-[72px] pb-[56px] pr-[44px] pl-[8px]">
+    <aside className="lg:sticky lg:top-0 lg:h-screen overflow-visible lg:border-r border-border-subtle flex flex-col justify-between pt-8 pb-6 px-5 lg:pt-[72px] lg:pb-[56px] lg:pr-[44px] lg:pl-[8px]">
       {/* Top block — identity */}
       <div className="relative z-10">
         <h1 className="text-h1 font-semibold text-text-primary">Christian Bega</h1>
@@ -17,7 +17,7 @@ export default function PersonaColumn() {
       </div>
 
       {/* Bottom block — links + CTA */}
-      <div className="relative z-10">
+      <div className="relative z-10 hidden lg:block">
         <nav className="flex flex-col">
           <IconLink icon="ti ti-brand-github" href="https://bit.ly/Cbega-GitHub">
             GitHub
