@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import StarfieldRenderer from "@/components/organisms/StarfieldRenderer";
+import NebulaLayer from "@/components/organisms/NebulaLayer";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -38,6 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             background: "radial-gradient(135% 90% at 50% -12%, #1a1f4e 0%, #101a3c 26%, #0c1430 48%, #0a1026 68%, #080c1c 100%)",
           }}
         />
+        {/* Nebula haze — sits above the atmosphere gradient, below the stars */}
+        <NebulaLayer />
         {children}
       </body>
     </html>
