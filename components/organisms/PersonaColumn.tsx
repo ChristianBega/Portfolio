@@ -11,7 +11,7 @@ export default function PersonaColumn() {
           React · Next.js · Node · AWS · GCP
         </p>
         <div className="flex items-center gap-[9px] mt-6 font-mono text-mono-sm text-text-dim tracking-[0.03em]">
-          <span className="w-[7px] h-[7px] rounded-full bg-accent shadow-[0_0_11px_rgba(138,144,240,0.85)]" />
+          <span className="w-[7px] h-[7px] rounded-full bg-accent shadow-[0_0_11px_rgba(63, 78, 157, 0.85)]" />
           Available for full-stack roles
         </div>
       </div>
