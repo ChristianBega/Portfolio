@@ -1,6 +1,12 @@
+'use client'
+
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { AccentMetric } from '@/components/atoms/AccentMetric'
 import { DomainTag } from '@/components/atoms/DomainTag'
+import { useReducedMotion } from '@/hooks/useReducedMotion'
+
+const MotionLink = motion.create(Link)
 
 interface ProjectCardProps {
   slug: string
@@ -33,11 +39,12 @@ export default function ProjectCard({
     )
   }
 
-  return (
-    <Link
-      href={`/projects/${slug}`}
-      className="group grid grid-cols-[1fr_auto] py-[26px] px-[8px] border-t border-border-card transition-all duration-[180ms] hover:bg-[rgba(138,144,240,0.05)] hover:shadow-card-hover"
-    >
+  const href = `/projects/${slug}`
+  const className =
+    'group grid grid-cols-[1fr_auto] py-[26px] px-[8px] border-t border-border-card transition-all duration-[180ms] hover:bg-[rgba(138,144,240,0.05)] hover:shadow-card-hover'
+
+  const inner = (
+    <>
       <div>
         <DomainTag>{tag}</DomainTag>
         <h3 className="text-card-title font-medium text-text-primary mt-[9px] mb-[8px] transition-colors group-hover:text-accent">
@@ -54,6 +61,27 @@ export default function ProjectCard({
         className="ti ti-arrow-up-right text-text-faint text-[17px] mt-[6px]"
         aria-hidden="true"
       />
-    </Link>
+    </>
+  )
+
+  const reduced = useReducedMotion()
+
+  if (reduced) {
+    return (
+      <Link href={href} className={className}>
+        {inner}
+      </Link>
+    )
+  }
+
+  return (
+    <MotionLink
+      href={href}
+      className={className}
+      whileHover={{ x: 2 }}
+      transition={{ duration: 0.15 }}
+    >
+      {inner}
+    </MotionLink>
   )
 }
