@@ -19,10 +19,10 @@ export default function PersonaColumn() {
       {/* Bottom block — links + CTA */}
       <div className="relative z-10 hidden lg:block">
         <nav className="flex flex-col">
-          <IconLink icon="ti ti-brand-github" href="https://bit.ly/Cbega-GitHub">
+          <IconLink icon="ti ti-brand-github" href="https://github.com/ChristianBega">
             GitHub
           </IconLink>
-          <IconLink icon="ti ti-brand-linkedin" href="https://bit.ly/Cbega-LinkedIn">
+          <IconLink icon="ti ti-brand-linkedin" href="https://www.linkedin.com/in/christianbega/">
             LinkedIn
           </IconLink>
           <IconLink icon="ti ti-file-text" href="/Christian_Bega_Resume_2026.pdf">

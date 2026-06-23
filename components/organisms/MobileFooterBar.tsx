@@ -5,10 +5,10 @@ export default function MobileFooterBar() {
       style={{ background: 'rgba(10,13,23,0.85)', backdropFilter: 'blur(12px)' }}
     >
       <div className="flex items-center gap-4">
-        <a href="https://bit.ly/Cbega-GitHub" className="text-text-dim hover:text-accent transition-colors">
+        <a href="https://github.com/ChristianBega" target="_blank" rel="noopener noreferrer" className="text-text-dim hover:text-accent transition-colors">
           <i className="ti ti-brand-github text-[18px]" aria-hidden="true" />
         </a>
-        <a href="https://bit.ly/Cbega-LinkedIn" className="text-text-dim hover:text-accent transition-colors">
+        <a href="https://www.linkedin.com/in/christianbega/" target="_blank" rel="noopener noreferrer" className="text-text-dim hover:text-accent transition-colors">
           <i className="ti ti-brand-linkedin text-[18px]" aria-hidden="true" />
         </a>
         <a href="/Christian_Bega_Resume_2026.pdf" className="text-text-dim hover:text-accent transition-colors">
