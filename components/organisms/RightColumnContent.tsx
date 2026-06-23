@@ -27,18 +27,13 @@ export default function RightColumnContent() {
   const about = (
     <>
       <SectionEyebrow>About</SectionEyebrow>
-      <p
-        className="text-body text-text-muted leading-[1.85] max-w-[580px] mt-4 mb-[56px]"
-        style={{ textWrap: 'pretty' }}
-      >
-        Full-stack developer in Denver with three years building production
-        software for a telehealth startup, where I grew from entry-level into
-        the lead role. Most of my work lives on the backend and in
-        infrastructure — a custom FHIR-based EHR, serverless APIs, CI/CD,
-        and integrations across Stripe, CRM, and healthcare systems.
+      <p className="text-body text-text-muted leading-[1.85] max-w-[580px] mt-4 mb-[56px]" style={{ textWrap: "pretty" }}>
+        Denver-based developer with three years building production software for a telehealth startup, where I grew from entry-level into the lead
+        role. Working in a startup meant owning work across the full stack: backend API development, cloud infrastructure, CI/CD pipelines, automated
+        testing, and the frontend.
       </p>
     </>
-  )
+  );
 
   const featured = (
     <>

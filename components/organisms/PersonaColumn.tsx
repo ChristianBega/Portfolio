@@ -1,4 +1,4 @@
-import { IconLink } from '@/components/atoms/IconLink'
+import { IconLink } from "@/components/atoms/IconLink";
 
 export default function PersonaColumn() {
   return (
@@ -8,7 +8,7 @@ export default function PersonaColumn() {
         <h1 className="text-h1 font-semibold text-text-primary">Christian Bega</h1>
         <p className="text-ui text-text-secondary mt-[11px]">Full-stack developer</p>
         <p className="font-mono text-mono-md text-text-dim mt-[13px] leading-[1.9] whitespace-nowrap">
-          React · Next.js · Node · AWS · GCP
+          React · Next.js · Node/Express · TypeScript · AWS · GCP
         </p>
         <div className="flex items-center gap-[9px] mt-6 font-mono text-mono-sm text-text-dim tracking-[0.03em]">
           <span className="w-[7px] h-[7px] rounded-full bg-accent shadow-[0_0_11px_rgba(63, 78, 157, 0.85)]" />
@@ -38,5 +38,5 @@ export default function PersonaColumn() {
         </a>
       </div>
     </aside>
-  )
+  );
 }
